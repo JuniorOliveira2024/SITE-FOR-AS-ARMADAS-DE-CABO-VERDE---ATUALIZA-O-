@@ -1,0 +1,33 @@
+/* ============================================================
+   Estrutura
+   ============================================================ */
+
+/* ---------- structure ---------- */
+.structure-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.structure-card{background:var(--navy-900);color:var(--white);border-radius:var(--radius);position:relative;overflow:hidden;transition:transform .3s var(--ease);border-top:3px solid var(--gold-500);display:flex;flex-direction:column;text-decoration:none;}
+.structure-card:hover{transform:translateY(-6px);}
+.structure-photo{aspect-ratio:16/10;position:relative;overflow:hidden;}
+.structure-photo img{width:100%;height:100%;object-fit:cover;}
+.structure-photo-emblem{background:var(--navy-950);display:grid;place-items:center;}
+.structure-photo-emblem img{object-fit:contain;padding:18px;}
+.structure-photo-emblem::after{background:linear-gradient(0deg,rgba(7,27,48,.18),transparent 72%);}
+.structure-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,27,48,.85),rgba(10,37,64,.15));}
+.structure-card .icon{width:32px;height:32px;color:var(--gold-300);position:absolute;bottom:12px;left:16px;z-index:2;}
+.structure-body{padding:22px 22px 26px;}
+.structure-card h3{color:var(--white);font-size:15.5px;letter-spacing:.03em;margin-bottom:10px;line-height:1.3;}
+.structure-card p{color:var(--gray-300);font-size:13px;}
+.structure-card .num{position:absolute;top:14px;right:18px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.7);z-index:2;}
+.structure-subhead{margin:32px 0 18px;}
+.structure-subhead h3{color:var(--white);font-size:20px;}
+.structure-org-head{margin-top:42px;}
+.structure-org-head p{margin-top:7px;color:var(--gray-300);font-size:13px;}
+.state-org-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.state-org-card{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;min-height:148px;padding:18px;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.17);border-left:3px solid var(--gold-500);color:var(--navy-900);transition:transform .2s,border-color .2s,background .2s;}
+.state-org-card:hover{transform:translateY(-3px);background:var(--white);border-left-color:var(--gold-300);}
+.state-org-seal{width:42px;height:42px;display:grid;place-items:center;background:var(--gray-50);border:1px solid var(--gray-100);}
+.state-org-seal img{width:30px;height:30px;object-fit:contain;}
+.state-org-copy h4{font:600 15px/1.3 'Oswald',sans-serif;text-transform:uppercase;color:var(--navy-900);}
+.state-org-copy p{margin-top:7px;color:var(--gray-700);font-size:12px;line-height:1.5;}
+.state-org-action{display:inline-flex;gap:8px;align-items:center;margin-top:12px;color:var(--navy-800);font:600 11px 'JetBrains Mono',monospace;text-transform:uppercase;border-bottom:1px solid var(--gold-500);padding-bottom:3px;}
+@media (max-width:860px){.state-org-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:560px){.state-org-grid{grid-template-columns:1fr;}.state-org-card{min-height:126px;}}

@@ -1,0 +1,11 @@
+/* ============================================================
+   CTA
+   ============================================================ */
+
+/* ---------- CTA band ---------- */
+.cta-band{background:linear-gradient(120deg,var(--navy-950),var(--navy-800));color:var(--white);padding:80px 0;position:relative;overflow:hidden;}
+.cta-band::before{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;border:1px solid rgba(198,161,91,.2);border-radius:50%;}
+.cta-band::after{content:"";position:absolute;right:-40px;top:-40px;width:280px;height:280px;border:1px solid rgba(198,161,91,.2);border-radius:50%;}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;position:relative;}
+.cta-inner h2{color:var(--white);font-size:clamp(24px,3vw,34px);max-width:520px;}
+.cta-inner p{color:var(--gray-300);margin-top:10px;max-width:480px;font-size:15px;}

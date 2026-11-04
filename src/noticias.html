@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-CV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arquivo completo de notícias das Forças Armadas de Cabo Verde.">
+<meta name="theme-color" content="#0A2540">
+<title>Notícias — Forças Armadas de Cabo Verde</title>
+<link rel="icon" type="image/png" href="assets/images/logo-fa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Cinzel:wght@600;700&family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base/base.css?v=202611021400">
+<link rel="stylesheet" href="css/components/header.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/news.css?v=202611021400">
+<link rel="stylesheet" href="css/components/footer.css?v=202611021400">
+<link rel="stylesheet" href="css/base/responsive.css?v=202611021400">
+<link rel="stylesheet" href="css/components/page-common.css?v=202611021400"><link rel="stylesheet" href="css/pages/noticias.css?v=202611021400"><link rel="stylesheet" href="css/sections/documentos.css?v=202611021400">
+</head>
+
+<!-- MASTER PAGE: navbar (master.html) -->
+<div id="master-navbar"></div>
+
+<a id="top"></a>
+
+
+<section class="page-hero" style="padding:150px 0 50px;">
+  <div class="container page-hero-inner">
+    <img class="page-hero-crest" src="assets/images/logo-fa.png" alt="Emblema Oficial das Forças Armadas de Cabo Verde">
+    <div class="page-hero-copy">
+      <h1>Notícias</h1>
+    </div>
+  </div>
+</section>
+
+<section class="news-hub">
+  <div class="container">
+    <div class="news-tabs" role="tablist" aria-label="Conteúdos de notícias">
+      <button class="news-tab active" id="tab-ultimas" data-tab="ultimas" role="tab" aria-selected="true" aria-controls="panel-ultimas">Últimas Notícias</button>
+      <button class="news-tab" id="tab-documentos" data-tab="documentos" role="tab" aria-selected="false" aria-controls="panel-documentos">Documentação</button>
+      <button class="news-tab" id="tab-comunicados" data-tab="comunicados" role="tab" aria-selected="false" aria-controls="panel-comunicados">Comunicados de Imprensa</button>
+      <button class="news-tab" id="tab-alertas" data-tab="alertas" role="tab" aria-selected="false" aria-controls="panel-alertas">Alertas</button>
+    </div>
+
+    <div class="news-panel active" id="panel-ultimas" data-panel="ultimas" role="tabpanel" aria-labelledby="tab-ultimas">
+      <div class="noticias-filters-row">
+        <div class="filters" id="noticias-page-filters">
+          <button class="filter-btn active" data-filter="Todas">Todas</button>
+          <button class="filter-btn" data-filter="Cerimónias">Cerimónias</button>
+          <button class="filter-btn" data-filter="Desporto">Desporto</button>
+          <button class="filter-btn" data-filter="Formação">Formação</button>
+          <button class="filter-btn" data-filter="Comunicados">Comunicados</button>
+        </div>
+        <div class="noticias-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="noticias-page-search" placeholder="Pesquisar notícias...">
+        </div>
+      </div>
+      <div class="noticias-full-grid" id="noticias-full-grid"></div>
+    </div>
+
+    <div class="news-panel" id="panel-documentos" data-panel="documentos" role="tabpanel" aria-labelledby="tab-documentos">
+      <div class="docs-library" id="noticias-docs-grid">
+        <aside class="docs-cats" aria-label="Categorias de legislação"><p class="docs-cats-title">Legislação</p><div class="docs-cats-list" role="tablist" aria-orientation="vertical">
+          <button type="button" class="docs-cat" id="doccat-conceito-estrategico-da-defesa-nacional" data-cat="conceito-estrategico-da-defesa-nacional" role="tab" aria-selected="false" aria-controls="docpanel-conceito-estrategico-da-defesa-nacional"><span class="docs-cat-num">01</span><span class="docs-cat-name">Conceito Estratégico da Defesa Nacional</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat is-active" id="doccat-diplomas-diversos" data-cat="diplomas-diversos" role="tab" aria-selected="true" aria-controls="docpanel-diplomas-diversos"><span class="docs-cat-num">02</span><span class="docs-cat-name">Diplomas Diversos</span><span class="docs-cat-count">4</span></button>
+<button type="button" class="docs-cat" id="doccat-estatuto-dos-militares" data-cat="estatuto-dos-militares" role="tab" aria-selected="false" aria-controls="docpanel-estatuto-dos-militares"><span class="docs-cat-num">03</span><span class="docs-cat-name">Estatuto dos Militares</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-fundacao-social-das-forcas-armadas" data-cat="fundacao-social-das-forcas-armadas" role="tab" aria-selected="false" aria-controls="docpanel-fundacao-social-das-forcas-armadas"><span class="docs-cat-num">04</span><span class="docs-cat-name">Fundação Social das Forças Armadas</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-heraldica-e-datas-comemorativas" data-cat="heraldica-e-datas-comemorativas" role="tab" aria-selected="false" aria-controls="docpanel-heraldica-e-datas-comemorativas"><span class="docs-cat-num">05</span><span class="docs-cat-name">Heráldica e Datas Comemorativas</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-identificacao-militar" data-cat="identificacao-militar" role="tab" aria-selected="false" aria-controls="docpanel-identificacao-militar"><span class="docs-cat-num">06</span><span class="docs-cat-name">Identificação Militar</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-justica-e-disciplina" data-cat="justica-e-disciplina" role="tab" aria-selected="false" aria-controls="docpanel-justica-e-disciplina"><span class="docs-cat-num">07</span><span class="docs-cat-name">Justiça e Disciplina</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-leis-fundamentais" data-cat="leis-fundamentais" role="tab" aria-selected="false" aria-controls="docpanel-leis-fundamentais"><span class="docs-cat-num">08</span><span class="docs-cat-name">Leis Fundamentais</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-organizacao-e-efetivos" data-cat="organizacao-e-efetivos" role="tab" aria-selected="false" aria-controls="docpanel-organizacao-e-efetivos"><span class="docs-cat-num">09</span><span class="docs-cat-name">Organização e Efetivos</span><span class="docs-cat-count">6</span></button>
+<button type="button" class="docs-cat" id="doccat-servico-militar" data-cat="servico-militar" role="tab" aria-selected="false" aria-controls="docpanel-servico-militar"><span class="docs-cat-num">10</span><span class="docs-cat-name">Serviço Militar</span><span class="docs-cat-count">2</span></button>
+<button type="button" class="docs-cat" id="doccat-servidoes-militares" data-cat="servidoes-militares" role="tab" aria-selected="false" aria-controls="docpanel-servidoes-militares"><span class="docs-cat-num">11</span><span class="docs-cat-name">Servidões militares</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-uniformes" data-cat="uniformes" role="tab" aria-selected="false" aria-controls="docpanel-uniformes"><span class="docs-cat-num">12</span><span class="docs-cat-name">Uniformes</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-medalhas" data-cat="medalhas" role="tab" aria-selected="false" aria-controls="docpanel-medalhas"><span class="docs-cat-num">13</span><span class="docs-cat-name">Medalhas</span><span class="docs-cat-count">0</span></button>
+<button type="button" class="docs-cat" id="doccat-programa-soldado-cidadao" data-cat="programa-soldado-cidadao" role="tab" aria-selected="false" aria-controls="docpanel-programa-soldado-cidadao"><span class="docs-cat-num">14</span><span class="docs-cat-name">Programa Soldado Cidadão</span><span class="docs-cat-count">2</span></button>
+        </div></aside>
+        <div class="docs-panels">
+          <section class="docs-panel" id="docpanel-conceito-estrategico-da-defesa-nacional" role="tabpanel" aria-labelledby="doccat-conceito-estrategico-da-defesa-nacional" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Conceito Estratégico da Defesa Nacional</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel is-active" id="docpanel-diplomas-diversos" role="tabpanel" aria-labelledby="doccat-diplomas-diversos"><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Diplomas Diversos</h3><span class="docs-panel-count">4 documentos</span></header><div class="docs-grid docs-grid--cat"><a href="assets/documentos/diplomas-diversos/despacho-n-o-9-2026-nomeacao-de-comandos.pdf" class="doc-card" data-doc-title="Despacho n.º 9/2026 — Nomeação de comandos"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Despacho n.º 9/2026 — Nomeação de comandos</h4><span class="doc-meta">B.O. · 2026</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/diplomas-diversos/despacho-n-o-10-2026-comando-da-guarda-nacional.pdf" class="doc-card" data-doc-title="Despacho n.º 10/2026 — Comando da Guarda Nacional"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Despacho n.º 10/2026 — Comando da Guarda Nacional</h4><span class="doc-meta">B.O. · 30/01/2026</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/diplomas-diversos/regulamento-do-conselho-de-classe-fa.pdf" class="doc-card" data-doc-title="Regulamento do Conselho de Classe FA"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Regulamento do Conselho de Classe FA</h4><span class="doc-meta">B.O. · 06/11/2006</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/diplomas-diversos/boletim-oficial-da-republica-de-cabo-verde.pdf" class="doc-card" data-doc-title="Boletim Oficial da República de Cabo Verde"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Boletim Oficial da República de Cabo Verde</h4><span class="doc-meta">Arquivo oficial BOE</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a></div></section>
+<section class="docs-panel" id="docpanel-estatuto-dos-militares" role="tabpanel" aria-labelledby="doccat-estatuto-dos-militares" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Estatuto dos Militares</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-fundacao-social-das-forcas-armadas" role="tabpanel" aria-labelledby="doccat-fundacao-social-das-forcas-armadas" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Fundação Social das Forças Armadas</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-heraldica-e-datas-comemorativas" role="tabpanel" aria-labelledby="doccat-heraldica-e-datas-comemorativas" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Heráldica e Datas Comemorativas</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-identificacao-militar" role="tabpanel" aria-labelledby="doccat-identificacao-militar" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Identificação Militar</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-justica-e-disciplina" role="tabpanel" aria-labelledby="doccat-justica-e-disciplina" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Justiça e Disciplina</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-leis-fundamentais" role="tabpanel" aria-labelledby="doccat-leis-fundamentais" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Leis Fundamentais</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-organizacao-e-efetivos" role="tabpanel" aria-labelledby="doccat-organizacao-e-efetivos" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Organização e Efetivos</h3><span class="docs-panel-count">6 documentos</span></header><div class="docs-grid docs-grid--cat"><a href="assets/documentos/organizacao-e-efetivos/organica-do-estado-maior-das-forcas-armadas-emfa.pdf" class="doc-card" data-doc-title="Orgânica do Estado-Maior das Forças Armadas (EMFA)"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Orgânica do Estado-Maior das Forças Armadas (EMFA)</h4><span class="doc-meta">B.O. · 26/01/2009</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/organizacao-e-efetivos/decreto-lei-n-o-12-2026-organica-das-forcas-armadas.pdf" class="doc-card" data-doc-title="Decreto-Lei n.º 12/2026 — Orgânica das Forças Armadas"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Decreto-Lei n.º 12/2026 — Orgânica das Forças Armadas</h4><span class="doc-meta">B.O. · 13/03/2026</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/organizacao-e-efetivos/decreto-regulamentar-organizacao-da-guarda-nacional.pdf" class="doc-card" data-doc-title="Decreto Regulamentar — Organização da Guarda Nacional"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Decreto Regulamentar — Organização da Guarda Nacional</h4><span class="doc-meta">B.O. · 07/12/2012</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/organizacao-e-efetivos/quadro-de-pessoal-das-forcas-armadas.pdf" class="doc-card" data-doc-title="Quadro de Pessoal das Forças Armadas"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Quadro de Pessoal das Forças Armadas</h4><span class="doc-meta">Documento oficial</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/organizacao-e-efetivos/despacho-de-criacao-da-guarda-costeira.pdf" class="doc-card" data-doc-title="Despacho de Criação da Guarda Costeira"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Despacho de Criação da Guarda Costeira</h4><span class="doc-meta">Documento oficial</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/organizacao-e-efetivos/competencias-da-escola-militar.pdf" class="doc-card" data-doc-title="Competências da Escola Militar"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Competências da Escola Militar</h4><span class="doc-meta">B.O. · 12/01/2009</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a></div></section>
+<section class="docs-panel" id="docpanel-servico-militar" role="tabpanel" aria-labelledby="doccat-servico-militar" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Serviço Militar</h3><span class="docs-panel-count">2 documentos</span></header><div class="docs-grid docs-grid--cat"><a href="assets/documentos/servico-militar/lei-do-servico-militar-decreto-legislativo-n-o-6-93.pdf" class="doc-card" data-doc-title="Lei do Serviço Militar — Decreto-Legislativo n.º 6/93"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Lei do Serviço Militar — Decreto-Legislativo n.º 6/93</h4><span class="doc-meta">24/05/1993</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/servico-militar/objecao-de-consciencia-decreto-legislativo-n-o-7-93.pdf" class="doc-card" data-doc-title="Objeção de Consciência — Decreto-Legislativo n.º 7/93"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Objeção de Consciência — Decreto-Legislativo n.º 7/93</h4><span class="doc-meta">24/05/1993</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a></div></section>
+<section class="docs-panel" id="docpanel-servidoes-militares" role="tabpanel" aria-labelledby="doccat-servidoes-militares" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Servidões militares</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-uniformes" role="tabpanel" aria-labelledby="doccat-uniformes" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Uniformes</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-medalhas" role="tabpanel" aria-labelledby="doccat-medalhas" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Medalhas</h3><span class="docs-panel-count">0 documentos</span></header><div class="docs-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><p>Os documentos desta categoria serão publicados em breve.</p></div></section>
+<section class="docs-panel" id="docpanel-programa-soldado-cidadao" role="tabpanel" aria-labelledby="doccat-programa-soldado-cidadao" hidden><header class="docs-panel-head"><span class="docs-panel-kicker">Legislação</span><h3>Programa Soldado Cidadão</h3><span class="docs-panel-count">2 documentos</span></header><div class="docs-grid docs-grid--cat"><a href="assets/documentos/programa-soldado-cidadao/resolucao-n-o-34-2007-criacao-do-programa-soldado-cidadao.pdf" class="doc-card" data-doc-title="Resolução n.º 34/2007 — Criação do Programa Soldado Cidadão"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Resolução n.º 34/2007 — Criação do Programa Soldado Cidadão</h4><span class="doc-meta">B.O. · 22/10/2007</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a><a href="assets/documentos/programa-soldado-cidadao/resolucao-n-o-177-x-2025-reestruturacao-do-psc.pdf" class="doc-card" data-doc-title="Resolução n.º 177/X/2025 — Reestruturação do PSC"><svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><div><h4>Resolução n.º 177/X/2025 — Reestruturação do PSC</h4><span class="doc-meta">B.O. I Série n.º 51 · 23/06/2025</span></div><span class="doc-dl" aria-hidden="true">PDF</span></a></div></section>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-panel" id="panel-comunicados" data-panel="comunicados" role="tabpanel" aria-labelledby="tab-comunicados">
+      <div class="noticias-full-grid" id="comunicados-grid"></div>
+    </div>
+
+    <div class="news-panel" id="panel-alertas" data-panel="alertas" role="tabpanel" aria-labelledby="tab-alertas">
+      <div class="alert-status">
+        <span class="alert-dot" aria-hidden="true"></span>
+        <div><strong>Sem alertas ativos neste momento</strong><p>Os alertas oficiais das Forças Armadas de Cabo Verde são publicados nesta área assim que forem emitidos pelos comandos competentes.</p></div>
+      </div>
+      <div class="alert-grid">
+        <article class="alert-card"><span class="alert-kind">Segurança marítima</span><h3>Avisos à navegação</h3><p>Informação sobre áreas de exercício, condições do mar e restrições temporárias ao largo do arquipélago.</p><a href="contactos.html">Contactar a Guarda Costeira</a></article>
+        <article class="alert-card"><span class="alert-kind">Proteção civil</span><h3>Alertas meteorológicos</h3><p>Acompanhamento das condições meteorológicas e das recomendações oficiais para a população.</p><a href="contactos.html">Contactar a instituição</a></article>
+        <article class="alert-card"><span class="alert-kind">Comunicação institucional</span><h3>Comunicados urgentes</h3><p>Alterações de última hora a cerimónias, incorporações, concursos e serviços ao cidadão.</p><a href="noticias.html#comunicados">Ver comunicados de imprensa</a></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MASTER PAGE: footer (master.html) -->
+<div id="master-footer"></div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/core/master-data.js?v=202611021400"></script>
+<script src="js/core/master.js?v=202611021400"></script>
+<script src="js/core/config.js?v=202611021400"></script>
+<script src="js/core/api.js?v=202611021400"></script><script src="js/core/live.js?v=202611021400"></script><script src="js/effects/index.js?v=202611021400"></script><script src="js/effects/fade.js?v=202611021400"></script><script src="js/effects/slide.js?v=202611021400"></script><script src="js/effects/zoom.js?v=202611021400"></script><script src="js/effects/parallax.js?v=202611021400"></script><script src="js/effects/hover.js?v=202611021400"></script><script src="js/effects/reveal.js?v=202611021400"></script><script src="js/effects/loading.js?v=202611021400"></script><script src="js/core/cms.js?v=202611021400"></script><script src="js/core/helpers.js?v=202611021400"></script>
+<script src="js/core/toast.js?v=202611021400"></script>
+<script src="js/core/reveal.js?v=202611021400"></script>
+<script src="js/components/mobile-nav.js?v=202611021400"></script>
+<script src="js/components/header-scroll.js?v=202611021400"></script>
+<script src="js/components/search.js?v=202611021400"></script>
+<script src="js/data/news-data.js?v=202611021400"></script>
+<script src="js/pages/noticias.js?v=202611021400"></script>
+</html>

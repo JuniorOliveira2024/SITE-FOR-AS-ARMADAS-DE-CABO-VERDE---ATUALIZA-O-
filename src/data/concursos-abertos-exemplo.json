@@ -1,0 +1,26 @@
+[
+  {
+    "ref": "FA-2026/014",
+    "title": "Concurso para Sargentos — Administração Militar",
+    "description": "Admissão de candidatos para o Curso de Formação de Sargentos, especialidade de Administração Militar, na Escola Militar.",
+    "status": "aberto",
+    "deadline": "2026-09-30",
+    "location": "Praia, Santiago"
+  },
+  {
+    "ref": "FA-2026/021",
+    "title": "Concurso para Praças — Guarda Costeira (Marinharia)",
+    "description": "Recrutamento de praças para a componente naval da Guarda Costeira, com formação inicial em operações marítimas.",
+    "status": "aberto",
+    "deadline": "2026-10-15",
+    "location": "Mindelo, São Vicente"
+  },
+  {
+    "ref": "FA-2026/027",
+    "title": "Técnicos de Saúde Militar — Serviço de Saúde",
+    "description": "Concurso para técnicos de enfermagem e apoio clínico, para reforço da Policlínica Militar e enfermarias regionais.",
+    "status": "brevemente",
+    "deadline_note": "Abertura prevista: Nov/2026",
+    "location": "Diversas Regiões"
+  }
+]

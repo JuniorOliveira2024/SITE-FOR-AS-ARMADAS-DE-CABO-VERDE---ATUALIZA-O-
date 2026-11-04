@@ -1,0 +1,42 @@
+[
+  {
+    "id": "posse-cemfa",
+    "title": "Contra-Almirante Manuel António Pereira Semedo toma posse como novo Chefe do Estado-Maior das Forças Armadas",
+    "excerpt": "O Presidente da República e Comandante Supremo das Forças Armadas, Dr. José Maria Pereira Neves, presidiu à cerimónia no Palácio da Presidência, marcando a transição de comando à frente da instituição.",
+    "category": "Cerimónias",
+    "tag": "Tomada de Posse",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pal%C3%A1cio_do_governo_(11223820464).jpg",
+    "featured": true,
+    "published_at": "2025-11-08T10:00:00+00:00"
+  },
+  {
+    "id": "cimmb-incorporacao",
+    "title": "CIMMB entra na fase final da 2ª Incorporação de 2025, com 289 recrutas",
+    "excerpt": "Entre os recrutas do Centro de Instrução Militar do Morro Branco, nove são mulheres, na etapa decisiva da preparação militar.",
+    "category": "Formação",
+    "tag": "Formação",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanonen_vor_Kaserne_Quartel_Jaime_Mota_Plato_Praia,_Santiago.JPG",
+    "featured": false,
+    "published_at": "2025-11-14T09:00:00+00:00"
+  },
+  {
+    "id": "feira-saude",
+    "title": "Forças Armadas realizam Feira de Saúde no Plateau, no âmbito do Dia da Defesa Nacional",
+    "excerpt": "Iniciativa reuniu dezenas de cidadãos e mobilizou profissionais de saúde e militares na Rua Pedonal do Plateau, Cidade da Praia.",
+    "category": "Comunicados",
+    "tag": "Ação Cívica",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_flag_of_Cape_Verde_Islands_in_the_city_center.jpg",
+    "featured": false,
+    "published_at": "2025-11-15T09:00:00+00:00"
+  },
+  {
+    "id": "reconhecimento-fuzileiro",
+    "title": "Sargento Fuzileiro Nabil Sandro Medina Camará distinguido em curso na Marinha Portuguesa",
+    "excerpt": "Concluiu com elevado mérito o Curso de Formação de Oficiais Fuzileiros, recebendo quatro Diplomas de Prémio por excelência profissional, física e comportamental.",
+    "category": "Cerimónias",
+    "tag": "Reconhecimento",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Verde_Coast_Guard_patrol_vessel_Guardi%C3%A3o_(P511)_moored_in_Mindelo_on_9_August_2019_190809-N-UN744-0063.jpg",
+    "featured": false,
+    "published_at": "2025-11-12T09:00:00+00:00"
+  }
+]

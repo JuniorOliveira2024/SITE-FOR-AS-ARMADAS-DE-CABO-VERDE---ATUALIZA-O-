@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-CV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sítio oficial das Forças Armadas de Cabo Verde. Notícias, estrutura, formação militar, concursos de incorporação e serviço à Nação.">
+<meta name="theme-color" content="#0A2540">
+<meta property="og:title" content="Forças Armadas de Cabo Verde — Ao Serviço da Nação">
+<meta property="og:description" content="Sítio oficial das Forças Armadas de Cabo Verde. Disciplina, lealdade e serviço à Nação.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_CV">
+<title>Forças Armadas de Cabo Verde — Ao Serviço da Nação</title>
+<link rel="icon" type="image/png" href="assets/images/logo-fa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base/base.css?v=202611021400">
+<link rel="stylesheet" href="css/components/header.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/hero.css?v=202611021400">
+<link rel="stylesheet" href="css/base/layout.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/news.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/institucional.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/estrutura.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/concursos.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/formacao.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/multimedia.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/documentos.css?v=202611021400">
+<link rel="stylesheet" href="css/components/cta.css?v=202611021400">
+<link rel="stylesheet" href="css/components/footer.css?v=202611021400">
+<link rel="stylesheet" href="css/components/modals.css?v=202611021400">
+<link rel="stylesheet" href="css/base/responsive.css?v=202611021400">
+</head>
+<body class="home-page">
+
+<!-- MASTER PAGE: navbar (master.html) -->
+<div id="master-navbar"></div>
+
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="Destaque principal">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kanonen_vor_Kaserne_Quartel_Jaime_Mota_Plato_Praia,_Santiago.JPG" alt="">
+  </div>
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+  <img class="hero-watermark" src="assets/images/brasao-fa-hero.png" alt="" aria-hidden="true">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-kicker"><span class="dot"></span> <span data-i18n="hero.kicker">Estado-Maior · Praia, Cabo Verde</span></div>
+      <h1 class="reveal in" data-i18n-html="hero.h1">Disciplina, lealdade<br>e serviço à <em>Nação</em>.</h1>
+      <p class="lede" data-i18n="hero.lede">Instituição permanente e apartidária ao serviço da República de Cabo Verde, responsável pela defesa militar do país e pela salvaguarda da soberania nacional em terra e no mar desde 1967.</p>
+      <div class="hero-actions">
+        <a href="#noticias" class="btn btn-gold" data-i18n="hero.btn1">Últimas Notícias</a>
+        <a href="concursos.html" class="btn btn-outline" data-i18n="hero.btn2">Ingressar nas Fileiras</a>
+        <a href="historia.html" class="btn btn-outline" data-i18n="hero.btn3">Conhecer a Instituição</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENSAGEM DO CEMFA ============ -->
+<section id="mensagem-cemfa" class="cemfa-home" aria-labelledby="cemfa-home-titulo">
+  <div class="container cemfa-home-grid">
+    <figure class="cemfa-home-photo reveal">
+      <img src="assets/images/lideranca/cemfa-oficial.jpg" data-cms-src="cemfa_message.photo" alt="Fotografia oficial do Chefe do Estado-Maior das Forças Armadas" loading="lazy">
+      <figcaption><strong data-cms="cemfa_message.signature_name">Contra-Almirante Manuel António Pereira Semedo</strong><span data-cms="cemfa_message.signature_role">Chefe do Estado-Maior das Forças Armadas</span></figcaption>
+    </figure>
+    <div class="cemfa-home-copy reveal">
+      <div class="eyebrow">Mensagem do CEMFA</div>
+      <h2 id="cemfa-home-titulo" data-cms="cemfa_message.title">Mensagem de Sua Excelência o Chefe do Estado-Maior</h2>
+      <div class="cemfa-home-orn" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+      <p class="cemfa-home-salute" data-cms="cemfa_message.salute">Prezado Internauta,</p>
+      <p class="cemfa-home-text" data-cms="cemfa_message.teaser">É com humildade, honra e um profundo sentido de missão que o saudamos e lhe damos as boas-vindas ao portal oficial das Forças Armadas de Cabo Verde. Num mundo cada vez mais interligado, a comunicação institucional assume um papel determinante…</p>
+      <a href="cemfa.html#mensagem" class="btn btn-gold cemfa-home-more">Leia mais <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOTÍCIAS ============ -->
+<section id="noticias">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="sec.noticias.eyebrow">Notícias &amp; Comunicados</div>
+        <h2 data-i18n="sec.noticias.title">Atualidade institucional</h2>
+        <p data-i18n="sec.noticias.desc">Acompanhe as últimas ações, cerimónias e comunicados oficiais das Forças Armadas de Cabo Verde.</p>
+      </div>
+      <a href="noticias.html" class="btn btn-outline-dark" data-i18n="btn.ver_arquivo">Ver arquivo completo</a>
+    </div>
+
+    <div class="filters reveal" role="tablist" aria-label="Filtrar notícias">
+      <button class="filter-btn active" data-filter="Todas" data-i18n="filter.todas">Todas</button>
+      <button class="filter-btn" data-filter="Cerimónias" data-i18n="filter.cerimonias">Cerimónias</button>
+      <button class="filter-btn" data-filter="Desporto" data-i18n="filter.desporto">Desporto</button>
+      <button class="filter-btn" data-filter="Formação" data-i18n="filter.formacao">Formação</button>
+      <button class="filter-btn" data-filter="Comunicados" data-i18n="filter.comunicados">Comunicados</button>
+    </div>
+
+    <div class="news-grid">
+      <article class="news-card featured reveal" id="news-1" data-category="Cerimónias">
+        <div class="news-thumb">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pal%C3%A1cio_do_governo_(11223820464).jpg" alt="Palácio do Governo, Cidade da Praia">
+          <span class="tag">Tomada de Posse</span>
+        </div>
+        <div class="news-body">
+          <span class="news-date">08 de novembro de 2025</span>
+          <h3 class="news-title">Contra-Almirante Manuel António Pereira Semedo toma posse como novo Chefe do Estado-Maior das Forças Armadas</h3>
+          <p class="news-excerpt">O Presidente da República e Comandante Supremo das Forças Armadas, Dr. José Maria Pereira Neves, presidiu à cerimónia no Palácio da Presidência, marcando a transição de comando à frente da instituição.</p>
+          <a href="#" class="news-link" data-noticia="posse-cemfa">Ler notícia completa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+
+      <article class="news-card reveal" id="news-3" data-category="Formação">
+        <div class="news-thumb">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kanonen_vor_Kaserne_Quartel_Jaime_Mota_Plato_Praia,_Santiago.JPG" alt="Quartel militar, Plateau, Praia">
+          <span class="tag tag-navy">Formação</span>
+        </div>
+        <div class="news-body">
+          <span class="news-date">14 de novembro de 2025</span>
+          <h3 class="news-title">CIMMB entra na fase final da 2ª Incorporação de 2025, com 289 recrutas</h3>
+          <p class="news-excerpt">Entre os recrutas do Centro de Instrução Militar do Morro Branco, nove são mulheres, na etapa decisiva da preparação militar.</p>
+          <a href="#" class="news-link" data-noticia="cimmb-incorporacao">Ler mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="news-card reveal" id="news-4" data-category="Comunicados">
+        <div class="news-thumb">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_flag_of_Cape_Verde_Islands_in_the_city_center.jpg" alt="Bandeira de Cabo Verde, Praia">
+          <span class="tag">Ação Cívica</span>
+        </div>
+        <div class="news-body">
+          <span class="news-date">15 de novembro de 2025</span>
+          <h3 class="news-title">Forças Armadas realizam Feira de Saúde no Plateau, no âmbito do Dia da Defesa Nacional</h3>
+          <p class="news-excerpt">Iniciativa reuniu dezenas de cidadãos e mobilizou profissionais de saúde e militares na Rua Pedonal do Plateau, Cidade da Praia.</p>
+          <a href="#" class="news-link" data-noticia="feira-saude">Ler mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="news-card reveal" id="news-5" data-category="Cerimónias">
+        <div class="news-thumb">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Verde_Coast_Guard_patrol_vessel_Guardi%C3%A3o_(P511)_moored_in_Mindelo_on_9_August_2019_190809-N-UN744-0063.jpg" alt="Navio Guardião, Guarda Costeira de Cabo Verde, Mindelo">
+          <span class="tag tag-gold">Reconhecimento</span>
+        </div>
+        <div class="news-body">
+          <span class="news-date">12 de novembro de 2025</span>
+          <h3 class="news-title">Sargento Fuzileiro Nabil Sandro Medina Camará distinguido em curso na Marinha Portuguesa</h3>
+          <p class="news-excerpt">Concluiu com elevado mérito o Curso de Formação de Oficiais Fuzileiros, recebendo quatro Diplomas de Prémio por excelência profissional, física e comportamental.</p>
+          <a href="#" class="news-link" data-noticia="reconhecimento-fuzileiro">Ler mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="archive-toggle-row reveal">
+      <button class="btn btn-outline-dark" id="btn-toggle-archive">Ver notícias mais antigas <svg class="chev-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+    </div>
+
+    <div class="archive-list" id="archive-list" style="display:none;">
+      <div class="archive-row" data-noticia="exercicio-busca-salvamento">
+        <span class="archive-date mono">20 de outubro de 2025</span>
+        <span class="archive-title">Forças Armadas participam em exercício conjunto de busca e salvamento marítimo</span>
+        <span class="archive-cat">Comunicados</span>
+        <a href="#" class="archive-link" data-noticia="exercicio-busca-salvamento">Ler mais →</a>
+      </div>
+      <div class="archive-row" data-noticia="escola-militar-nova-turma">
+        <span class="archive-date mono">05 de outubro de 2025</span>
+        <span class="archive-title">Escola Militar recebe nova turma de candidatos a Oficiais</span>
+        <span class="archive-cat">Formação</span>
+        <a href="#" class="archive-link" data-noticia="escola-militar-nova-turma">Ler mais →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODAL: DETALHES DO CONCURSO/LEGISLAÇÃO ============ -->
+<div class="article-modal" id="detail-modal" role="dialog" aria-modal="true" aria-label="Ver detalhes">
+  <div class="article-modal-backdrop" id="detail-modal-backdrop"></div>
+  <div class="article-modal-panel">
+    <button class="article-modal-close" id="detail-modal-close" aria-label="Fechar">✕</button>
+    <div class="article-hero">
+      <img id="detail-image" src="" alt="">
+      <span class="tag" id="detail-tag"></span>
+    </div>
+    <div class="article-body">
+      <span class="news-date" id="detail-date"></span>
+      <h2 id="detail-title"></h2>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INSTITUCIONAL / MISSÃO ============ -->
+<section id="institucional" class="section-alt">
+  <div class="container split">
+    <div class="reveal">
+      <div class="eyebrow" data-i18n="sec.institucional.eyebrow">Institucional</div>
+      <h2 data-i18n="sec.institucional.title">Missão e Visão</h2>
+      <p data-cms="mission.p1">As Forças Armadas são uma instituição permanente e regular, compõem-se exclusivamente de cidadãos cabo-verdianos e estão estruturadas com base na hierarquia e na disciplina. As Forças Armadas estão subordinadas e obedecem aos competentes órgãos de soberania, nos termos da Constituição e da lei. Estão ao serviço da nação e são rigorosamente apartidárias, não podendo os seus membros na efetividade de serviço ou, sendo do quadro permanente, na situação de ativo, filiar-se em qualquer sindicato, partido ou associação política, nem exercer atividades político-partidárias de qualquer natureza.</p>
+      <p data-cms="mission.p2">A organização das Forças Armadas é única para todo o território nacional. Às Forças Armadas incumbe, em exclusivo, a execução da componente militar da defesa nacional, competindo-lhes assegurar a defesa militar da República contra qualquer ameaça ou agressão externas. As Forças Armadas desempenham também as missões que lhe forem atribuídas, nos termos da lei e nos seguintes quadros:</p>
+      <ul class="mission-list">
+        <li>Execução da declaração do estado de sítio ou de emergência;</li>
+        <li>Vigilância, fiscalização e defesa do espaço aéreo e marítimo nacionais, designadamente no que se refere à utilização das águas arquipelágicas, do mar territorial e da zona económica exclusiva e a operações de busca e salvamento, bem como, em colaboração com as autoridades policiais e outras competentes e sob a responsabilidade destas, à proteção do meio ambiente e do património arqueológico submarino, à prevenção e repressão da poluição marítima, do tráfico de estupefacientes e armas, do contrabando e outras formas de criminalidade organizada;</li>
+        <li>Colaboração em tarefas relacionadas com a satisfação de necessidades básicas e a melhoria das condições de vida das populações;</li>
+        <li>Participação no sistema nacional de proteção civil;</li>
+        <li>Defesa das instituições democráticas e do ordenamento constitucional;</li>
+        <li>Desempenho de outras missões de interesse público.</li>
+      </ul>
+      <p data-cms="mission.p3">Qualquer intervenção das Forças Armadas só poderá ter lugar à ordem dos comandos militares competentes, cuja atuação se deve pautar pela obediência estrita às decisões e instruções dos órgãos de soberania, nos termos da Constituição e da lei. Será assegurada de forma permanente a preparação das Forças Armadas, para a Defesa do País e o seu funcionamento em tempo de paz deve ter em vista a preparação para realizar as missões que constitucionalmente lhe incumbem. A atuação das Forças Armadas desenvolve-se no respeito pela Constituição e pela lei, em execução da política de Defesa Nacional conforme for definida pelos órgãos de soberania competentes e de forma a corresponder às orientações estabelecidas nos níveis seguintes: Conceito Estratégico de Defesa Nacional; Conceito Estratégico Militar; Missões das Forças Armadas; Sistemas de Forças e Dispositivo dos Sistemas de Forças.</p>
+      <ul class="split-list">
+        <li><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> <strong>Organização única para todo o território nacional</strong></li>
+        <li><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> <strong>Subordinação plena aos órgãos de soberania</strong></li>
+        <li><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> <strong>Preparação permanente para a Defesa do País, em tempo de paz e de crise</strong></li>
+      </ul>
+    </div>
+    <figure class="split-media mission-frame reveal" id="mission-frame">
+      <img src="assets/images/institucional/brasao-oficial-fa.png" alt="Brasão oficial das Forças Armadas de Cabo Verde">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ESTRUTURA ============ -->
+<section id="estrutura" class="section-navy">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="sec.estrutura.eyebrow">Organização</div>
+        <h2 data-i18n="sec.estrutura.title">Estrutura e comandos</h2>
+        <p data-i18n="sec.estrutura.desc">Órgãos centrais e regionais que compõem a organização das Forças Armadas, sob a direção do Chefe do Estado-Maior (CEMFA).</p>
+      </div>
+    </div>
+    <div class="section-head reveal structure-subhead"><div><div class="eyebrow">Comandos</div><h3>Comandos principais</h3></div></div>
+    <div class="structure-grid">
+      <a href="guarda-nacional.html" class="structure-card reveal" id="guarda-nacional">
+        <span class="num">01</span>
+        <div class="structure-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kanonen_vor_Kaserne_Quartel_Jaime_Mota_Plato_Praia,_Santiago.JPG" alt="Quartel Jaime Mota, Plateau, Praia"></div>
+        <div class="structure-body">
+          <h3 data-i18n="estrutura.card1.title">Comando da Guarda Nacional</h3>
+          <p>Principal componente das Forças Armadas para a defesa militar do país, com operações terrestres e anfíbias e apoio à segurança interna, através dos Comandos das três Regiões Militares.</p>
+        </div>
+      </a>
+      <a href="guarda-costeira.html" class="structure-card reveal" id="guarda-costeira">
+        <span class="num">02</span>
+        <div class="structure-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Verde_Coast_Guard_patrol_vessel_Guardi%C3%A3o_(P511)_moored_in_Mindelo_on_9_August_2019_190809-N-UN744-0063.jpg" alt="Navio Guardião (P511), Guarda Costeira, Mindelo"></div>
+        <div class="structure-body">
+          <h3 data-i18n="estrutura.card3.title">Comando da Guarda Costeira</h3>
+          <p>Responsável pela defesa e proteção dos interesses económicos nacionais no mar sob jurisdição nacional e pelo apoio aéreo e naval às operações terrestres e anfíbias.</p>
+        </div>
+      </a>
+      <a href="comando-pessoal.html" class="structure-card reveal" id="comando-pessoal">
+        <span class="num">03</span>
+        <div class="structure-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rua_Pedonal,_Praia,_Cabo_Verde_01.jpg" alt="Plateau, Cidade da Praia"></div>
+        <div class="structure-body">
+          <h3 data-i18n="estrutura.card2.title">Comando do Pessoal</h3>
+          <p>Assegura as atividades relacionadas com o pessoal das Forças Armadas, de acordo com os planos e diretivas do CEMFA.</p>
+        </div>
+      </a>
+      <a href="comando-logistica.html" class="structure-card reveal" id="comando-logistica">
+        <span class="num">04</span>
+        <div class="structure-photo structure-photo-emblem"><img src="assets/images/logo-fa-large.png" alt="Emblema Oficial das Forças Armadas de Cabo Verde"></div>
+        <div class="structure-body">
+          <h3 data-i18n="estrutura.card4.title">Comando da Logística</h3>
+          <p>Órgão central responsável pela administração dos recursos materiais e financeiros das Forças Armadas.</p>
+        </div>
+      </a>
+    </div>
+    <div class="section-head reveal structure-subhead structure-org-head">
+      <div><div class="eyebrow">Estado-Maior</div><h3>Órgãos centrais</h3><p>Órgãos e estabelecimentos de apoio ao comando central das Forças Armadas.</p></div>
+    </div>
+    <div class="state-org-grid">
+      <a class="state-org-card reveal" href="inspecao-forcas-armadas.html"><span class="state-org-seal"><img src="assets/images/logo-fa.png" alt=""></span><span class="state-org-copy"><h4>Inspeção das Forças Armadas</h4><p>Órgão do Estado-Maior. Missão e competências oficiais a completar.</p><span class="state-org-action">Ver órgão <span aria-hidden="true">→</span></span></span></a>
+      <a class="state-org-card reveal" href="direcao-informacoes-militares.html"><span class="state-org-seal"><img src="assets/images/logo-fa.png" alt=""></span><span class="state-org-copy"><h4>Direção de Informações Militares</h4><p>Direção central. Apresentação institucional a completar.</p><span class="state-org-action">Ver órgão <span aria-hidden="true">→</span></span></span></a>
+      <a class="state-org-card reveal" href="escola-militar.html"><span class="state-org-seal"><img src="assets/images/logo-fa.png" alt=""></span><span class="state-org-copy"><h4>Escola Militar</h4><p>Formação militar e estudos doutrinários, técnicos e científico-militares.</p><span class="state-org-action">Ver órgão <span aria-hidden="true">→</span></span></span></a>
+      <a class="state-org-card reveal" href="planeamento-estrategico.html"><span class="state-org-seal"><img src="assets/images/logo-fa.png" alt=""></span><span class="state-org-copy"><h4>Centro de Planeamento Estratégico Militar</h4><p>Órgão central. Atribuições detalhadas a completar com informação institucional.</p><span class="state-org-action">Ver órgão <span aria-hidden="true">→</span></span></span></a>
+      <a class="state-org-card reveal" href="comando-guarnicao.html"><span class="state-org-seal"><img src="assets/images/logo-fa.png" alt=""></span><span class="state-org-copy"><h4>Comando da Guarnição</h4><p>Órgão central. Apresentação institucional a completar.</p><span class="state-org-action">Ver órgão <span aria-hidden="true">→</span></span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMAÇÃO / OPORTUNIDADES ============ -->
+<section id="formacao" class="section-alt">
+  <div class="container">
+    <div class="section-head reveal oportunidades-head">
+      <div>
+        <div class="eyebrow" data-i18n="sec.concursos.eyebrow">Oportunidades</div>
+        <h2 data-i18n="sec.concursos.title">Oportunidades</h2>
+        <p data-i18n="sec.concursos.desc">Concursos, incorporação, serviço militar e formação profissional num só lugar.</p>
+      </div>
+      <a href="concursos.html" class="btn btn-outline-dark" data-i18n="btn.todos_concursos">Ver todas as oportunidades</a>
+    </div>
+    <div class="psc-feature reveal" id="psc">
+      <div class="psc-feature-media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rua_Pedonal,_Praia,_Cabo_Verde_01.jpg" alt="Ação cívica do Programa Soldado Cidadão, Praia">
+      </div>
+      <div class="psc-feature-body">
+        <span class="psc-badge">Programa de Destaque</span>
+        <h3 data-i18n="psc.title">Programa Soldado Cidadão</h3>
+        <p>Mais do que instrução militar, o Programa Soldado Cidadão prepara cada recruta para a vida em sociedade: cidadania, saúde, igualdade de género e competências técnico-profissionais, formando não só melhores militares, mas também melhores cidadãos para Cabo Verde.</p>
+        <div class="psc-pillars">
+          <span><svg class="psc-pillar-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v6"/></svg>Formação técnico-profissional</span>
+          <span><svg class="psc-pillar-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Educação cívica</span>
+          <span><svg class="psc-pillar-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"/><path d="M12 9v6"/><path d="M9 12h6"/></svg>Saúde e bem-estar</span>
+          <span><svg class="psc-pillar-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 21h14"/><path d="M5 7h14"/><path d="m5 7-3 7a3.5 3.5 0 0 0 6 0L5 7z"/><path d="m19 7-3 7a3.5 3.5 0 0 0 6 0l-3-7z"/></svg>Igualdade de género</span>
+        </div>
+        <a href="programa-soldado-cidadao.html" class="btn btn-gold" id="psc-saber-mais">Saber mais sobre o Programa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MULTIMÉDIA ============ -->
+<section id="multimedia">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="sec.multimedia.eyebrow">Multimédia</div>
+        <h2 data-i18n="sec.multimedia.title">Galeria institucional</h2>
+        <p data-i18n="sec.multimedia.desc">Fotografia e vídeo de cerimónias, operações e formação das Forças Armadas de Cabo Verde.</p>
+      </div>
+      <button class="btn btn-outline-dark" id="btn-toast-galeria" data-i18n="btn.ver_galeria">Ver galeria completa</button>
+    </div>
+    <div class="media-grid reveal" id="media-grid">
+      <button class="media-tile tall" data-caption="Instalações militares · Plateau, Praia" data-credit="Wikimedia Commons" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Kanonen_vor_Kaserne_Quartel_Jaime_Mota_Plato_Praia,_Santiago.JPG">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kanonen_vor_Kaserne_Quartel_Jaime_Mota_Plato_Praia,_Santiago.JPG" alt="Instalações militares, Plateau, Praia">
+        <div class="overlay"><span>Foto · Quartel Jaime Mota, Plateau</span></div>
+      </button>
+      <button class="media-tile wide" data-caption="Palácio do Governo · Cidade da Praia" data-credit="Wikimedia Commons" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Pal%C3%A1cio_do_governo_(11223820464).jpg">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pal%C3%A1cio_do_governo_(11223820464).jpg" alt="Palácio do Governo, Cidade da Praia">
+        <div class="overlay"><span>Foto · Tomada de Posse do CEMFA</span></div>
+      </button>
+      <button class="media-tile" data-caption="Navio-patrulha Guardião (P511) · Mindelo" data-credit="US Navy / Wikimedia Commons" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Verde_Coast_Guard_patrol_vessel_Guardi%C3%A3o_(P511)_moored_in_Mindelo_on_9_August_2019_190809-N-UN744-0063.jpg">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Verde_Coast_Guard_patrol_vessel_Guardi%C3%A3o_(P511)_moored_in_Mindelo_on_9_August_2019_190809-N-UN744-0063.jpg" alt="Navio Guardião, Guarda Costeira, Mindelo">
+        <div class="overlay"><span>Foto · Guarda Costeira</span></div>
+      </button>
+      <button class="media-tile" data-caption="Rua Pedonal · Plateau, Praia" data-credit="Wikimedia Commons" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Rua_Pedonal,_Praia,_Cabo_Verde_01.jpg">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rua_Pedonal,_Praia,_Cabo_Verde_01.jpg" alt="Rua Pedonal, Plateau, Praia">
+        <div class="overlay"><span>Foto · Dia da Defesa Nacional</span></div>
+      </button>
+      <button class="media-tile" data-caption="Bandeira Nacional · Plateau, Praia" data-credit="Wikimedia Commons" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/The_flag_of_Cape_Verde_Islands_in_the_city_center.jpg">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_flag_of_Cape_Verde_Islands_in_the_city_center.jpg" alt="Bandeira Nacional de Cabo Verde">
+        <div class="overlay"><span>Foto · Juramento à Bandeira</span></div>
+      </button>
+      <button class="media-tile" data-caption="Vista aérea do Porto da Praia" data-credit="Wikimedia Commons" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Praia-Vue_a%C3%A9rienne_du_port.jpg">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Praia-Vue_a%C3%A9rienne_du_port.jpg" alt="Vista aérea do Porto da Praia">
+        <div class="overlay"><span>Foto · Feira de Saúde</span></div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption"><span id="lightbox-caption-text"></span><span class="credit" id="lightbox-credit"></span></div>
+  </div>
+</div>
+
+<!-- ============ CTA ============ -->
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2 data-i18n="sec.cta.title">Pronto para servir Cabo Verde?</h2>
+      <p>Conheça os requisitos de incorporação, os prazos em curso e o percurso de formação no Centro de Instrução Militar do Morro Branco.</p>
+    </div>
+    <button class="btn btn-gold" id="btn-open-service-check">Consultar Incorporação</button>
+  </div>
+</section>
+
+<!-- ============ MODAL: CONSULTA DE SITUAÇÃO MILITAR ============ -->
+<div class="service-modal" id="service-modal" role="dialog" aria-modal="true" aria-label="Consultar situação militar">
+  <div class="service-modal-backdrop" id="service-modal-backdrop"></div>
+  <div class="service-modal-panel">
+    <button class="service-modal-close" id="service-modal-close" aria-label="Fechar">✕</button>
+
+    <div id="service-step-form">
+      <div class="eyebrow">Consulta de Incorporação</div>
+      <h3 class="service-modal-title">Qual é a sua situação militar?</h3>
+      <p class="service-modal-lede">Indique o seu ano de nascimento para saber se está sujeito ao Serviço Militar Obrigatório e qual a próxima data de apresentação prevista.</p>
+
+      <form id="service-form">
+        <label for="birth-year" class="service-label">Ano de nascimento</label>
+        <input type="number" id="birth-year" class="service-input" placeholder="Ex: 2007" min="1930" max="2026" required>
+
+        <label for="birth-sex" class="service-label" style="margin-top:16px;">Sexo</label>
+        <select id="birth-sex" class="service-input">
+          <option value="M">Masculino</option>
+          <option value="F">Feminino</option>
+        </select>
+
+        <button type="submit" class="btn btn-gold" style="margin-top:24px;width:100%;justify-content:center;">Consultar Situação</button>
+      </form>
+      <p class="service-disclaimer">⚠ Ferramenta de simulação informativa, baseada no ciclo regular de incorporação da CIMMB. Não substitui a confirmação oficial junto do Comando da sua Região Militar.</p>
+    </div>
+
+    <div id="service-step-declare" style="display:none;">
+      <div class="eyebrow">Consulta de Incorporação</div>
+      <h3 class="service-modal-title">Confirme os seus dados</h3>
+      <p class="service-modal-lede" id="declare-lede">Com base no seu ano de nascimento, encontra-se no escalão etário sujeito ao Serviço Militar Obrigatório. Confirme os dados abaixo para consultarmos a sua situação.</p>
+
+      <form id="service-declare-form">
+        <label for="full-name" class="service-label">Nome completo</label>
+        <input type="text" id="full-name" class="service-input" placeholder="Ex: António José Fortes Tavares" required>
+        <span class="field-error" id="name-error" style="display:none;">Introduza o nome completo (nome e apelido), apenas letras.</span>
+
+        <label class="service-label" style="margin-top:16px;">Já se apresentou ao Serviço Militar?</label>
+        <div class="service-radio-group">
+          <label class="service-radio"><input type="radio" name="presented" value="sim" required> Sim, já me apresentei</label>
+          <label class="service-radio"><input type="radio" name="presented" value="nao" required> Não, ainda não me apresentei</label>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="margin-top:24px;width:100%;justify-content:center;">Consultar Situação</button>
+      </form>
+      <p class="service-disclaimer">⚠ Ferramenta de simulação informativa. Não substitui a confirmação oficial junto do Comando da sua Região Militar.</p>
+    </div>
+
+    <div id="service-step-result" style="display:none;">
+      <div class="eyebrow" id="result-eyebrow">Resultado da Consulta</div>
+      <h3 class="service-modal-title" id="result-status-title">—</h3>
+      <div class="service-result-grid">
+        <div class="service-result-card">
+          <span class="src-label">Nome</span>
+          <span class="src-value" id="result-name">—</span>
+        </div>
+        <div class="service-result-card">
+          <span class="src-label">Idade atual</span>
+          <span class="src-value" id="result-age">—</span>
+        </div>
+        <div class="service-result-card">
+          <span class="src-label">Situação</span>
+          <span class="src-value" id="result-situation">—</span>
+        </div>
+        <div class="service-result-card">
+          <span class="src-label">Data de apresentação prevista</span>
+          <span class="src-value" id="result-date">—</span>
+        </div>
+        <div class="service-result-card">
+          <span class="src-label">Local de apresentação</span>
+          <span class="src-value" id="result-place">—</span>
+        </div>
+      </div>
+      <p class="service-result-note" id="result-note"></p>
+      <p class="service-disclaimer">⚠ Resultado simulado para fins de demonstração — a confirmação oficial da sua situação de recenseamento militar deve ser feita junto do Comando da sua Região Militar ou da Câmara Municipal da sua área de residência.</p>
+      <div class="service-result-actions">
+        <button class="btn btn-outline-dark" id="service-back-btn">← Nova consulta</button>
+        <a href="#cimmb" class="btn btn-gold" id="service-cimmb-link">Saber mais sobre o CIMMB</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MASTER PAGE: footer (master.html) -->
+<div id="master-footer"></div>
+
+<div class="toast" id="toast"></div>
+
+
+</body>
+<script src="js/core/master-data.js?v=202611021400"></script>
+<script src="js/core/master.js?v=202611021400"></script>
+<script src="js/core/config.js?v=202611021400"></script>
+<script src="js/core/api.js?v=202611021400"></script><script src="js/core/live.js?v=202611021400"></script><script src="js/effects/index.js?v=202611021400"></script><script src="js/effects/fade.js?v=202611021400"></script><script src="js/effects/slide.js?v=202611021400"></script><script src="js/effects/zoom.js?v=202611021400"></script><script src="js/effects/parallax.js?v=202611021400"></script><script src="js/effects/hover.js?v=202611021400"></script><script src="js/effects/reveal.js?v=202611021400"></script><script src="js/effects/loading.js?v=202611021400"></script><script src="js/core/cms.js?v=202611021400"></script>
+<script src="js/core/helpers.js?v=202611021400"></script>
+<script src="js/core/toast.js?v=202611021400"></script>
+<script src="js/core/reveal.js?v=202611021400"></script>
+<script src="js/components/news-filter.js?v=202611021400"></script>
+<script src="js/components/scrollspy.js?v=202611021400"></script>
+<script src="js/components/mobile-nav.js?v=202611021400"></script>
+<script src="js/components/header-scroll.js?v=202611021400"></script>
+<script src="js/components/search.js?v=202611021400"></script>
+<script src="js/components/lightbox.js?v=202611021400"></script>
+<script src="js/data/news-data.js?v=202611021400"></script>
+<script src="js/components/article-reader.js?v=202611021400"></script>
+<script src="js/components/detail-modal.js?v=202611021400"></script>
+<script src="js/components/archive-toggle.js?v=202611021400"></script>
+<script src="js/components/psc-carousel.js?v=202611021400"></script>
+<script src="js/core/i18n.js?v=202611021400"></script>
+<script src="js/components/job-application.js?v=202611021400"></script>
+<script src="js/components/military-service.js?v=202611021400"></script>
+<script src="js/components/backend-integration.js?v=202611021400"></script>
+<script src="js/components/clock.js?v=202611021400"></script>
+</html>

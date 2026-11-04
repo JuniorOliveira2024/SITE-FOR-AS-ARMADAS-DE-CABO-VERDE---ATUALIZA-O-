@@ -1,0 +1,168 @@
+/* ---------- páginas institucionais preparadas para conteúdo futuro ---------- */
+.institutional-page .page-hero{position:relative;padding:88px 0 72px;background:linear-gradient(120deg,var(--navy-950),var(--navy-800));color:var(--white);overflow:hidden;}
+.institutional-page .page-hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(198,161,91,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(198,161,91,.08) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 70% 30%,black 10%,transparent 70%);}
+.institutional-page .page-hero-inner{position:relative;z-index:1;max-width:900px;display:flex;align-items:center;gap:28px;}
+.institutional-page .page-hero-crest{width:92px;height:92px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 8px 16px rgba(0,0,0,.22));}
+.institutional-page .page-hero h1{color:var(--white);font-size:clamp(30px,4.4vw,50px);margin:0;line-height:1.16;}
+.institutional-page .page-hero p{color:var(--gray-300);font-size:16px;max-width:650px;margin:16px 0 0;}
+.institutional-page .placeholder-section{padding:76px 0;background:var(--white);}
+.institutional-page .placeholder-section:nth-of-type(even){background:var(--gray-50);}
+.institutional-page .placeholder-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.institutional-page .placeholder-card{min-height:174px;background:var(--white);border:1px solid var(--gray-100);border-top:3px solid var(--gold-500);padding:27px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 12px 28px -26px rgba(7,27,48,.45);}
+.institutional-page .placeholder-card h2{font-size:18px;color:var(--navy-900);margin:0;text-transform:none;letter-spacing:0;}
+.institutional-page .placeholder-card .content-slot{min-height:64px;margin-top:22px;border:1px dashed var(--gray-300);background:var(--gray-50);display:flex;align-items:center;padding:14px;color:var(--gray-500);font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.55;}
+.institutional-page .page-intro{max-width:760px;margin-bottom:34px;}
+.institutional-page .page-intro h2{color:var(--navy-900);margin-bottom:12px;}
+.institutional-page .page-intro p{color:var(--gray-700);font-size:15px;line-height:1.7;}
+.institutional-page .institutional-blocks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.institutional-page .institutional-block{background:var(--white);border:1px solid var(--gray-100);border-top:3px solid var(--gold-500);padding:24px;min-width:0;}
+.institutional-page .institutional-block h2{font-size:18px;letter-spacing:0;text-transform:none;color:var(--navy-900);margin-bottom:10px;}
+.institutional-page .institutional-block p{font-size:14px;color:var(--gray-700);line-height:1.7;margin-bottom:12px;}
+.institutional-page .institutional-block ul{list-style:none;display:grid;gap:8px;margin-top:12px;}
+.institutional-page .institutional-block li{font-size:13.5px;color:var(--gray-700);padding-left:17px;position:relative;}
+.institutional-page .institutional-block li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;background:var(--gold-500);}
+.institutional-page .institutional-block a.inline-link{display:inline-flex;margin:8px 10px 0 0;color:var(--navy-800);font-weight:700;text-decoration:underline;text-decoration-color:var(--gold-500);text-underline-offset:4px;}
+.institutional-page .profile-summary{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:center;margin-bottom:34px;padding:24px;background:var(--gray-50);border-left:4px solid var(--gold-500);}
+.institutional-page .profile-photo{aspect-ratio:4/5;background:var(--gray-100);display:grid;place-items:center;color:var(--gray-500);font:12px 'JetBrains Mono',monospace;text-align:center;padding:16px;}
+.institutional-page .profile-card{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:start;margin-top:14px;}
+.institutional-page .profile-card .profile-photo{aspect-ratio:4/5;}
+.institutional-page .profile-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.institutional-page .profile-fields div{padding:10px 12px;background:var(--gray-50);border-left:2px solid var(--gold-500);min-width:0;}
+.institutional-page .profile-fields dt{font:10px 'JetBrains Mono',monospace;text-transform:uppercase;color:var(--gray-500);margin-bottom:4px;}
+.institutional-page .profile-fields dd{font-size:13px;color:var(--navy-900);overflow-wrap:anywhere;}
+.institutional-page .responsible-section{margin:0 0 38px;}
+.institutional-page .responsible-section>h2{font-size:24px;margin:0 0 16px;color:var(--navy-900);}
+.institutional-page .responsible-card{display:grid;grid-template-columns:190px minmax(0,1fr);gap:22px;align-items:stretch;padding:22px;background:var(--gray-50);border:1px solid var(--gray-100);border-left:4px solid var(--gold-500);}
+.institutional-page .responsible-photo{min-height:220px;aspect-ratio:4/5;background:var(--gray-100);display:grid;place-items:center;overflow:hidden;}
+.institutional-page .responsible-photo-placeholder{max-width:140px;padding:18px;border:1px dashed var(--gray-500);color:var(--gray-500);font:11px 'JetBrains Mono',monospace;text-align:center;}
+.institutional-page .responsible-photo-image{width:100%;height:100%;object-fit:cover;}
+.institutional-page .responsible-card .profile-fields{align-content:start;}
+.institutional-page .timeline-list{display:grid;gap:14px;}
+.institutional-page .timeline-entry{border-left:3px solid var(--gold-500);padding:12px 16px;background:var(--gray-50);}
+.institutional-page .timeline-entry strong{display:block;font-family:'JetBrains Mono',monospace;color:var(--gold-500);font-size:12px;margin-bottom:5px;}
+.institutional-page .commemoration-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.institutional-page .commemoration-card{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px;background:var(--gray-50);border:1px solid var(--gray-100);border-left:3px solid var(--gold-500);min-width:0;}
+.institutional-page .commemoration-photo{min-height:150px;display:grid;place-items:center;padding:12px;background:var(--gray-100);color:var(--gray-500);font:10px 'JetBrains Mono',monospace;text-align:center;}
+.institutional-page .commemoration-copy>strong{font:11px 'JetBrains Mono',monospace;color:var(--gold-500);}
+.institutional-page .commemoration-copy h3{font-size:16px;letter-spacing:0;text-transform:none;margin:5px 0;color:var(--navy-900);}
+.institutional-page .commemoration-copy>span{display:block;font-size:11px;color:var(--gray-500);margin-bottom:8px;}
+.institutional-page .commemoration-copy p{font-size:12.5px;line-height:1.55;color:var(--gray-700);margin-top:7px;}
+.institutional-page .memory-page-intro{max-width:820px;margin:0 0 28px;}
+.institutional-page .memory-page-intro p{color:var(--gray-700);font-size:15px;line-height:1.75;}
+.institutional-page .cemfa-timeline{display:grid;gap:20px;position:relative;}
+.institutional-page .cemfa-timeline::before{content:"";position:absolute;top:16px;bottom:16px;left:15px;width:2px;background:var(--gold-500);opacity:.7;}
+.institutional-page .cemfa-record{position:relative;display:grid;grid-template-columns:30px 190px minmax(0,1fr);gap:18px;align-items:start;padding:22px;background:var(--white);border:1px solid var(--gray-100);border-left:4px solid var(--gold-500);}
+.institutional-page .cemfa-record::before{content:"";position:absolute;left:-25px;top:31px;width:12px;height:12px;border-radius:50%;background:var(--navy-900);border:3px solid var(--gold-500);z-index:1;}
+.institutional-page .cemfa-record-marker{writing-mode:vertical-rl;transform:rotate(180deg);font:10px 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--gray-500);}
+.institutional-page .cemfa-record.is-current{background:var(--gray-50);border-left-color:var(--navy-800);}
+.institutional-page .cemfa-record.is-current .cemfa-record-marker{color:var(--navy-800);font-weight:700;}
+.institutional-page .cemfa-photo-slot{aspect-ratio:4/5;min-height:210px;display:grid;place-items:center;background:var(--gray-50);border:1px dashed var(--gray-300);padding:14px;color:var(--gray-500);font:11px 'JetBrains Mono',monospace;text-align:center;}
+.institutional-page .cemfa-record-content h2{font-size:21px;color:var(--navy-900);margin:0 0 15px;line-height:1.3;}
+.institutional-page .memory-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.institutional-page .memory-fields>div{min-width:0;padding:11px 13px;background:var(--gray-50);border-left:2px solid var(--gold-500);}
+.institutional-page .memory-fields dt{font:10px 'JetBrains Mono',monospace;text-transform:uppercase;color:var(--gray-500);margin-bottom:5px;}
+.institutional-page .memory-fields dd{font-size:13px;line-height:1.55;color:var(--navy-900);overflow-wrap:anywhere;}
+.institutional-page .memory-field-wide{grid-column:1/-1;}
+.institutional-page .memory-card-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.institutional-page .cemfa-gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.institutional-page .cemfa-gallery-card{display:grid;grid-template-columns:minmax(130px,38%) minmax(0,1fr);gap:18px;align-items:start;padding:18px;background:var(--white);border:1px solid var(--gray-100);border-top:3px solid var(--gold-500);}
+.institutional-page .cemfa-gallery-photo{aspect-ratio:4/5;min-height:200px;display:grid;place-items:center;padding:14px;border:1px dashed var(--gray-300);background:var(--gray-50);color:var(--gray-500);font:11px 'JetBrains Mono',monospace;text-align:center;}
+.institutional-page .cemfa-gallery-copy{min-width:0;}
+.institutional-page .cemfa-gallery-ordinal{display:block;color:var(--gold-500);font:600 11px 'JetBrains Mono',monospace;text-transform:uppercase;margin-bottom:7px;}
+.institutional-page .cemfa-gallery-copy h2,.institutional-page .cemfa-profile-card h2{font-size:19px;line-height:1.3;color:var(--navy-900);margin:0 0 8px;}
+.institutional-page .cemfa-gallery-copy em,.institutional-page .cemfa-profile-rank{font-size:13px;color:var(--gray-700);}
+.institutional-page .cemfa-gallery-copy>p,.institutional-page .cemfa-profile-period{font-size:12px;color:var(--navy-900);font-weight:600;margin:8px 0 14px;}
+.institutional-page .cemfa-gallery-copy .btn{font-size:11px;padding:9px 12px;}
+.institutional-page .cemfa-profile-page{max-width:850px;margin:0 auto;}
+.institutional-page .cemfa-profile-back{display:inline-block;margin:0 0 18px;color:var(--navy-800);font:600 11px 'JetBrains Mono',monospace;text-transform:uppercase;}
+.institutional-page .cemfa-profile-card{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:center;padding:26px;background:var(--gray-50);border-left:4px solid var(--gold-500);}
+.institutional-page .cemfa-profile-card .cemfa-gallery-photo{width:100%;}
+.institutional-page .rank-component-columns{display:grid;grid-template-columns:1fr 1fr;position:relative;background:var(--gray-50);border:1px solid var(--gray-100);}
+.institutional-page .rank-component{min-width:0;padding:24px 22px;}
+.institutional-page .rank-component+.rank-component{border-left:2px solid var(--gold-500);}
+.institutional-page .rank-component-title{color:var(--navy-900);font-size:24px;text-align:center;margin:0 0 20px;padding-bottom:15px;border-bottom:2px solid var(--navy-900);}
+.institutional-page .rank-component-brand{min-height:128px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin-bottom:12px;text-align:center;color:var(--gray-500);font:10px 'JetBrains Mono',monospace;text-transform:uppercase;}
+.institutional-page .rank-component-brand img{width:100px;height:100px;object-fit:contain;}
+.institutional-page .rank-component-brand [hidden]{display:none;}
+.institutional-page .rank-component-subtitle{text-align:center;color:var(--gray-500);font:11px 'JetBrains Mono',monospace;text-transform:uppercase;margin:-10px 0 12px;}
+.institutional-page .rank-component .rank-category{padding:14px 0;background:transparent;border-top:0;border-bottom:1px solid var(--gray-300);}
+.institutional-page .rank-component .rank-category:last-child{border-bottom:0;}
+.institutional-page .rank-component .rank-category-heading{margin-bottom:12px;}
+.institutional-page .rank-component .rank-category-heading h3{font-size:17px;color:var(--navy-900);margin:0;}
+.institutional-page .rank-component .rank-post-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.institutional-page .rank-component .rank-post-card{padding:12px;}
+.institutional-page .rank-component .rank-insignia-slot{min-height:116px;}
+.institutional-page .rank-shared-classes{display:grid;gap:22px;}
+.institutional-page .shared-force-brands{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;padding:14px;border:1px solid var(--gray-100);background:var(--gray-50);}
+.institutional-page .shared-force-brand{display:inline-flex;align-items:center;gap:9px;color:var(--gray-700);font:10px 'JetBrains Mono',monospace;text-transform:uppercase;}
+.institutional-page .shared-force-brand img{width:38px;height:38px;object-fit:contain;}
+.institutional-page .shared-force-brand img[hidden]{display:none;}
+.institutional-page .rank-category-shared{padding:24px;background:var(--white);border:1px solid var(--gray-100);border-top:3px solid var(--navy-800);}
+.institutional-page .rank-category-shared .rank-category-heading{display:block;}
+.institutional-page .rank-category-shared .rank-category-heading h2{font-size:22px;}
+.institutional-page .rank-category-shared .rank-category-heading p{margin-top:6px;color:var(--gray-500);font-size:13px;}
+.institutional-page .rank-category-shared .rank-post-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+.institutional-page .rank-catalog-page{display:grid;gap:34px;}
+.institutional-page .rank-category{padding:22px;background:var(--gray-50);border-top:3px solid var(--gold-500);}
+.institutional-page .rank-category-heading{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;border-bottom:1px solid var(--gray-300);padding-bottom:12px;}
+.institutional-page .rank-category-heading>span{font:12px 'JetBrains Mono',monospace;color:var(--gold-500);}
+.institutional-page .rank-category-heading h2{font-size:21px;color:var(--navy-900);margin:0;}
+.institutional-page .rank-post-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.institutional-page .rank-post-card{padding:18px;background:var(--white);border:1px solid var(--gray-100);min-width:0;}
+.institutional-page .rank-post-card h3{font-size:15px;color:var(--navy-900);letter-spacing:0;text-transform:none;margin:0 0 12px;}
+.institutional-page .rank-insignia-slot{min-height:138px;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px;background:var(--gray-50);border:1px dashed var(--gray-300);color:var(--gray-500);font:11px 'JetBrains Mono',monospace;text-align:center;}
+.institutional-page .rank-insignia-slot small{font:10px 'Inter',sans-serif;color:var(--gray-500);}
+.institutional-page .rank-post-card p{margin-top:12px;font-size:12px;color:var(--gray-500);}
+.institutional-page .date-filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;}
+.institutional-page .date-filter{min-height:40px;padding:9px 14px;border:1px solid var(--gray-300);background:var(--white);color:var(--navy-900);font:600 11px 'JetBrains Mono',monospace;}
+.institutional-page .date-filter:hover,.institutional-page .date-filter.active{background:var(--navy-900);border-color:var(--navy-900);color:var(--white);}
+.institutional-page .date-table-wrap{overflow-x:auto;border:1px solid var(--gray-100);}
+.institutional-page .date-table{width:100%;border-collapse:collapse;background:var(--white);font-size:13px;}
+.institutional-page .date-table th{background:var(--navy-900);color:var(--white);font:600 11px 'JetBrains Mono',monospace;text-align:left;text-transform:uppercase;padding:13px;}
+.institutional-page .date-table td{padding:13px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);vertical-align:top;}
+.institutional-page .date-table tbody tr:last-child td{border-bottom:0;}
+.institutional-page .date-table time{white-space:nowrap;color:var(--navy-900);font-weight:700;}
+.institutional-page .date-detail-button{border:0;border-bottom:1px solid var(--gold-500);padding:0 0 3px;background:none;color:var(--navy-800);font:600 11px 'JetBrains Mono',monospace;white-space:nowrap;}
+.institutional-page .date-detail-button:hover{color:var(--blue-500);}
+.institutional-page .date-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px;}
+.institutional-page .date-card{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding:18px;background:var(--gray-50);border:1px solid var(--gray-100);border-left:3px solid var(--gold-500);}
+.institutional-page .date-card-calendar{min-height:106px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--navy-900);color:var(--white);}
+.institutional-page .date-card-calendar strong{font:600 38px 'Oswald',sans-serif;line-height:1;}
+.institutional-page .date-card-calendar span{margin-top:8px;color:var(--gold-300);font:10px 'JetBrains Mono',monospace;}
+.institutional-page .date-card-body h2{font-size:16px;color:var(--navy-900);letter-spacing:0;text-transform:none;margin:0 0 6px;}
+.institutional-page .date-card-body p{font-size:12px;color:var(--gray-700);margin-bottom:12px;}
+.institutional-page .date-empty-state{padding:18px;margin-bottom:16px;background:var(--gray-50);border-left:3px solid var(--gold-500);color:var(--gray-700);}
+.institutional-page .date-history-dialog{width:min(640px,calc(100% - 32px));max-height:min(80vh,760px);margin:auto;padding:30px;border:1px solid var(--gray-300);border-top:4px solid var(--gold-500);background:var(--white);color:var(--ink);}
+.institutional-page .date-history-dialog::backdrop{background:rgba(7,27,48,.68);}
+.institutional-page .date-dialog-close{position:absolute;top:10px;right:12px;width:40px;height:40px;border:1px solid var(--gray-300);background:var(--white);color:var(--navy-900);font-size:24px;}
+.institutional-page .date-dialog-date{font:600 12px 'JetBrains Mono',monospace;color:var(--gold-500);margin:8px 0;}
+.institutional-page .date-history-dialog h2{font-size:25px;color:var(--navy-900);margin:8px 40px 20px 0;}
+.institutional-page .date-dialog-media{margin:18px 0;padding:22px;border:1px dashed var(--gray-300);background:var(--gray-50);color:var(--gray-500);font:11px 'JetBrains Mono',monospace;text-align:center;}
+.institutional-page .partner-grid,.institutional-page .training-grid,.institutional-page .rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.institutional-page .partner-slot,.institutional-page .training-slot,.institutional-page .rank-slot{border:1px solid var(--gray-100);background:var(--white);padding:16px;color:var(--navy-900);font-size:13px;font-weight:600;}
+.institutional-page .partner-slot{min-height:105px;display:flex;align-items:center;justify-content:center;text-align:center;border-style:dashed;color:var(--gray-500);}
+.institutional-page .content-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.institutional-page .search-results-section{padding:70px 0;background:var(--white);}
+.institutional-page .results-search-form{display:flex;gap:10px;max-width:720px;margin:0 0 28px;}
+.institutional-page .results-search-form input{flex:1;min-width:0;border:1px solid var(--gray-300);padding:13px 15px;font:inherit;color:var(--ink);}
+.institutional-page .results-count{font:12px 'JetBrains Mono',monospace;color:var(--gray-500);margin-bottom:14px;}
+.institutional-page .search-result-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.institutional-page .search-result{padding:20px;border:1px solid var(--gray-100);border-left:3px solid var(--gold-500);background:var(--gray-50);}
+.institutional-page .search-result .eyebrow{font-size:10px;margin-bottom:8px;}
+.institutional-page .search-result h3{font-size:18px;letter-spacing:0;text-transform:none;margin-bottom:8px;}
+.institutional-page .search-result h3 a:hover{color:var(--blue-500);}
+.institutional-page .search-result p{font-size:13px;color:var(--gray-700);line-height:1.55;}
+.institutional-page .search-empty{padding:26px 0 20px;}
+.institutional-page .search-empty h2{margin:0 0 8px;}
+.institutional-page .search-empty p{color:var(--gray-700);}
+.institutional-page .search-categories{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;padding-top:18px;border-top:1px solid var(--gray-100);}
+.institutional-page .search-categories a{font-size:13px;font-weight:700;color:var(--navy-800);text-decoration:underline;text-decoration-color:var(--gold-500);text-underline-offset:4px;}
+.institutional-page .search-category-group{margin:24px 0 32px;}
+.institutional-page .search-category-group>h3{font-size:20px;color:var(--navy-900);margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--gray-100);}
+.institutional-page .search-result h4{font:600 17px/1.35 'Oswald',sans-serif;text-transform:uppercase;color:var(--navy-900);margin:0 0 8px;}
+@media (max-width:860px){.institutional-page .institutional-blocks{grid-template-columns:1fr 1fr;}.institutional-page .partner-grid,.institutional-page .training-grid,.institutional-page .rank-grid,.institutional-page .commemoration-grid{grid-template-columns:1fr;}}
+@media (max-width:860px){.institutional-page .cemfa-record{grid-template-columns:22px 150px minmax(0,1fr);gap:14px;padding:17px;}.institutional-page .cemfa-gallery-grid{grid-template-columns:1fr 1fr;}.institutional-page .rank-category-shared .rank-post-grid,.institutional-page .date-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.institutional-page .date-table{min-width:760px;}}
+@media (max-width:860px){.institutional-page .placeholder-grid{grid-template-columns:1fr 1fr;}.institutional-page .page-hero-inner{align-items:flex-start;}.institutional-page .page-hero-crest{width:72px;height:72px;}}
+@media (max-width:560px){.institutional-page .page-hero{padding:64px 0 54px;}.institutional-page .page-hero-inner{gap:18px;}.institutional-page .page-hero-crest{width:58px;height:58px;}.institutional-page .placeholder-section,.institutional-page .search-results-section{padding:54px 0;}.institutional-page .placeholder-grid,.institutional-page .institutional-blocks,.institutional-page .partner-grid,.institutional-page .training-grid,.institutional-page .rank-grid,.institutional-page .search-result-list{grid-template-columns:1fr;}.institutional-page .placeholder-card{min-height:150px;}.institutional-page .profile-summary,.institutional-page .profile-card,.institutional-page .responsible-card{grid-template-columns:1fr;}.institutional-page .profile-photo{max-width:180px;}.institutional-page .responsible-photo{max-width:220px;min-height:240px;}.institutional-page .profile-fields{grid-template-columns:1fr;}.institutional-page .results-search-form{align-items:stretch;flex-direction:column;}.institutional-page .cemfa-record{grid-template-columns:18px minmax(0,1fr);gap:12px;padding:14px;}.institutional-page .cemfa-photo-slot{grid-column:2;grid-row:1;min-height:220px;max-width:210px;}.institutional-page .cemfa-record-marker{grid-column:1;grid-row:1/3;}.institutional-page .cemfa-record-content{grid-column:2;}.institutional-page .cemfa-gallery-grid,.institutional-page .rank-component-columns,.institutional-page .rank-component .rank-post-grid,.institutional-page .rank-category-shared .rank-post-grid,.institutional-page .rank-post-grid,.institutional-page .date-card-grid{grid-template-columns:1fr;}.institutional-page .rank-component+.rank-component{border-left:0;border-top:2px solid var(--gold-500);}.institutional-page .cemfa-gallery-card{grid-template-columns:112px minmax(0,1fr);gap:12px;padding:14px;}.institutional-page .cemfa-gallery-photo{min-height:160px;}.institutional-page .cemfa-profile-card{grid-template-columns:1fr;padding:18px;}.institutional-page .cemfa-profile-card .cemfa-gallery-photo{max-width:220px;}.institutional-page .memory-fields{grid-template-columns:1fr;}.institutional-page .rank-category{padding:16px;}.institutional-page .date-filter-bar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}.institutional-page .date-filter{padding:9px 8px;}.institutional-page .date-card{grid-template-columns:82px minmax(0,1fr);gap:12px;padding:13px;}.institutional-page .date-history-dialog{padding:24px 18px;}}
+
+.institutional-feature-image{margin:18px 0 0;max-width:760px}.institutional-feature-image img{display:block;width:100%;max-height:360px;object-fit:cover;border-radius:10px}.institutional-feature-image figcaption{margin-top:8px;color:var(--gray-500);font-size:.85rem}

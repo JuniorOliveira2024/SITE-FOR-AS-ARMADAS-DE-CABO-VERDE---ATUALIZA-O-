@@ -1,0 +1,107 @@
+/* ---------- página História ---------- */
+@media (min-width:760px){.timeline-wrap::before{left:50%;transform:translateX(-50%);}}
+@media (min-width:760px){
+  .timeline-item{padding-left:0;display:grid;grid-template-columns:1fr 60px 1fr;gap:0 32px;align-items:start;}
+  .timeline-item:nth-child(even) .timeline-card{grid-column:3;}
+  .timeline-item:nth-child(odd) .timeline-card{grid-column:1;text-align:right;border-left:none;border-right:3px solid var(--gold-500);}
+  .timeline-dot{position:static;grid-column:2;justify-self:center;}
+}
+@media (max-width:860px){
+  .heroes-grid{grid-template-columns:1fr;}
+  .branches-grid{grid-template-columns:1fr;}
+}
+
+/* ============================================================
+   Crónica institucional — "História das Forças Armadas de Cabo Verde"
+   Aspeto editorial de época: papel, serifa, capitulares e algarismos romanos.
+   ============================================================ */
+.chronicle-section{--paper:#f6f0e2;--ink:#2a2823;padding:clamp(64px,9vw,110px) 0;background:
+  radial-gradient(1200px 500px at 15% 0%,rgba(216,200,65,.12),transparent 60%),
+  radial-gradient(900px 500px at 90% 100%,rgba(10,37,64,.07),transparent 60%),var(--paper);
+  border-top:4px double var(--gold-500);border-bottom:4px double var(--gold-500);}
+.chronicle-head{text-align:center;margin-bottom:clamp(36px,5vw,64px);}
+.chronicle-head .eyebrow{justify-content:center;}
+.chronicle-head h2{font-family:'Cinzel','Georgia',serif;font-weight:700;font-size:clamp(26px,4vw,46px);line-height:1.15;letter-spacing:.04em;max-width:900px;margin:10px auto 0;}
+.chronicle-orn,.chronicle-end{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto 0;max-width:360px;color:var(--kicker);}
+.chronicle-orn span,.chronicle-end span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-500),transparent);}
+.chronicle-orn i,.chronicle-end i{font-style:normal;font-size:16px;}
+
+.chronicle-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start;}
+.chronicle-layout > *{min-width:0;}
+.chronicle-toc{position:sticky;top:116px;padding-right:8px;}
+.toc-title{font:700 11px var(--font-site);letter-spacing:.2em;text-transform:uppercase;color:var(--kicker);padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid rgba(216,200,65,.55);}
+.chronicle-toc ol{list-style:none;display:flex;flex-direction:column;gap:2px;}
+.chronicle-toc a{display:flex;gap:12px;align-items:baseline;padding:9px 8px 9px 10px;border-left:2px solid transparent;color:rgba(42,40,35,.72);font:500 13.5px/1.35 Georgia,'Times New Roman',serif;text-decoration:none;transition:color .25s,border-color .25s,background .25s;}
+.chronicle-toc a b{font:700 12px 'Cinzel',Georgia,serif;color:var(--kicker);min-width:26px;letter-spacing:.04em;}
+.chronicle-toc a:hover,.chronicle-toc a:focus-visible{color:var(--navy-900);background:rgba(216,200,65,.1);}
+.chronicle-toc a.is-active{color:var(--navy-900);border-left-color:var(--gold-500);background:rgba(216,200,65,.14);font-weight:700;}
+
+.chronicle-body{max-width:760px;font-family:Georgia,'Times New Roman',serif;color:var(--ink);}
+.chronicle-lead{font-size:clamp(18px,2.1vw,21px);line-height:1.8;font-style:italic;color:#3a372f;padding-bottom:clamp(26px,4vw,44px);margin-bottom:clamp(30px,4vw,48px);border-bottom:1px solid rgba(216,200,65,.55);}
+.chronicle-lead::first-letter{font:700 4.6em/.8 'Cinzel',Georgia,serif;float:left;margin:.08em .12em 0 0;color:var(--kicker);font-style:normal;}
+
+.chapter{position:relative;padding:clamp(26px,4vw,44px) 0;border-bottom:1px solid rgba(42,40,35,.13);scroll-margin-top:110px;}
+.chapter:last-of-type{border-bottom:0;}
+.chapter-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px clamp(14px,2.4vw,26px);align-items:center;margin-bottom:20px;}
+.chapter-num{grid-row:1 / span 2;font:700 clamp(40px,6vw,64px)/1 'Cinzel',Georgia,serif;color:transparent;-webkit-text-stroke:1.4px var(--gold-500);min-width:1.1em;text-align:center;}
+.chapter-head h3{font:700 clamp(21px,2.8vw,29px)/1.2 'Cinzel',Georgia,serif;letter-spacing:.02em;text-transform:none;color:var(--navy-900);overflow-wrap:break-word;}
+.chapter-date{justify-self:start;font:600 11px var(--font-site);letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:var(--navy-900);padding:5px 12px;}
+.chapter-text p{font-size:clamp(16.5px,1.8vw,18px);line-height:1.9;margin-bottom:18px;text-align:left;hyphens:auto;overflow-wrap:break-word;}
+.chapter-text p:last-child{margin-bottom:0;}
+
+.chapter-list{list-style:none;columns:2;column-gap:36px;margin:6px 0 24px;padding:18px 22px;background:rgba(255,255,255,.55);border-left:3px solid var(--gold-500);}
+.chapter-list li{break-inside:avoid;position:relative;padding:5px 0 5px 22px;font-size:16px;line-height:1.55;overflow-wrap:break-word;}
+.chapter-list li::before{content:"";position:absolute;left:2px;top:.9em;width:7px;height:7px;background:var(--gold-500);transform:rotate(45deg);}
+.chapter-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:8px 0 26px;}
+.duo-card{background:rgba(255,255,255,.7);border:1px solid rgba(42,40,35,.1);border-top:3px solid var(--gold-500);padding:20px 20px 8px;min-width:0;}
+.duo-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+.duo-head h4{font:700 18px 'Cinzel',Georgia,serif;letter-spacing:.03em;text-transform:none;color:var(--navy-900);}
+.duo-logo{width:64px;height:64px;object-fit:contain;flex-shrink:0;}
+.duo-head .logo-slot{display:grid;place-items:center;overflow:hidden;border:1px dashed var(--gray-300);background:var(--gray-50);color:var(--gray-500);text-align:center;}
+.duo-head .logo-slot.has-image{border:0;background:transparent;}
+.duo-head .logo-slot .media-slot-image{width:100%;height:100%;object-fit:contain;}
+.duo-head .logo-slot .media-slot-label{font:600 9.5px/1.3 var(--font-site);padding:4px;}
+.duo-card .chapter-list{columns:1;background:none;border:0;padding:6px 0 14px;margin:0;}
+.chronicle-end{margin-top:12px;}
+
+@media (max-width:960px){
+  .chronicle-layout{grid-template-columns:minmax(0,1fr);gap:28px;}
+  .chronicle-toc{position:static;padding:0;}
+  .chronicle-toc ol{flex-direction:row;overflow-x:auto;gap:8px;padding:2px 2px 10px;scroll-snap-type:x proximity;scrollbar-width:thin;}
+  .chronicle-toc li{flex:0 0 auto;scroll-snap-align:start;}
+  .chronicle-toc a{border:1px solid rgba(216,200,65,.55);border-left-width:1px;padding:8px 14px;white-space:nowrap;border-radius:20px;background:rgba(255,255,255,.55);}
+  .chronicle-toc a.is-active{background:var(--navy-900);color:var(--white);border-color:var(--navy-900);}
+  .chronicle-toc a.is-active b{color:var(--gold-300);}
+}
+@media (max-width:640px){
+  .chapter-list{columns:1;padding:14px 16px;}
+  .chapter-duo{grid-template-columns:minmax(0,1fr);}
+  .chapter-num{-webkit-text-stroke-width:1.2px;}
+  .chapter-text p{line-height:1.8;}
+}
+@media (max-width:960px){.chronicle-toc a{gap:8px;}.chronicle-toc a b{min-width:0;}}
+
+/* ============ Núcleo Fundador ============ */
+.founders-section{--paper:#f6f0e2;--ink:#2a2823;padding:clamp(60px,9vw,108px) 0;background:radial-gradient(120% 80% at 50% 0%,#fbf6ea 0%,var(--paper) 60%,#efe6d0 100%);border-top:1px solid rgba(216,200,65,.5);scroll-margin-top:90px;}
+.founders-head{text-align:center;max-width:860px;margin:0 auto clamp(34px,5vw,60px);}
+.founders-head .eyebrow{justify-content:center;}
+.founders-head h2{font:700 clamp(26px,4vw,44px)/1.15 'Cinzel',Georgia,serif;letter-spacing:.03em;text-transform:none;color:var(--navy-900);margin:10px 0 0;}
+.founders-sub{font:italic 600 clamp(17px,2.2vw,22px) Georgia,'Times New Roman',serif;color:var(--kicker);margin-top:12px;}
+.founders-orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px auto;max-width:340px;color:var(--kicker);}
+.founders-orn span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-500),transparent);}
+.founders-orn i{font-style:normal;font-size:16px;}
+.founders-lead{font:clamp(16.5px,1.9vw,19px)/1.8 Georgia,'Times New Roman',serif;color:var(--ink);}
+.founders-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px;}
+.founder-card{position:relative;background:var(--white);border:1px solid rgba(216,200,65,.6);border-top:3px solid var(--gold-500);padding:14px 14px 18px;display:flex;flex-direction:column;gap:14px;transition:translate .25s,box-shadow .25s;}
+@media (hover:hover){.founder-card:hover{translate:0 -5px;box-shadow:0 18px 30px -18px rgba(10,37,64,.4);}}
+.founder-photo{aspect-ratio:4/5;display:grid;place-items:center;text-align:center;border:1px dashed var(--gray-300);background:var(--gray-50);overflow:hidden;}
+.founder-photo .media-slot-label{font:600 11.5px/1.4 var(--font-site);letter-spacing:.03em;color:var(--gray-500);padding:10px;}
+.founder-photo.has-image{border:0;background:var(--navy-950);}
+.founder-photo .media-slot-image{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.founder-copy{position:relative;padding-top:2px;min-width:0;}
+.founder-num{position:absolute;top:-4px;right:0;font:700 22px 'Cinzel',Georgia,serif;color:transparent;-webkit-text-stroke:1px var(--gold-500);}
+.founder-rank{display:block;font:600 10.5px var(--font-site);letter-spacing:.14em;text-transform:uppercase;color:var(--kicker);margin-bottom:6px;padding-right:34px;}
+.founder-rank--none{letter-spacing:.1em;}
+.founder-copy h3{font:700 16px/1.35 'Cinzel',Georgia,serif;text-transform:none;letter-spacing:.01em;color:var(--navy-900);overflow-wrap:break-word;}
+
+.chapters-list{display:contents;}

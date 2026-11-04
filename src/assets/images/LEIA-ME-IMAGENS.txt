@@ -1,0 +1,36 @@
+COMO ADICIONAR FOTOGRAFIAS E BRASÕES (sem mexer em código)
+=========================================================
+Basta copiar o ficheiro para a pasta indicada, com EXACTAMENTE o nome abaixo.
+Formatos aceites: .jpg  .png  .webp   (ex.: rm1.jpg  ou  rm1.png)
+Depois recarregue a página (Ctrl+Shift+R). Enquanto o ficheiro não existir, o site mostra um espaço reservado.
+
+BRASÕES (pasta assets/images/brasoes/)
+  rm1.png   → Brasão da 1ª Região Militar   (JÁ INSERIDO)
+  rm2.png   → Brasão da 2ª Região Militar   (JÁ INSERIDO)
+  rm3.png   → Brasão da 3ª Região Militar   (JÁ INSERIDO)
+  (recomendado: PNG com fundo transparente, quadrado, mínimo 400 x 400 px)
+
+FOTOGRAFIAS DOS COMANDANTES (pasta assets/images/comandantes/)
+  rm1.jpg                      → Comandante da 1ª Região Militar
+  rm2.jpg                      → Comandante da 2ª Região Militar
+  rm3.jpg                      → Comandante da 3ª Região Militar
+  guarda-nacional.jpg          → Comandante da Guarda Nacional
+  guarda-costeira.jpg          → Comandante da Guarda Costeira
+  esquadrilha-naval.jpg        → Comandante da Esquadrilha Naval
+  esquadrilha-aerea.jpg        → Comandante da Esquadrilha Aérea
+  comando-pessoal.jpg          → Comandante do Pessoal
+  comando-logistica.jpg        → Comandante da Logística
+  escola-militar.jpg           → Diretora da Escola Militar
+  cimmb.jpg                    → Diretor do CIMMB
+  gestor-psc.jpg               → Gestor do Programa Soldado Cidadão
+  inspecao-forcas-armadas.jpg  → Inspetor das Forças Armadas
+  direcao-informacoes-militares.jpg → Diretor de Informações Militares
+  (recomendado: retrato vertical 4:5, mínimo 600 x 750 px)
+
+MINISTRO DA DEFESA (pasta assets/images/governo/)
+  ministro-defesa.jpg          → Fotografia oficial do Ministro da Defesa Nacional
+
+Para mudar NOMES, POSTOS ou DATAS (ex.: novo comandante), edite o ficheiro js/data/comandos-data.js.
+
+LOGOTIPO DA GUARDA NACIONAL (JÁ INSERIDO)
+  assets/images/guarda-nacional.png → aparece no topo da página da Guarda Nacional (em vez do emblema das Forças Armadas)

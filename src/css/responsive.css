@@ -1,0 +1,50 @@
+/* ============================================================
+   Responsividade
+   ============================================================ */
+
+/* ---------- responsive ---------- */
+.page-hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.09;
+  background:url("../assets/images/logo-fa-large.png") no-repeat right 7% center / min(34vw,420px);
+}
+.page-hero-inner{position:relative;z-index:1;}
+.org-links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.org-links-grid a{border:1px solid var(--gray-100);border-left:3px solid var(--gold-500);padding:15px 18px;background:var(--white);color:var(--navy-900);font-weight:600;transition:background .2s,color .2s;}
+.org-links-grid a:hover{background:var(--navy-900);color:var(--white);}
+@media (max-width:1080px){
+  .news-grid{grid-template-columns:1fr 1fr;}
+  .news-card.featured{grid-column:span 2;grid-row:auto;}
+  .structure-grid{grid-template-columns:repeat(2,1fr);}
+  .formacao-grid{grid-template-columns:repeat(2,1fr);}
+  .media-grid{grid-template-columns:repeat(3,1fr);}
+  .footer-top{grid-template-columns:1fr 1fr 1fr;}
+}
+@media (max-width:860px){
+  nav.primary{display:none;}
+  .nav-divider{display:none;}
+  .burger{display:block;}
+  .nav-cta .btn-gold{display:none;}
+  .split{grid-template-columns:1fr;gap:36px;}
+  .docs-grid{grid-template-columns:1fr 1fr;}
+  .concurso-row{grid-template-columns:1fr;gap:8px;text-align:left;}
+  .concurso-cta{text-align:left;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .topbar-left{display:none;}
+  .page-hero::before{background-size:220px;background-position:right 3% center;opacity:.07;}
+  .org-links-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:600px){
+  .news-grid{grid-template-columns:1fr;}
+  .news-card.featured{grid-column:auto;}
+  .structure-grid{grid-template-columns:1fr;}
+  .formacao-grid{grid-template-columns:1fr 1fr;}
+  .media-grid{grid-template-columns:repeat(2,1fr);}
+  .media-tile.wide{grid-column:span 2;}
+  .docs-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .hero-actions{flex-direction:column;align-items:stretch;}
+  .cta-inner{flex-direction:column;align-items:flex-start;}
+  .page-hero::before{background-size:135px;background-position:right -26px center;opacity:.055;}
+  .org-links-grid{grid-template-columns:1fr;}
+  section{padding:60px 0;}
+}

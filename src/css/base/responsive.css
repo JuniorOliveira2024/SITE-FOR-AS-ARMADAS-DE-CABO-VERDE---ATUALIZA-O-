@@ -1,0 +1,78 @@
+/* ============================================================
+   Responsividade global (grids de secção, rodapé, blocos comuns)
+   ------------------------------------------------------------
+   Onde fica cada coisa (para não haver duas regras a mandar no mesmo componente):
+   - header / topbar / menu móvel / pesquisa ........ components/header.css
+   - Concursos & Ingresso + Concursos Abertos ....... sections/concursos.css
+   - tabela de cursos / modal PSC ................... sections/formacao.css
+   - modais (candidatura, leitor de notícia) ....... components/modals.css, sections/news.css
+   - container, espaçamento das secções ............. base/base.css, base/layout.css
+   Faixas usadas aqui:
+     ≥1081  desktop     | 861–1080 desktop pequeno / tablet largo
+     601–860 tablet     | 481–600 mobile grande
+     361–480 mobile     | ≤360 mobile pequeno
+   ============================================================ */
+
+/* ---------- blocos comuns das páginas internas ---------- */
+.page-hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.09;
+  background:url("../../assets/images/logo-fa-large.png") no-repeat right 7% center / min(34vw,420px);
+}
+.page-hero-inner{position:relative;z-index:1;}
+.org-links-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.org-links-grid a{border:1px solid var(--gray-100);border-left:3px solid var(--gold-500);padding:15px 18px;background:var(--white);color:var(--navy-900);font-weight:600;transition:background .2s,color .2s;overflow-wrap:break-word;}
+.org-links-grid a:hover{background:var(--navy-900);color:var(--white);}
+
+/* ---------- grids fluidos: nenhum filho pode alargar a coluna ---------- */
+.news-grid > *,.structure-grid > *,.formacao-grid > *,.media-grid > *,.docs-grid > *,.footer-top > *,.split > *,.hero-stats > *{min-width:0;}
+.news-title,.news-excerpt,.structure-card h3,.structure-card p,.formacao-card h4,.doc-card h4,.doc-card .doc-meta,.footer-col a,.footer-brand p,.split p,.split-list li,.hero p.lede{overflow-wrap:break-word;}
+
+/* ---------- ≤1080px: desktop pequeno / tablet largo ---------- */
+@media (max-width:1080px){
+  .news-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+  .news-card.featured{grid-column:span 2;grid-row:auto;}
+  .structure-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .formacao-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .media-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .footer-top{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+
+/* ---------- ≤860px: tablet ---------- */
+@media (max-width:860px){
+  .hero-stats{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .split{grid-template-columns:minmax(0,1fr);gap:36px;}
+  .docs-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .footer-top{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .page-hero::before{background-size:220px;background-position:right 3% center;opacity:.07;}
+  .org-links-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+
+/* ---------- ≤600px: mobile ---------- */
+@media (max-width:600px){
+  .news-grid{grid-template-columns:minmax(0,1fr);}
+  .news-card.featured{grid-column:auto;}
+  .structure-grid{grid-template-columns:minmax(0,1fr);}
+  .media-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .media-tile.wide{grid-column:span 2;}
+  .docs-grid{grid-template-columns:minmax(0,1fr);}
+  .footer-top{grid-template-columns:minmax(0,1fr);gap:32px;}
+  .hero-actions{flex-direction:column;align-items:stretch;}
+  .cta-inner{flex-direction:column;align-items:flex-start;}
+  .page-hero::before{background-size:135px;background-position:right -26px center;opacity:.055;}
+  .org-links-grid{grid-template-columns:minmax(0,1fr);}
+}
+
+/* ---------- ≤480px: mobile pequeno ---------- */
+@media (max-width:480px){
+  .formacao-grid{grid-template-columns:minmax(0,1fr);}
+  .media-grid{grid-auto-rows:140px;gap:10px;}
+  .hero-stat .num{font-size:26px;}
+  .cta-inner .btn{width:100%;}
+}
+
+/* ---------- ≤360px: mobile muito pequeno ---------- */
+@media (max-width:360px){
+  .hero-stats{gap:14px 12px;}
+  .hero-stat .label{font-size:10.5px;letter-spacing:.04em;}
+  .doc-card{padding:18px;gap:12px;}
+}

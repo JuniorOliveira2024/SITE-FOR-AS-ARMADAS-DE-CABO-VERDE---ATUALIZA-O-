@@ -1,0 +1,9 @@
+/* ---------- página Multimédia (galeria completa) ---------- */
+.mm-filters{padding:26px 0;background:var(--white);border-bottom:1px solid var(--gray-100);position:sticky;top:0;z-index:30;}
+.mm-gallery-section{padding:60px 0 90px;background:var(--gray-50);}
+.mm-full-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;}
+.mm-empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--gray-500);font-family:'JetBrains Mono',monospace;}
+.mm-loadmore{display:flex;justify-content:center;margin-top:40px;}
+
+@media (max-width:1080px){.mm-full-grid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:600px){.mm-full-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;}}

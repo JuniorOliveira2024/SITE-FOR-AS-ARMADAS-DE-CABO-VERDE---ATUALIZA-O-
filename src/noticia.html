@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-CV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Notícia — Forças Armadas de Cabo Verde">
+<meta name="theme-color" content="#0A2540">
+<title id="page-title">Notícia — Forças Armadas de Cabo Verde</title>
+<link rel="icon" type="image/png" href="assets/images/logo-fa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Cinzel:wght@600;700&family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base/base.css?v=202611021400">
+<link rel="stylesheet" href="css/components/header.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/news.css?v=202611021400">
+<link rel="stylesheet" href="css/components/footer.css?v=202611021400">
+<link rel="stylesheet" href="css/base/responsive.css?v=202611021400">
+<link rel="stylesheet" href="css/pages/noticia.css?v=202611021400">
+</head>
+
+<!-- MASTER PAGE: navbar (master.html) -->
+<div id="master-navbar"></div>
+
+<a id="top"></a>
+
+<section class="noticia-page">
+  <div class="container noticia-content-wrap">
+    <a href="index.html#noticias" class="noticia-back">← Voltar às Notícias</a>
+    <div id="noticia-loading" class="noticia-loading">A carregar notícia…</div>
+    <div id="noticia-body" style="display:none;">
+      <div class="noticia-hero">
+        <img id="noticia-image" src="" alt="">
+        <span class="tag" id="noticia-tag"></span>
+      </div>
+      <div class="noticia-content">
+        <span class="news-date" id="noticia-date"></span>
+        <h1 id="noticia-title"></h1>
+        <div id="noticia-paragraphs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTER PAGE: footer (master.html) -->
+<div id="master-footer"></div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/core/master-data.js?v=202611021400"></script>
+<script src="js/core/master.js?v=202611021400"></script>
+<script src="js/core/config.js?v=202611021400"></script>
+<script src="js/core/api.js?v=202611021400"></script><script src="js/core/live.js?v=202611021400"></script><script src="js/effects/index.js?v=202611021400"></script><script src="js/effects/fade.js?v=202611021400"></script><script src="js/effects/slide.js?v=202611021400"></script><script src="js/effects/zoom.js?v=202611021400"></script><script src="js/effects/parallax.js?v=202611021400"></script><script src="js/effects/hover.js?v=202611021400"></script><script src="js/effects/reveal.js?v=202611021400"></script><script src="js/effects/loading.js?v=202611021400"></script><script src="js/core/cms.js?v=202611021400"></script><script src="js/core/helpers.js?v=202611021400"></script>
+<script src="js/core/toast.js?v=202611021400"></script>
+<script src="js/components/mobile-nav.js?v=202611021400"></script>
+<script src="js/components/header-scroll.js?v=202611021400"></script>
+<script src="js/components/search.js?v=202611021400"></script>
+<script src="js/data/news-data.js?v=202611021400"></script>
+<script src="js/pages/noticia.js?v=202611021400"></script>
+</html>

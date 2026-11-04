@@ -1,0 +1,25 @@
+/* ============================================================
+   Multimédia
+   ============================================================ */
+
+/* ---------- multimedia ---------- */
+.media-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:170px;gap:12px;}
+.media-tile{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:var(--navy-950);border:none;padding:0;display:block;width:100%;height:100%;}
+.media-tile.tall{grid-row:span 2;}
+.media-tile.wide{grid-column:span 2;}
+.media-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease);}
+.media-tile:hover img{transform:scale(1.08);}
+.media-tile .overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,27,48,.88),transparent 55%);display:flex;align-items:flex-end;padding:16px;z-index:2;}
+.media-tile .overlay span{color:var(--white);font-size:11.5px;letter-spacing:.04em;text-align:left;}
+.media-tile .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(216,200,65,.92);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s,transform .25s;z-index:2;}
+.media-tile:hover .play{opacity:1;transform:translate(-50%,-50%) scale(1.06);}
+.media-tile .play svg{width:20px;height:20px;color:var(--navy-950);margin-left:3px;}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(4,12,22,.94);z-index:500;display:none;align-items:center;justify-content:center;padding:clamp(12px,4vw,40px);overscroll-behavior:contain;}
+.lightbox.open{display:flex;}
+.lightbox-inner{max-width:960px;width:100%;min-width:0;}
+.lightbox-inner img{width:100%;max-height:70vh;object-fit:contain;border:1px solid rgba(216,200,65,.4);}
+.lightbox-caption{color:var(--white);font-size:13px;margin-top:16px;letter-spacing:.03em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;overflow-wrap:break-word;}
+.lightbox-caption span.credit{color:var(--gray-500);}
+.lightbox-close{position:absolute;top:max(12px,calc(24px - env(safe-area-inset-top)));right:clamp(8px,2.5vw,30px);width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;background:none;border:none;color:var(--white);font-size:32px;line-height:1;}

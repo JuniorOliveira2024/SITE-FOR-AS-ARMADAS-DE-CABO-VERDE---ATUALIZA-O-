@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-CV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Incorporação de Recrutas nas Forças Armadas de Cabo Verde: processo de recrutamento, requisitos, documentação necessária, etapas e incorporação em curso.">
+<meta name="theme-color" content="#0A2540">
+<title>Serviço Militar — Forças Armadas de Cabo Verde</title>
+<link rel="icon" type="image/png" href="assets/images/logo-fa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Cinzel:wght@600;700&family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base/base.css?v=202611021400">
+<link rel="stylesheet" href="css/components/header.css?v=202611021400">
+<link rel="stylesheet" href="css/components/footer.css?v=202611021400">
+<link rel="stylesheet" href="css/base/responsive.css?v=202611021400">
+<link rel="stylesheet" href="css/components/page-common.css?v=202611021400">
+<link rel="stylesheet" href="css/pages/incorporacao.css?v=202611021400">
+</head>
+<body class="incorporacao-page">
+
+<!-- MASTER PAGE: navbar (master.html) -->
+<div id="master-navbar"></div>
+
+<a id="top"></a>
+
+<section class="page-hero" style="padding:150px 0 50px;">
+  <div class="container page-hero-inner">
+    <img class="page-hero-crest" src="assets/images/logo-fa.png" alt="Emblema Oficial das Forças Armadas de Cabo Verde">
+    <div class="page-hero-copy">
+      <div class="eyebrow">Ingresso nas Fileiras</div>
+      <h1>Serviço Militar</h1>
+      <p>Serviço militar e incorporação de recrutas — informações sobre o recrutamento e a incorporação: requisitos, documentação necessária, etapas de seleção e a incorporação que está a decorrer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Incorporação a decorrer (dados em js/data/incorporacao-data.js) -->
+<section class="inc-wrap" id="em-curso" aria-label="Incorporação em curso">
+  <div class="container">
+    <div class="inc-live" id="inc-atual" role="status" aria-live="polite">
+      <h2 class="inc-live-title">A carregar a incorporação em curso…</h2>
+    </div>
+  </div>
+</section>
+
+<section class="inc-section" id="processo">
+  <div class="container">
+    <div class="inc-head">
+      <div class="eyebrow">O Processo</div>
+      <h2>Como funciona o recrutamento e a incorporação</h2>
+      <p>A incorporação é o momento em que os cidadãos convocados se apresentam para iniciar a formação militar. O processo é conduzido pelo Estado-Maior das Forças Armadas, através dos Comandos das Regiões Militares, e a formação inicial decorre no Centro de Instrução Militar do Morro Branco (CIMMB), com módulos do Programa Soldado Cidadão.</p>
+    </div>
+    <ol class="inc-steps" id="inc-etapas" aria-label="Etapas do processo de incorporação"></ol>
+  </div>
+</section>
+
+<section class="inc-section alt" id="requisitos">
+  <div class="container">
+    <div class="inc-head">
+      <div class="eyebrow">Condições de Acesso</div>
+      <h2>Requisitos e documentação necessária</h2>
+      <p>Confirme os requisitos e prepare os documentos antes da data de apresentação indicada na convocatória.</p>
+    </div>
+    <div class="inc-two">
+      <article class="inc-card"><h3>Requisitos</h3><ul id="inc-requisitos"></ul></article>
+      <article class="inc-card"><h3>Documentação necessária</h3><ul id="inc-documentos"></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="inc-section" id="outras">
+  <div class="container">
+    <div class="inc-head">
+      <div class="eyebrow">Calendário</div>
+      <h2>Outras incorporações</h2>
+      <p>As datas das incorporações seguintes são divulgadas nesta página e na secção de Notícias.</p>
+    </div>
+    <div class="inc-others" id="inc-outras"></div>
+
+    <div class="inc-help">
+      <a class="btn btn-gold" href="contactos.html">Contactar o Comando da Região Militar</a>
+      <a class="btn btn-outline-dark" href="programa-soldado-cidadao.html">Programa Soldado Cidadão</a>
+      <a class="btn btn-outline-dark" href="cimmb.html">Centro de Instrução Militar do Morro Branco</a>
+      <a class="btn btn-outline-dark" href="concursos.html?status=legislacao">Legislação do Serviço Militar</a>
+    </div>
+    <p class="inc-note">Informação de referência. Confirme sempre a data, o local e os documentos na convocatória individual ou junto do Comando da sua Região Militar.</p>
+  </div>
+</section>
+
+<!-- MASTER PAGE: footer (master.html) -->
+<div id="master-footer"></div>
+
+<div class="toast" id="toast"></div>
+<script src="js/core/master-data.js?v=202611021400"></script>
+<script src="js/core/master.js?v=202611021400"></script>
+<script src="js/core/config.js?v=202611021400"></script>
+<script src="js/core/api.js?v=202611021400"></script>
+<script src="js/core/live.js?v=202611021400"></script>
+<script src="js/core/cms.js?v=202611021400"></script>
+<script src="js/core/toast.js?v=202611021400"></script>
+<script src="js/core/reveal.js?v=202611021400"></script>
+<script src="js/components/mobile-nav.js?v=202611021400"></script>
+<script src="js/components/header-scroll.js?v=202611021400"></script>
+<script src="js/components/search.js?v=202611021400"></script>
+<script src="js/data/incorporacao-data.js?v=202611021400"></script>
+<script src="js/pages/incorporacao.js?v=202611021400"></script>
+<script src="js/core/i18n.js?v=202611021400"></script>
+</body>
+</html>

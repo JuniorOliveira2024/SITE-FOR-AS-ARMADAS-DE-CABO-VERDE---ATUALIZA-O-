@@ -1,0 +1,130 @@
+/* ============================================================
+   Base
+   ============================================================ */
+
+:root{
+  --font-site:'Inter',sans-serif;
+  /* Fonte de destaque (títulos, números, logotipo). Para trocar a fonte do site inteiro, mude só esta linha
+     (e o <link> do Google Fonts nas páginas). */
+  --font-display:'Barlow','Inter',sans-serif;
+  --font-brand:'Cinzel','Trajan Pro','Georgia',serif;   /* nome da instituição no header */
+  --navy-950:#071B30;
+  --navy-900:#0A2540;
+  --navy-800:#0F3358;
+  --navy-700:#154674;
+  --blue-500:#2D6FA3;
+  --gold-500:#D8C841;   /* caixas, bordas e botões amarelos */
+  --kicker:#B88E4B;     /* rótulos/títulos pequenos (legíveis sobre fundo claro e escuro) */
+  --gold-300:#DFC48B;
+  --red-600:#A3202B;
+  --white:#FFFFFF;
+  --gray-50:#F5F7F9;
+  --gray-100:#EDF0F3;
+  --gray-300:#CBD3DB;
+  --gray-500:#6B7480;
+  --gray-700:#3C4552;
+  --ink:#0E1620;
+  --radius:2px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --header-h:132px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+/* html NÃO deve ter overflow-x: com overflow no html e no body, o body vira contentor de scroll
+   e o header `position:sticky` deixa de funcionar. A proteção contra scroll horizontal fica só no body. */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+body{
+  overflow-x:hidden;
+  overflow-x:clip;
+  overflow-wrap:break-word;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.display{
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  font-weight:600;
+  color:var(--navy-900);
+}
+.hero-stat .num{font-family:var(--font-display);}
+a{color:inherit;text-decoration:none;}
+img,video,canvas,iframe{max-width:100%;}
+img,video{height:auto;}
+img{display:block;}
+svg{max-width:100%;}
+button{cursor:pointer;}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 clamp(16px,4.2vw,28px);}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--kicker);
+  display:flex;align-items:center;gap:10px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--kicker);display:inline-block;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+:focus-visible{outline:3px solid var(--gold-500);outline-offset:3px;}
+section[id],.structure-card[id],.formacao-card[id],.concurso-row[id],.psc-feature[id]{scroll-margin-top:var(--header-h);}
+
+/* Tipografia: Inter (--font-site) no texto corrido; Barlow (--font-display) nos títulos e destaques; o título da home usa Oswald (como no original). */
+body,button,input,select,textarea{font-family:var(--font-site);}
+
+/* ---------- reveal on scroll ---------- */
+/* A animação só esconde os blocos se o JS (reveal.js) estiver ativo: sem JS, tudo fica visível. */
+html.reveal-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+html.reveal-ready .reveal.in{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  html.reveal-ready .reveal{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ---------- efeitos sazonais do site ---------- */
+.site-effect-layer{position:fixed;inset:0;z-index:9998;pointer-events:none;overflow:hidden;}
+.site-effect-piece{position:absolute;top:-40px;display:block;line-height:1;}
+.site-effect-piece.drift{animation-name:effect-drift;animation-timing-function:linear;animation-iteration-count:infinite;}
+.site-effect-piece.fall{animation-name:effect-fall;animation-timing-function:linear;animation-iteration-count:infinite;}
+@keyframes effect-drift{
+  0%{transform:translate(0,-10vh) rotate(0deg);opacity:0;}
+  10%{opacity:.9;}
+  90%{opacity:.9;}
+  100%{transform:translate(6vw,110vh) rotate(360deg);opacity:0;}
+}
+@keyframes effect-fall{
+  0%{transform:translateY(-10vh) rotate(0deg);opacity:0;}
+  10%{opacity:1;}
+  90%{opacity:1;}
+  100%{transform:translateY(110vh) rotate(220deg);opacity:0;}
+}
+.site-effect-banner{
+  position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9999;width:max-content;
+  background:rgba(10,37,64,.92);color:var(--white);border:1px solid var(--gold-500);
+  padding:10px 22px;border-radius:20px;font-size:12.5px;
+  letter-spacing:.02em;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);text-align:center;max-width:calc(100vw - 32px);
+}
+@media (prefers-reduced-motion:reduce){
+  .site-effect-layer{display:none;}
+}
+
+/* toast */
+.toast{position:fixed;bottom:max(28px,env(safe-area-inset-bottom));left:50%;width:max-content;max-width:calc(100vw - 32px);text-align:center;transform:translateX(-50%) translateY(20px);background:var(--navy-950);color:var(--white);border:1px solid var(--gold-500);padding:14px 22px;font-size:12.5px;border-radius:2px;z-index:600;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ---------- toque / mobile ---------- */
+/* Evita o zoom automático do iOS ao focar campos (<16px) e garante área de toque confortável. */
+@media (max-width:600px){
+  input,select,textarea{font-size:16px;}
+}
+@media (pointer:coarse){
+  .btn,.filter-btn,.btn-apply-course{min-height:44px;}
+}
+
+@media (pointer:coarse){
+  .topbar-right a{display:inline-flex;align-items:center;min-height:44px;}
+  .lang-toggle button{min-width:44px;min-height:44px;}
+  .news-link{min-height:44px;}
+  .archive-link,.filters .filter-btn{min-height:44px;display:inline-flex;align-items:center;}
+}

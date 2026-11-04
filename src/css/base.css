@@ -1,0 +1,111 @@
+/* ============================================================
+   Base
+   ============================================================ */
+
+:root{
+  --font-site:'Inter',sans-serif;
+  --font-display:'Inter',sans-serif;
+  --font-mono:'Inter',sans-serif;
+  --navy-950:#071B30;
+  --navy-900:#0A2540;
+  --navy-800:#0F3358;
+  --navy-700:#154674;
+  --blue-500:#2D6FA3;
+  --gold-500:#C6A15B;
+  --gold-300:#DFC48B;
+  --red-600:#A3202B;
+  --white:#FFFFFF;
+  --gray-50:#F5F7F9;
+  --gray-100:#EDF0F3;
+  --gray-300:#CBD3DB;
+  --gray-500:#6B7480;
+  --gray-700:#3C4552;
+  --ink:#0E1620;
+  --radius:2px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --header-h:132px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{
+  overflow-x:hidden;
+  font-family:var(--font-site);
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.display{
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  font-weight:600;
+  color:var(--navy-900);
+}
+.mono{font-family:var(--font-mono);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;}
+.container{max-width:1240px;margin:0 auto;padding:0 28px;}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold-500);
+  display:flex;align-items:center;gap:10px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold-500);display:inline-block;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+:focus-visible{outline:3px solid var(--gold-500);outline-offset:3px;}
+section[id],.structure-card[id],.formacao-card[id],.concurso-row[id],.psc-feature[id]{scroll-margin-top:var(--header-h);}
+
+/* Tipografia global: todas as páginas usam a mesma família e escala base. */
+body,button,input,select,textarea{font-family:var(--font-site);}
+h1,h2,h3,h4,h5,h6,.display,.brand-text,.section-head h2,.hero h1{font-family:var(--font-display);}
+.mono,.eyebrow,.topbar-left,.lang-toggle,.filter-btn,.tag,.news-date,.concurso-date,.concurso-status{font-family:var(--font-mono);}
+/* Regra global de leitura; a home aplica a sua tipografia institucional abaixo. */
+body *{font-family:var(--font-site)!important;}
+.home-page h1,.home-page h2,.home-page h3,.home-page h4,.home-page .display,.home-page .brand-text,.home-page .section-head h2,.home-page .hero h1{font-family:'Oswald',sans-serif!important;}
+.home-page .mono,.home-page .eyebrow,.home-page .topbar-left,.home-page .lang-toggle,.home-page .filter-btn,.home-page .tag,.home-page .news-date,.home-page .concurso-date,.home-page .concurso-status,.home-page .hero-kicker,.home-page .ticker-label{font-family:'JetBrains Mono',monospace!important;}
+
+/* ---------- reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ---------- efeitos sazonais do site ---------- */
+.site-effect-layer{position:fixed;inset:0;z-index:9998;pointer-events:none;overflow:hidden;}
+.site-effect-piece{position:absolute;top:-40px;display:block;line-height:1;}
+.site-effect-piece.drift{animation-name:effect-drift;animation-timing-function:linear;animation-iteration-count:infinite;}
+.site-effect-piece.fall{animation-name:effect-fall;animation-timing-function:linear;animation-iteration-count:infinite;}
+@keyframes effect-drift{
+  0%{transform:translate(0,-10vh) rotate(0deg);opacity:0;}
+  10%{opacity:.9;}
+  90%{opacity:.9;}
+  100%{transform:translate(6vw,110vh) rotate(360deg);opacity:0;}
+}
+@keyframes effect-fall{
+  0%{transform:translateY(-10vh) rotate(0deg);opacity:0;}
+  10%{opacity:1;}
+  90%{opacity:1;}
+  100%{transform:translateY(110vh) rotate(220deg);opacity:0;}
+}
+.site-effect-banner{
+  position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9999;
+  background:rgba(10,37,64,.92);color:var(--white);border:1px solid var(--gold-500);
+  padding:10px 22px;border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:12.5px;
+  letter-spacing:.02em;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);text-align:center;max-width:90vw;
+}
+@media (prefers-reduced-motion:reduce){
+  .site-effect-layer{display:none;}
+}
+
+/* toast */
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy-950);color:var(--white);border:1px solid var(--gold-500);padding:14px 22px;font-family:'JetBrains Mono',monospace;font-size:12.5px;border-radius:2px;z-index:600;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}

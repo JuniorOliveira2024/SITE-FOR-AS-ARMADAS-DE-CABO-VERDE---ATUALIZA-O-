@@ -1,0 +1,68 @@
+/* ============================================================
+   Estrutura
+   ============================================================ */
+
+/* ---------- structure ---------- */
+.structure-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+.structure-card{background:var(--navy-900);color:var(--white);border-radius:var(--radius);position:relative;overflow:hidden;border-top:3px solid var(--gold-500);display:flex;flex-direction:column;text-decoration:none;}
+.structure-photo{aspect-ratio:16/10;position:relative;overflow:hidden;}
+.structure-photo img{width:100%;height:100%;object-fit:cover;}
+.structure-photo-emblem{background:var(--navy-950);display:grid;place-items:center;}
+.structure-photo-emblem img{object-fit:contain;padding:18px;}
+.structure-photo-emblem::after{background:linear-gradient(0deg,rgba(7,27,48,.18),transparent 72%);}
+.structure-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,27,48,.85),rgba(10,37,64,.15));}
+.structure-card .icon{width:32px;height:32px;color:var(--gold-300);position:absolute;bottom:12px;left:16px;z-index:2;}
+.structure-body{padding:22px 22px 26px;}
+.structure-card h3{color:var(--white);font-size:15.5px;letter-spacing:.03em;margin-bottom:10px;line-height:1.3;overflow-wrap:break-word;}
+.structure-card p{color:var(--gray-300);font-size:13px;}
+.structure-card .num{position:absolute;top:14px;right:18px;font-size:11px;color:rgba(255,255,255,.7);z-index:2;}
+.structure-subhead{margin:32px 0 18px;}
+.structure-subhead h3{color:var(--white);font-size:20px;}
+.structure-org-head{margin-top:42px;}
+.structure-org-head p{margin-top:7px;color:var(--gray-300);font-size:13px;}
+.state-org-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.state-org-card{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;min-height:148px;padding:18px;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.17);border-left:3px solid var(--gold-500);color:var(--navy-900);}
+.state-org-seal{width:42px;height:42px;display:grid;place-items:center;background:var(--gray-50);border:1px solid var(--gray-100);}
+.state-org-seal img{width:30px;height:30px;object-fit:contain;}
+.state-org-copy h4{font:600 15px/1.3 var(--font-display);text-transform:uppercase;color:var(--navy-900);overflow-wrap:break-word;}
+.state-org-copy p{margin-top:7px;color:var(--gray-700);font-size:12px;line-height:1.5;}
+.state-org-action{display:inline-flex;gap:8px;align-items:center;margin-top:12px;color:var(--navy-800);font:600 11px var(--font-site);text-transform:uppercase;border-bottom:1px solid var(--gold-500);padding-bottom:3px;}
+/* ---------- efeitos ao passar o mouse (e ao focar com o teclado) ----------
+   Usa a propriedade `translate` (independente de `transform`): os cards têm a classe .reveal, cuja regra
+   de `transform` tem prioridade maior e anulava qualquer :hover baseado em transform.
+   Os seletores com html.reveal-ready.. igualam a especificidade da animação de entrada. */
+.structure-card::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:linear-gradient(90deg,var(--gold-500),var(--gold-300));transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease);z-index:3;}
+.structure-photo img{transition:transform .7s var(--ease);}
+.structure-photo::after{transition:opacity .4s var(--ease);}
+.structure-card .num,.structure-card h3{transition:color .3s var(--ease);}
+.state-org-seal,.state-org-seal img{transition:background .3s var(--ease),border-color .3s var(--ease),transform .4s var(--ease);}
+.state-org-action,.state-org-action span{transition:gap .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease);}
+html.reveal-ready .structure-card.reveal,
+html.reveal-ready .state-org-card.reveal{transition:opacity .7s var(--ease),transform .7s var(--ease),translate .35s var(--ease),box-shadow .35s var(--ease),background .3s var(--ease),border-color .3s var(--ease);}
+
+@media (hover:hover){
+  .structure-card:hover,.structure-card:focus-visible{translate:0 -9px;box-shadow:0 28px 44px -20px rgba(0,0,0,.65),0 0 0 1px rgba(216,200,65,.55);}
+  .structure-card:hover::after,.structure-card:focus-visible::after{transform:scaleX(1);}
+  .structure-card:hover .structure-photo img,.structure-card:focus-visible .structure-photo img{transform:scale(1.08);}
+  .structure-card:hover .structure-photo::after,.structure-card:focus-visible .structure-photo::after{opacity:.55;}
+  .structure-card:hover .num,.structure-card:focus-visible .num{color:var(--gold-300);}
+  .structure-card:hover h3,.structure-card:focus-visible h3{color:var(--gold-300);}
+  /* chamada "Ver mais →" que desliza para dentro (só em dispositivos com mouse) */
+  .structure-body::after{content:"Ver mais →";display:block;margin-top:14px;font:600 11px var(--font-site);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-300);opacity:0;transform:translateX(-10px);transition:opacity .35s var(--ease),transform .35s var(--ease);}
+  .structure-card:hover .structure-body::after,.structure-card:focus-visible .structure-body::after{opacity:1;transform:none;}
+
+  .state-org-card:hover,.state-org-card:focus-visible{translate:0 -6px;background:var(--white);border-left-color:var(--gold-300);box-shadow:0 20px 34px -16px rgba(0,0,0,.6),-4px 0 0 0 var(--gold-500);}
+  .state-org-card:hover .state-org-seal,.state-org-card:focus-visible .state-org-seal{background:rgba(216,200,65,.16);border-color:var(--gold-500);}
+  .state-org-card:hover .state-org-seal img,.state-org-card:focus-visible .state-org-seal img{transform:scale(1.14) rotate(-4deg);}
+  .state-org-card:hover .state-org-action,.state-org-card:focus-visible .state-org-action{gap:16px;border-bottom-color:var(--red-600);}
+}
+.structure-card:focus-visible,.state-org-card:focus-visible{outline:3px solid var(--gold-300);outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){
+  html.reveal-ready .structure-card.reveal,html.reveal-ready .state-org-card.reveal,
+  .structure-photo img,.structure-card::after,.structure-body::after,.state-org-seal img{transition:none;}
+  .structure-card:hover,.state-org-card:hover{translate:none;}
+  .structure-card:hover .structure-photo img,.state-org-card:hover .state-org-seal img{transform:none;}
+}
+
+@media (max-width:860px){.state-org-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:560px){.state-org-grid{grid-template-columns:1fr;}.state-org-card{min-height:126px;}}

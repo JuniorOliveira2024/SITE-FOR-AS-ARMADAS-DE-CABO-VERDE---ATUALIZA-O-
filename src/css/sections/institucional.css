@@ -1,0 +1,86 @@
+/* ============================================================
+    Institucional
+   ============================================================ */
+
+/* ---------- split ---------- */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,64px);align-items:center;}
+.split-media{aspect-ratio:4/5;border-radius:var(--radius);position:relative;overflow:hidden;border:1px solid rgba(216,200,65,.3);background:var(--navy-950);}
+.split-media img{width:100%;height:100%;object-fit:cover;}
+.split-media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,27,48,.75) 0%,rgba(7,27,48,.05) 55%);}
+.split-media .frame-corner{position:absolute;width:34px;height:34px;border:2px solid var(--gold-500);z-index:2;}
+.frame-corner.tl{top:16px;left:16px;border-right:none;border-bottom:none;}
+.frame-corner.br{bottom:16px;right:16px;border-left:none;border-top:none;}
+.split-media .caption{position:absolute;bottom:16px;left:16px;right:50px;overflow-wrap:break-word;z-index:2;color:var(--white);font-size:11px;letter-spacing:.05em;}
+.split h2{margin-bottom:20px;}
+.split p{color:var(--gray-700);margin-bottom:16px;font-size:15.5px;}
+.split-list{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:14px;}
+.split-list li{display:flex;gap:14px;align-items:flex-start;font-size:14.5px;color:var(--gray-700);}
+.split-list .chev{flex-shrink:0;width:20px;height:20px;color:var(--kicker);margin-top:2px;}
+
+/* Missão e Visão: */
+#institucional{background:var(--white);}
+#institucional .split{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,3vw,40px);}
+#institucional .split-media{aspect-ratio:auto;border:0;background:transparent;border-radius:0;overflow:visible;min-height:0;display:flex;align-items:center;justify-content:center;}
+#institucional .split-media img{width:70%;height:auto;min-height:0;object-fit:contain;object-position:center;border-radius:0;box-shadow:none;}
+#institucional .split p{text-align:justify;text-justify:inter-word;hyphens:auto;line-height:1.7;max-width:72ch;}
+#institucional .split-media::after{display:none;}
+/* a imagem ocupa mais largura, chegando à margem disponível do ecrã */
+@media (min-width:861px){
+  #institucional .split-media{margin-right:calc(-1 * max(0px, 50vw - 640px));}
+}
+#institucional .split-media .frame-corner,
+#institucional .split-media .caption{display:none;}
+@media (max-width:860px){
+  #institucional .split{grid-template-columns:1fr;}
+  #institucional .split-media,#institucional .split-media img{min-height:0;}
+}
+
+
+/* ---------- Missão e Visão: imagem em formato de QUADRO ----------
+   Moldura dourada com passe-partout claro. A imagem aparece SEMPRE inteira
+   (object-fit:contain), sem cortes, e ocupa toda a largura da coluna. Para trocar
+   a imagem basta alterar o src da <img> dentro de #mission-frame (index.html). */
+#institucional .split-media.mission-frame{
+  display:block;margin:0;width:100%;
+  padding:0;
+  background:transparent;
+  border:0;border-radius:0;
+  box-shadow:none;
+  overflow:visible;aspect-ratio:auto;
+}
+#institucional .split-media.mission-frame img{
+  display:block;width:100%;height:auto;
+  max-height:min(80vh,760px);
+  object-fit:contain;object-position:center;margin:0 auto;
+}
+@media (min-width:861px){
+  #institucional .split-media.mission-frame{margin-right:calc(-0.5 * max(0px, 50vw - 640px));}
+  #institucional .split-media.mission-frame img{margin-left:auto;margin-right:0;object-position:right center;}
+}
+@media (max-width:860px){
+  #institucional .split-media.mission-frame{max-width:640px;margin:8px auto 0;}
+  #institucional .split-media.mission-frame img{max-height:none;}
+}
+
+/* ============ Mensagem do CEMFA (página inicial) ============ */
+.cemfa-home{--paper:#f6f0e2;--ink:#2a2823;padding:clamp(56px,8vw,96px) 0;background:radial-gradient(120% 90% at 50% 0%,#fbf6ea 0%,var(--paper) 60%,#efe6d0 100%);border-top:1px solid rgba(216,200,65,.5);border-bottom:1px solid rgba(216,200,65,.5);}
+.cemfa-home-grid{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;}
+.cemfa-home-grid > *{min-width:0;}
+.cemfa-home-photo{margin:0;position:relative;padding:12px;background:#fff;border:1px solid rgba(216,200,65,.7);box-shadow:0 0 0 6px rgba(216,200,65,.14),0 30px 50px -30px rgba(7,27,48,.5);}
+.cemfa-home-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;}
+.cemfa-home-photo figcaption{padding:14px 6px 4px;text-align:center;display:flex;flex-direction:column;gap:3px;}
+.cemfa-home-photo figcaption strong{font:700 14px/1.3 'Cinzel',Georgia,serif;color:var(--navy-900);letter-spacing:.02em;}
+.cemfa-home-photo figcaption span{font:600 11px var(--font-site);letter-spacing:.14em;text-transform:uppercase;color:var(--kicker);}
+.cemfa-home-copy h2{font:700 clamp(24px,3.4vw,38px)/1.2 'Cinzel',Georgia,serif;letter-spacing:.02em;text-transform:none;color:var(--navy-900);margin:8px 0 0;}
+.cemfa-home-orn{display:flex;align-items:center;gap:14px;max-width:300px;margin:20px 0 22px;color:var(--kicker);}
+.cemfa-home-orn span{flex:1;height:1px;background:linear-gradient(90deg,var(--gold-500),transparent);}
+.cemfa-home-orn i{font-style:normal;font-size:16px;}
+.cemfa-home-salute{font:italic 700 clamp(19px,2.2vw,23px) Georgia,'Times New Roman',serif;color:var(--navy-900);margin-bottom:10px;}
+.cemfa-home-text{font:clamp(16.5px,1.8vw,18.5px)/1.85 Georgia,'Times New Roman',serif;font-style:italic;color:#3a372f;max-width:62ch;margin-bottom:26px;}
+.cemfa-home-more{display:inline-flex;gap:8px;align-items:center;}
+@media (max-width:760px){.cemfa-home-grid{grid-template-columns:minmax(0,1fr);}.cemfa-home-photo{max-width:300px;margin:0 auto;}}
+
+/* ============ Missão e Visão: lista de missões ============ */
+#institucional .mission-list{list-style:none;margin:4px 0 20px;padding:16px 20px;background:rgba(255,255,255,.6);border-left:3px solid var(--gold-500);}
+#institucional .mission-list li{position:relative;padding:6px 0 6px 22px;font-size:15.5px;line-height:1.65;color:var(--gray-700);overflow-wrap:break-word;}
+#institucional .mission-list li::before{content:"";position:absolute;left:2px;top:1em;width:7px;height:7px;background:var(--gold-500);transform:rotate(45deg);}

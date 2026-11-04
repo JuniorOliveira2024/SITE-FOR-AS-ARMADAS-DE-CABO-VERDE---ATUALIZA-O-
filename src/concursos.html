@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-CV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Todos os concursos, incorporações e legislação de ingresso nas Forças Armadas de Cabo Verde, num só lugar.">
+<meta name="theme-color" content="#0A2540">
+<title>Todos os Concursos — Forças Armadas de Cabo Verde</title>
+<link rel="icon" type="image/png" href="assets/images/logo-fa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base/base.css?v=202611021400">
+<link rel="stylesheet" href="css/components/header.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/news.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/concursos.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/formacao.css?v=202611021400">
+<link rel="stylesheet" href="css/components/modals.css?v=202611021400">
+<link rel="stylesheet" href="css/components/footer.css?v=202611021400">
+<link rel="stylesheet" href="css/base/responsive.css?v=202611021400">
+<link rel="stylesheet" href="css/components/page-common.css?v=202611021400"><link rel="stylesheet" href="css/pages/concursos.css?v=202611021400">
+</head>
+
+<!-- MASTER PAGE: navbar (master.html) -->
+<div id="master-navbar"></div>
+
+<a id="top"></a>
+
+
+<section class="page-hero" style="padding:150px 0 50px;">
+  <div class="container page-hero-inner">
+    <img class="page-hero-crest" src="assets/images/logo-fa.png" alt="Emblema Oficial das Forças Armadas de Cabo Verde">
+    <div class="page-hero-copy">
+    <div class="eyebrow">Ingresso e Formação</div>
+    <h1>Oportunidades</h1>
+    <p>Concursos públicos, incorporações militares, serviço militar e formação profissional das Forças Armadas de Cabo Verde, num só lugar.</p></div>
+  </div>
+</section>
+
+<section class="concursos-filters" aria-label="Filtrar concursos">
+  <div class="container concursos-filters-row">
+    <div class="filters" id="concursos-filters" role="group" aria-label="Estado do concurso"></div>
+    <div class="concursos-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="search" id="concursos-search" placeholder="Pesquisar concursos..." aria-label="Pesquisar concursos">
+    </div>
+  </div>
+</section>
+
+<section class="concursos-list-section" id="concursos">
+  <div class="container">
+    <span id="incorporacao" class="anchor-target" aria-hidden="true"></span>
+    <span id="servico-militar" class="anchor-target" aria-hidden="true"></span>
+    <span id="objecao" class="anchor-target" aria-hidden="true"></span>
+    <p class="concursos-count" id="concursos-count" role="status" aria-live="polite"></p>
+    <div class="open-jobs-grid" id="concursos-grid"></div>
+    <p class="concursos-note">* Conteúdo de demonstração — substituir pelos concursos reais em vigor. Para outras informações, contacte o Comando da sua Região Militar.</p>
+  </div>
+</section>
+
+<section id="psc" class="section-alt oportunidades-psc">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Programa de Destaque</div>
+        <h2>Programa Soldado Cidadão</h2>
+        <p>Mais do que instrução militar, o Programa Soldado Cidadão prepara cada recruta para a vida em sociedade: cidadania, saúde, igualdade de género e competências técnico-profissionais.</p>
+      </div>
+      <a href="programa-soldado-cidadao.html" class="btn btn-gold">Página do Programa</a>
+    </div>
+    <div class="psc-feature reveal" style="margin-top:8px;">
+      <div class="psc-feature-media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rua_Pedonal,_Praia,_Cabo_Verde_01.jpg" alt="Ação cívica do Programa Soldado Cidadão, Praia">
+      </div>
+      <div class="psc-feature-body">
+        <span class="psc-badge">Formação técnico-profissional</span>
+        <h3>Preparar para a vida civil</h3>
+        <p>O programa decorre em articulação com o Centro de Instrução Militar do Morro Branco (CIMMB) e entidades parceiras de formação profissional, ao longo de todo o percurso de incorporação.</p>
+        <div class="psc-pillars">
+          <span>Formação técnico-profissional</span><span>Educação cívica</span><span>Saúde e bem-estar</span><span>Igualdade de género</span>
+        </div>
+        <a href="programa-soldado-cidadao.html" class="btn btn-gold">Saber mais sobre o Programa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formacao-oportunidades" class="oportunidades-formacao">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Ensino Militar</div>
+        <h2>Formação Militar</h2>
+        <p>Preparar quem serve a Nação. Conheça a Escola Militar e as formações disponíveis. O Centro de Instrução Militar do Morro Branco encontra-se em <a href="estrutura.html#cimmb">Estrutura</a>.</p>
+      </div>
+    </div>
+    <div class="oportunidades-formacao-grid">
+      <a href="escola-militar.html" id="escola-militar" class="oportunidade-formacao-card reveal"><img src="assets/images/logo-fa.png" alt=""><div><h3>Escola Militar</h3><p>Formação e aperfeiçoamento dos quadros militares, doutrina e estudos militares.</p><span>Ver Escola Militar →</span></div></a>
+    </div>
+    <div class="courses-head reveal"><h4>Formações disponíveis no Programa Soldado Cidadão</h4></div>
+    <div class="courses-table reveal" id="courses-table">
+      <div class="courses-row courses-head-row"><span>Área de Formação</span><span>Entidade Parceira</span><span>Nível</span><span>Duração</span><span></span></div>
+      <div class="courses-row" data-curso="Eletricidade e Instalações Elétricas"><span data-label="Área">Eletricidade e Instalações Elétricas</span><span data-label="Parceiro">IEFP — Centro de Emprego e Formação Profissional</span><span data-label="Nível"><span class="level-chip lvl-2">Nível II</span></span><span data-label="Duração">3 meses</span><span data-label="Ação"><a class="btn-apply-course" href="programa-soldado-cidadao.html">Candidatar-se</a></span></div>
+      <div class="courses-row" data-curso="Mecânica Auto e Manutenção de Viaturas"><span data-label="Área">Mecânica Auto e Manutenção de Viaturas</span><span data-label="Parceiro">OCFA / CIMMB (formação interna)</span><span data-label="Nível"><span class="level-chip lvl-2">Nível II</span></span><span data-label="Duração">4 meses</span><span data-label="Ação"><a class="btn-apply-course" href="programa-soldado-cidadao.html">Candidatar-se</a></span></div>
+      <div class="courses-row" data-curso="Culinária e Hotelaria"><span data-label="Área">Culinária e Hotelaria</span><span data-label="Parceiro">IEFP — Centro de Emprego e Formação Profissional</span><span data-label="Nível"><span class="level-chip lvl-1">Nível I</span></span><span data-label="Duração">2 meses</span><span data-label="Ação"><a class="btn-apply-course" href="programa-soldado-cidadao.html">Candidatar-se</a></span></div>
+      <div class="courses-row" data-curso="Informática na Ótica do Utilizador"><span data-label="Área">Informática na Ótica do Utilizador</span><span data-label="Parceiro">Labanta</span><span data-label="Nível"><span class="level-chip lvl-1">Nível I</span></span><span data-label="Duração">6 semanas</span><span data-label="Ação"><a class="btn-apply-course" href="programa-soldado-cidadao.html">Candidatar-se</a></span></div>
+      <div class="courses-row" data-curso="Empreendedorismo e Gestão de Pequenos Negócios"><span data-label="Área">Empreendedorismo e Gestão de Pequenos Negócios</span><span data-label="Parceiro">CERMI</span><span data-label="Nível"><span class="level-chip lvl-1">Nível I</span></span><span data-label="Duração">6 semanas</span><span data-label="Ação"><a class="btn-apply-course" href="programa-soldado-cidadao.html">Candidatar-se</a></span></div>
+      <div class="courses-row" data-curso="Educação Cívica e Cidadania"><span data-label="Área">Educação Cívica e Cidadania</span><span data-label="Parceiro">CIMMB (transversal a todo o percurso)</span><span data-label="Nível"><span class="level-chip lvl-transv">Transversal</span></span><span data-label="Duração">Todo o percurso</span><span data-label="Ação"><span class="included-tag">Incluído no percurso</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTER PAGE: footer (master.html) -->
+<div id="master-footer"></div>
+
+<div class="service-modal" id="job-modal" role="dialog" aria-modal="true" aria-label="Candidatar-se a um concurso">
+  <div class="service-modal-backdrop" id="job-modal-backdrop"></div>
+  <div class="service-modal-panel">
+    <button class="service-modal-close" id="job-modal-close" aria-label="Fechar">✕</button>
+
+    <div id="job-step-form">
+      <div class="eyebrow">Concursos Públicos</div>
+      <h3 class="service-modal-title">Candidatura ao concurso</h3>
+      <p class="service-modal-lede" id="job-modal-lede">Preencha os seus dados para se candidatar a este concurso. Aberto tanto a civis como a militares no ativo.</p>
+
+      <form id="job-form">
+        <label class="service-label">Concurso escolhido</label>
+        <input type="text" id="job-name" class="service-input" readonly>
+
+        <label for="job-full-name" class="service-label">Nome completo</label>
+        <input type="text" id="job-full-name" class="service-input" placeholder="Ex: Maria Ana Fernandes Lima" required>
+        <span class="field-error" id="job-name-error" style="display:none;">Introduza o nome completo (nome e apelido), apenas letras.</span>
+
+        <label for="job-contact" class="service-label" style="margin-top:16px;">Telefone / WhatsApp</label>
+        <input type="tel" id="job-contact" class="service-input" placeholder="Ex: 991 23 45" required>
+
+        <label for="job-email" class="service-label" style="margin-top:16px;">E-mail (opcional)</label>
+        <input type="email" id="job-email" class="service-input" placeholder="nome@exemplo.cv">
+
+        <label class="service-label" style="margin-top:16px;">É militar no ativo?</label>
+        <div class="service-radio-group">
+          <label class="service-radio"><input type="radio" name="militar-ativo" value="sim" required> Sim, sou militar no ativo (concurso interno)</label>
+          <label class="service-radio"><input type="radio" name="militar-ativo" value="nao" required> Não, sou candidato civil</label>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="margin-top:24px;width:100%;justify-content:center;">Enviar Candidatura</button>
+      </form>
+      <p class="service-disclaimer">⚠ Formulário de demonstração. Numa versão em produção, esta candidatura seria registada no sistema oficial de recrutamento das Forças Armadas, com confirmação por SMS ou e-mail.</p>
+    </div>
+
+    <div id="job-step-result" style="display:none;">
+      <div class="eyebrow">Candidatura Enviada</div>
+      <h3 class="service-modal-title">Candidatura registada com sucesso</h3>
+      <p class="service-result-note" id="job-result-note"></p>
+      <div class="service-result-actions">
+        <button class="btn btn-outline-dark" id="job-back-btn">← Nova candidatura</button>
+        <button class="btn btn-gold" id="job-close-btn">Concluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-modal" id="detail-modal" role="dialog" aria-modal="true" aria-label="Ver detalhes">
+  <div class="article-modal-backdrop" id="detail-modal-backdrop"></div>
+  <div class="article-modal-panel">
+    <button class="article-modal-close" id="detail-modal-close" aria-label="Fechar">✕</button>
+    <div class="article-hero">
+      <img id="detail-image" src="" alt="">
+      <span class="tag" id="detail-tag"></span>
+    </div>
+    <div class="article-body">
+      <span class="news-date" id="detail-date"></span>
+      <h2 id="detail-title"></h2>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/core/master-data.js?v=202611021400"></script>
+<script src="js/core/master.js?v=202611021400"></script>
+<script src="js/core/config.js?v=202611021400"></script>
+<script src="js/core/api.js?v=202611021400"></script><script src="js/core/live.js?v=202611021400"></script><script src="js/effects/index.js?v=202611021400"></script><script src="js/effects/fade.js?v=202611021400"></script><script src="js/effects/slide.js?v=202611021400"></script><script src="js/effects/zoom.js?v=202611021400"></script><script src="js/effects/parallax.js?v=202611021400"></script><script src="js/effects/hover.js?v=202611021400"></script><script src="js/effects/reveal.js?v=202611021400"></script><script src="js/effects/loading.js?v=202611021400"></script><script src="js/core/cms.js?v=202611021400"></script><script src="js/core/helpers.js?v=202611021400"></script>
+<script src="js/core/toast.js?v=202611021400"></script>
+<script src="js/core/reveal.js?v=202611021400"></script>
+<script src="js/components/mobile-nav.js?v=202611021400"></script>
+<script src="js/components/header-scroll.js?v=202611021400"></script>
+<script src="js/components/search.js?v=202611021400"></script>
+<script src="js/data/concursos-data.js?v=202611021400"></script>
+<script src="js/components/job-application.js?v=202611021400"></script>
+<script src="js/components/detail-modal.js?v=202611021400"></script>
+<script src="js/pages/concursos.js?v=202611021400"></script>
+</html>

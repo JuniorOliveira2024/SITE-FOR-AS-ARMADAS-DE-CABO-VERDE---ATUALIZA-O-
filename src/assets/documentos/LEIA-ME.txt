@@ -1,0 +1,20 @@
+Documentos (PDF) da secção Documentação
+
+Cada categoria tem a sua pasta. Coloque o PDF com o nome indicado e o botão do documento passa a abri-lo.
+Para adicionar um documento novo, acrescente um <a class="doc-card"> na categoria em noticias.html (copie um existente).
+
+Ficheiros esperados:
+assets/documentos/diplomas-diversos/despacho-n-o-9-2026-nomeacao-de-comandos.pdf  ->  Despacho n.º 9/2026 — Nomeação de comandos
+assets/documentos/diplomas-diversos/despacho-n-o-10-2026-comando-da-guarda-nacional.pdf  ->  Despacho n.º 10/2026 — Comando da Guarda Nacional
+assets/documentos/diplomas-diversos/regulamento-do-conselho-de-classe-fa.pdf  ->  Regulamento do Conselho de Classe FA
+assets/documentos/diplomas-diversos/boletim-oficial-da-republica-de-cabo-verde.pdf  ->  Boletim Oficial da República de Cabo Verde
+assets/documentos/organizacao-e-efetivos/organica-do-estado-maior-das-forcas-armadas-emfa.pdf  ->  Orgânica do Estado-Maior das Forças Armadas (EMFA)
+assets/documentos/organizacao-e-efetivos/decreto-lei-n-o-12-2026-organica-das-forcas-armadas.pdf  ->  Decreto-Lei n.º 12/2026 — Orgânica das Forças Armadas
+assets/documentos/organizacao-e-efetivos/decreto-regulamentar-organizacao-da-guarda-nacional.pdf  ->  Decreto Regulamentar — Organização da Guarda Nacional
+assets/documentos/organizacao-e-efetivos/quadro-de-pessoal-das-forcas-armadas.pdf  ->  Quadro de Pessoal das Forças Armadas
+assets/documentos/organizacao-e-efetivos/despacho-de-criacao-da-guarda-costeira.pdf  ->  Despacho de Criação da Guarda Costeira
+assets/documentos/organizacao-e-efetivos/competencias-da-escola-militar.pdf  ->  Competências da Escola Militar
+assets/documentos/servico-militar/lei-do-servico-militar-decreto-legislativo-n-o-6-93.pdf  ->  Lei do Serviço Militar — Decreto-Legislativo n.º 6/93
+assets/documentos/servico-militar/objecao-de-consciencia-decreto-legislativo-n-o-7-93.pdf  ->  Objeção de Consciência — Decreto-Legislativo n.º 7/93
+assets/documentos/programa-soldado-cidadao/resolucao-n-o-34-2007-criacao-do-programa-soldado-cidadao.pdf  ->  Resolução n.º 34/2007 — Criação do Programa Soldado Cidadão
+assets/documentos/programa-soldado-cidadao/resolucao-n-o-177-x-2025-reestruturacao-do-psc.pdf  ->  Resolução n.º 177/X/2025 — Reestruturação do PSC

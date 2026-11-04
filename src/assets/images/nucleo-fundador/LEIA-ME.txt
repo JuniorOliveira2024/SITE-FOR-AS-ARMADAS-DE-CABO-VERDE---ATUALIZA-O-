@@ -1,0 +1,32 @@
+Fotografias do Núcleo Fundador
+
+Coloque aqui uma fotografia por membro (formato retrato, .jpg, .png ou .webp).
+O nome do ficheiro deve ser exatamente o indicado abaixo; o site mostra a foto automaticamente.
+
+pedro-verona-rodrigues-pires.jpg  ->  Pedro Verona Rodrigues Pires
+olivio-melicio-pires.jpg  ->  Olívio Melício Pires
+silvino-manuel-da-luz.jpg  ->  Silvino Manuel da Luz
+honorio-chantre-fortes.jpg  ->  Honório Chantre Fortes
+julio-cesar-de-carvalho.jpg  ->  Júlio César de Carvalho
+agnelo-medina-dantas-pereira.jpg  ->  Agnelo Medina Dantas Pereira
+amancio-santos-lopes.jpg  ->  Amâncio Santos Lopes
+joaquim-pedro-silva.jpg  ->  Joaquim Pedro Silva (Barô)
+afonso-gomes.jpg  ->  Afonso Gomes
+antonio-leite.jpg  ->  António Leite
+armindo-lopes-ferreira.jpg  ->  Armindo Lopes Ferreira
+manuel-joao-piedade.jpg  ->  Manuel João Piedade
+manuel-de-jesus-gomes.jpg  ->  Manuel de Jesus Gomes
+osvaldo-aranda-azevedo.jpg  ->  Osvaldo Aranda Azevedo
+armando-antonio-lima-fortes.jpg  ->  Armando António Lima Fortes
+jose-anselmo-corsino.jpg  ->  José Anselmo Corsino
+sotero-nicolau-fortes.jpg  ->  Sotero Nicolau Fortes
+manuel-pedro-dos-santos.jpg  ->  Manuel Pedro dos Santos
+estanislau-joao-ramos.jpg  ->  Estanislau João Ramos
+maria-ilidia-da-cruz-evora.jpg  ->  Maria Ilídia da Cruz Évora
+fernando-dos-santos-rosa.jpg  ->  Fernando dos Santos Rosa
+nicolau-lucio-pio.jpg  ->  Nicolau Lúcio Pio
+alcides-evora.jpg  ->  Alcides Évora (Batcha)
+jaime-mota.jpg  ->  Jaime Mota
+manuel-duarte-monteiro.jpg  ->  Manuel Duarte Monteiro
+wlademiro-carvalho.jpg  ->  Wlademiro Carvalho
+manuel-maria-dos-santos.jpg  ->  Manuel Maria dos Santos

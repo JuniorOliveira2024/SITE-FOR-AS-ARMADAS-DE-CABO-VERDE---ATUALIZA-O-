@@ -1,0 +1,145 @@
+/* ============================================================
+   Cabeçalho
+   Inclui TODA a responsividade do header (topbar, navegação,
+   menu hambúrguer, menu móvel e pesquisa). Partilhado por todas as páginas.
+   Ponto de troca desktop → hambúrguer: 1240px.
+   O menu desktop tem 8 itens e encolhe de forma fluida entre 1240px e 1540px. O botão dourado
+   "Concursos Abertos" está SEMPRE visível: compacto em 1200–1359px, normal a partir de 1360px
+   e também no modo hambúrguer (tablet, a partir de 640px). Em telemóvel pequeno fica no menu.
+   A linha do header usa até 1480px de largura (e não só 1240px) para caber tudo sem sobrepor.
+   ============================================================ */
+
+/* ---------- topbar ---------- */
+.topbar{background:var(--navy-950);color:var(--gray-300);font-size:12.5px;}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;flex-wrap:wrap;gap:8px;}
+.topbar-left{display:flex;gap:22px;align-items:center;letter-spacing:.02em;}
+.topbar-left span{opacity:.85;}
+.topbar-right{display:flex;gap:6px 18px;align-items:center;flex-wrap:wrap;min-width:0;max-width:100%;}
+.topbar-right a{opacity:.85;transition:opacity .2s;}
+.topbar-right a:hover{opacity:1;color:var(--gold-300);}
+.lang-toggle{display:flex;gap:6px;}
+.lang-toggle button{background:none;border:none;color:var(--gray-300);font-size:12px;padding:2px 4px;}
+.lang-toggle button.active{color:var(--gold-300);font-weight:700;}
+
+/* ---------- header / nav ---------- */
+header.site-header{position:sticky;top:0;z-index:200;background:rgba(10,37,64,.98);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(216,200,65,.3), 0 10px 30px -18px rgba(0,0,0,.5);}
+/* header inteligente: desliza para fora do ecrã ao rolar para baixo (ver js/components/header-scroll.js) */
+header.site-header{transition:transform .32s var(--ease),box-shadow .32s var(--ease);will-change:transform;}
+header.site-header.header-hidden{transform:translateY(-100%);box-shadow:none;}
+@media (prefers-reduced-motion:reduce){header.site-header{transition:none;}}
+header.site-header::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--navy-950) 0%,var(--gold-500) 20%,var(--gold-300) 50%,var(--gold-500) 80%,var(--navy-950) 100%);}
+.nav-row{max-width:1560px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,4.2vw,28px);gap:clamp(14px,2vw,30px);}
+nav.primary{margin-left:auto;margin-right:clamp(8px,.9vw,14px);}
+nav.primary > ul{justify-content:flex-end;}
+.nav-divider{width:1px;align-self:stretch;background:rgba(255,255,255,.14);margin:6px 0;}
+.brand{display:flex;align-items:center;gap:clamp(10px,1.4vw,14px);color:var(--white);flex-shrink:0;min-width:0;}
+.crest{width:46px;height:46px;flex-shrink:0;object-fit:contain;}
+.brand-text{min-width:0;}
+.brand-text .b1{font-size:14px;letter-spacing:.03em;color:var(--white);font-weight:600;line-height:1.35;white-space:normal;}
+.brand-text .b1{display:block;font-family:var(--font-brand);font-weight:700;font-size:13px;letter-spacing:.07em;text-transform:uppercase;line-height:1.3;color:var(--white);text-shadow:0 1px 0 rgba(0,0,0,.35);}
+.brand-text .b1::first-line{color:#F3DE41;}
+
+/* Navegação desktop: tamanhos fluidos para caber entre 1240px e 1540px+ sem estourar a linha */
+nav.primary{display:flex;align-items:center;gap:2px;min-width:0;}
+nav.primary > ul{display:flex;list-style:none;gap:clamp(18px,1.9vw,34px);}
+nav.primary > ul > li{position:relative;}
+nav.primary > ul > li > a{display:flex;align-items:center;height:64px;padding:0 clamp(2px,.35vw,5px);color:rgba(255,255,255,.78);font-size:clamp(11px,calc(11px + (100vw - 1180px) * .0062),13px);letter-spacing:.04em;text-transform:uppercase;font-weight:500;border-bottom:2px solid transparent;transition:color .2s,border-color .2s,background .2s;white-space:nowrap;}
+nav.primary > ul > li > a:hover,nav.primary > ul > li:hover > a,nav.primary > ul > li > a.active{color:var(--white);border-color:var(--gold-500);background:rgba(255,255,255,.04);}
+.has-mega{position:relative;}
+.mega{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);width:640px;max-width:calc(100vw - 32px);background:var(--white);box-shadow:0 22px 45px -12px rgba(7,27,48,.35);border-top:3px solid var(--gold-500);padding:26px 30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 34px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s var(--ease),transform .2s var(--ease);}
+.has-mega:hover .mega,.has-mega:focus-within .mega{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0);}
+.mega a{display:block;padding:9px 4px;font-size:14px;color:var(--navy-800);border-bottom:1px solid var(--gray-100);font-weight:500;overflow-wrap:break-word;}
+.mega a:hover{color:var(--red-600);}
+.mega-title{grid-column:1/-1;font-size:11px;letter-spacing:.1em;color:var(--kicker);text-transform:uppercase;margin-bottom:6px;}
+/* Primeiro mega-menu alinhado à esquerda do item (não sai do ecrã à esquerda) */
+nav.primary > ul > li.has-mega:first-child .mega{left:0;transform:translate(0,8px);}
+nav.primary > ul > li.has-mega:first-child:hover .mega,
+nav.primary > ul > li.has-mega:first-child:focus-within .mega{transform:translate(0,0);}
+/* Mega-menus dos últimos itens abrem alinhados à direita para nunca saírem do ecrã */
+nav.primary > ul > li.has-mega:nth-last-child(-n+3) .mega{left:auto;right:0;transform:translate(0,8px);}
+nav.primary > ul > li.has-mega:nth-last-child(-n+3):hover .mega,
+nav.primary > ul > li.has-mega:nth-last-child(-n+3):focus-within .mega{transform:translate(0,0);}
+
+.nav-cta{display:flex;align-items:center;gap:clamp(8px,1.1vw,14px);flex-shrink:0;margin-left:0;justify-content:flex-end;}
+.btn{font-size:13px;letter-spacing:.05em;text-transform:uppercase;font-weight:600;padding:11px 20px;border-radius:var(--radius);border:1px solid transparent;transition:all .22s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:8px;max-width:100%;text-align:center;line-height:1.25;}
+.btn-gold{background:var(--gold-500);color:var(--navy-950);}
+.btn-gold:hover{background:var(--gold-300);transform:translateY(-1px);}
+.btn-outline{border-color:rgba(255,255,255,.35);color:var(--white);}
+.btn-outline:hover{border-color:var(--gold-500);color:var(--gold-300);}
+.btn-outline-dark{border-color:var(--gray-300);color:var(--navy-900);}
+.btn-outline-dark:hover{border-color:var(--gold-500);color:var(--red-600);background:var(--gray-50);}
+.btn-search{background:none;border:1px solid rgba(255,255,255,.25);color:var(--white);padding:9px 12px;}
+/* a pesquisa fica sempre encostada ao canto direito do cabeçalho */
+.nav-cta .btn-search{margin-left:0;}
+.burger{display:none;background:none;border:none;color:var(--white);font-size:26px;line-height:1;padding:4px 8px;}
+
+/* ---------- mobile nav ---------- */
+.mobile-nav{display:none;position:fixed;inset:0;z-index:300;background:rgba(7,27,48,.98);padding:84px clamp(16px,5vw,28px) 40px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+.mobile-nav.open{display:block;}
+.mobile-nav .close-mobile{position:absolute;top:14px;right:max(14px,calc(clamp(16px,5vw,28px) - 8px));width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;background:none;border:none;color:var(--white);font-size:30px;line-height:1;}
+.mobile-nav details{border-bottom:1px solid rgba(255,255,255,.12);padding:6px 0;}
+.mobile-nav summary{color:var(--white);font-size:16px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:44px;overflow-wrap:break-word;}
+.mobile-nav summary::-webkit-details-marker{display:none;}
+.mobile-nav .sub-links{display:flex;flex-direction:column;gap:2px;margin:6px 0 10px;padding-left:6px;}
+.mobile-nav .sub-links a{color:var(--gray-300);font-size:14px;display:block;padding:10px 0;overflow-wrap:break-word;}
+.mobile-nav > a.top-link{display:flex;align-items:center;min-height:44px;padding:8px 0;color:var(--white);font-size:16px;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.12);}
+/* bloqueia o scroll da página por trás dos overlays abertos */
+body:has(.mobile-nav.open),
+body:has(.search-overlay.open),
+body:has(.article-modal.open),
+body:has(.psc-page-modal.open),
+body:has(.service-modal.open),
+body:has(.lightbox.open){overflow:hidden;}
+
+/* ---------- search overlay ---------- */
+.search-overlay{position:fixed;inset:0;background:rgba(7,27,48,.96);z-index:400;display:none;align-items:flex-start;justify-content:center;padding-top:clamp(84px,16vh,140px);overflow-y:auto;}
+.search-overlay.open{display:flex;}
+.search-box{width:min(640px,calc(100% - 32px));}
+.search-box form{display:flex;align-items:center;gap:8px;border-bottom:2px solid var(--gold-500);padding-bottom:14px;}
+.search-box input{flex:1;min-width:0;background:none;border:none;color:var(--white);font-size:clamp(18px,5.4vw,26px);letter-spacing:.02em;outline:none;}
+.search-box input::placeholder{color:var(--gray-500);}
+.search-box button.submit{background:none;border:none;color:var(--gold-300);flex-shrink:0;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+.search-hint{color:var(--gray-500);font-size:12px;margin-top:18px;overflow-wrap:break-word;}
+.search-close{position:absolute;top:14px;right:14px;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;background:none;border:none;color:var(--white);font-size:30px;line-height:1;}
+
+/* ============================================================
+   Responsividade do header
+   ============================================================ */
+
+/* Abaixo de 1180px: menu desktop some, aparece o hambúrguer */
+@media (max-width:1179px){
+  nav.primary{display:none;}
+  .nav-divider{display:none;}
+  .burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;}
+  .btn-search{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0;}
+  .topbar-left{display:none;}
+}
+/* o menu móvel nunca fica aberto num layout desktop */
+@media (min-width:1180px){
+  .mobile-nav{display:none !important;}
+}
+
+/* Topbar compacta em telemóveis */
+@media (max-width:600px){
+  .topbar{font-size:12px;}
+  .topbar .container{padding-top:6px;padding-bottom:6px;}
+  .topbar-right{width:100%;justify-content:center;gap:2px 14px;margin-left:0 !important;}
+  .topbar-right{gap:0 10px;}
+  .topbar-right a{padding:0 4px;}
+  .lang-toggle button{padding:0 6px;}
+}
+
+/* Header em telemóveis: logo + pesquisa + hambúrguer sempre visíveis */
+@media (max-width:480px){
+  .nav-row{padding-top:10px;padding-bottom:10px;gap:10px;}
+  .brand{flex-shrink:1;}
+  .crest{width:42px;height:42px;}
+  .brand-text .b1{font-size:12px;letter-spacing:.05em;}
+  .nav-cta{gap:6px;}
+}
+@media (max-width:359px){
+  .crest{width:38px;height:38px;}
+  .brand{gap:8px;}
+  .brand-text .b1{font-size:10.5px;letter-spacing:.03em;}
+  .btn-search,.burger{min-width:40px;width:40px;height:40px;}
+}

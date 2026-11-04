@@ -1,0 +1,29 @@
+/* ============================================================
+   Página "Todos os concursos" (concursos.html)
+   Os cards reutilizam .open-jobs-grid / .job-card (sections/concursos.css).
+   ============================================================ */
+.concursos-filters{padding:24px 0;background:var(--white);border-bottom:1px solid var(--gray-100);}
+.concursos-filters-row{display:flex;justify-content:space-between;align-items:center;gap:16px 24px;flex-wrap:wrap;}
+.concursos-filters .filters{margin-bottom:0;min-width:0;}
+.filter-count{display:inline-block;min-width:18px;margin-left:4px;padding:1px 6px;border-radius:10px;background:rgba(10,37,64,.08);font-size:11px;line-height:1.5;text-align:center;}
+.filter-btn.active .filter-count,.filter-btn:hover .filter-count{background:rgba(255,255,255,.2);}
+.filter-btn{min-height:40px;}
+.concursos-search{position:relative;flex:0 1 340px;min-width:0;}
+.concursos-search input{width:100%;padding:11px 16px 11px 40px;border:1px solid var(--gray-300);font-size:14px;border-radius:20px;background:var(--white);}
+.concursos-search input:focus{outline:none;border-color:var(--gold-500);}
+.concursos-search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--gray-500);pointer-events:none;}
+.concursos-list-section{padding:48px 0 90px;background:var(--gray-50);min-height:50vh;}
+.concursos-count{font-size:13px;color:var(--gray-500);margin-bottom:22px;}
+.concursos-note{font-size:11.5px;font-style:italic;color:var(--gray-500);margin-top:28px;}
+.job-card-title{font-size:15.5px;text-transform:none;letter-spacing:0;color:var(--navy-900);line-height:1.32;overflow-wrap:anywhere;hyphens:auto;}
+.concursos-empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--gray-500);background:var(--white);border:1px dashed var(--gray-300);}
+.concursos-reset{display:block;margin:16px auto 0;background:none;border:none;border-bottom:1px solid var(--gold-500);color:var(--navy-900);font-weight:600;padding:8px 2px;min-height:44px;}
+@media (max-width:600px){
+  .concursos-search{flex-basis:100%;}
+  .concursos-list-section{padding:36px 0 70px;}
+  .filters{gap:8px;}
+}
+
+/* links com aspeto de botão (ex.: "Saber mais") iguais aos <button> dos outros cards */
+.open-jobs-grid a.job-apply{background:#efefef;}
+.open-jobs-grid a.job-apply:hover{background:var(--gray-50);}

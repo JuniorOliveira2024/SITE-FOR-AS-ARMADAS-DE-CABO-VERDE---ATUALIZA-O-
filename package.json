@@ -1,0 +1,11 @@
+{
+  "name": "fa-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend estático das Forças Armadas de Cabo Verde",
+  "scripts": {
+    "start": "node server.js",
+    "build:master": "node build-master.js",
+    "prestart": "node build-master.js"
+  }
+}

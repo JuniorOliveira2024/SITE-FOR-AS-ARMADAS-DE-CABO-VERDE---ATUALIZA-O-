@@ -1,0 +1,100 @@
+/* ============================================================
+   Formação
+   ============================================================ */
+
+/* ---------- formacao cards ---------- */
+.formacao-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;}
+.formacao-card{background:var(--white);border:1px solid var(--gray-300);padding:20px;transition:border-color .2s,transform .2s;}
+.formacao-card:hover{border-color:var(--gold-500);transform:translateY(-4px);}
+.formacao-card .fnum{font-family:'JetBrains Mono',monospace;color:var(--gold-500);font-size:12px;font-weight:700;}
+.formacao-card h4{font-size:14px;text-transform:none;letter-spacing:0;color:var(--navy-900);margin-top:8px;line-height:1.3;}
+
+.psc-feature{display:grid;grid-template-columns:1fr 1.3fr;background:var(--navy-900);border-radius:2px;overflow:hidden;margin-top:44px;box-shadow:0 24px 50px -22px rgba(10,37,64,.4);}
+.psc-feature-media{position:relative;min-height:280px;}
+.psc-feature-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.psc-feature-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 40%,rgba(10,37,64,.9));}
+.psc-feature-body{padding:40px 44px;color:var(--white);display:flex;flex-direction:column;gap:14px;}
+.psc-badge{align-self:flex-start;background:var(--gold-500);color:var(--navy-950);font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;padding:5px 12px;border-radius:14px;}
+.psc-feature-body h3{color:var(--white);font-size:26px;margin-bottom:2px;}
+.psc-feature-body p{color:var(--gray-300);font-size:14.5px;max-width:520px;}
+.psc-pillars{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 10px;}
+.psc-pillars span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:7px 13px;border-radius:16px;font-size:12.5px;color:var(--gray-300);}
+.psc-feature-body .btn{align-self:flex-start;}
+@media (max-width:860px){
+  .psc-feature{grid-template-columns:1fr;}
+  .psc-feature-media{min-height:180px;}
+  .psc-feature-body{padding:28px 24px;}
+}
+
+.courses-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin:44px 0 18px;}
+.courses-head h4{font-size:17px;text-transform:none;letter-spacing:0;color:var(--navy-900);}
+.courses-table{display:flex;flex-direction:column;gap:1px;background:var(--gray-100);border:1px solid var(--gray-100);}
+.courses-row{background:var(--white);display:grid;grid-template-columns:1.9fr 1.5fr 100px 100px 150px;gap:14px;align-items:center;padding:16px 20px;font-size:13.5px;color:var(--gray-700);}
+.courses-row.courses-head-row{background:var(--navy-900);color:var(--white);font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:12px 20px;}
+.courses-row em{color:var(--gray-500);font-style:italic;}
+
+/* ---------- PSC full modal ---------- */
+.psc-page-modal{position:fixed;inset:0;z-index:850;display:none;align-items:flex-start;justify-content:center;padding:32px 16px;overflow-y:auto;}
+.psc-page-modal.open{display:flex;}
+.psc-page-backdrop{position:fixed;inset:0;background:rgba(4,12,22,.9);}
+.psc-page-panel{position:relative;background:var(--white);width:min(900px,100%);margin:auto;box-shadow:0 30px 70px -20px rgba(0,0,0,.5);}
+.psc-page-close{position:absolute;top:16px;right:18px;z-index:3;background:rgba(7,27,48,.6);border:none;color:var(--white);font-size:22px;width:38px;height:38px;border-radius:50%;}
+.psc-page-hero{position:relative;aspect-ratio:16/6;overflow:hidden;background:var(--navy-950);}
+.psc-page-hero img{width:100%;height:100%;object-fit:cover;opacity:.55;}
+.psc-page-hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 40px;background:linear-gradient(0deg,rgba(7,27,48,.85),transparent 60%);}
+.psc-page-hero-overlay h2{color:var(--white);font-size:clamp(22px,3vw,32px);margin-top:8px;}
+.psc-page-body{padding:36px 40px 50px;}
+.psc-page-body > p{color:var(--gray-700);font-size:15px;line-height:1.75;margin-bottom:16px;}
+.psc-page-body h3{font-size:18px;color:var(--navy-900);text-transform:none;letter-spacing:0;margin:36px 0 16px;padding-top:20px;border-top:1px solid var(--gray-100);}
+.illustrative-note{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray-500);font-style:italic;margin-top:8px;}
+
+.psc-page-courses{display:flex;flex-direction:column;gap:1px;background:var(--gray-100);border:1px solid var(--gray-100);}
+.psc-page-course-row{background:var(--white);display:flex;justify-content:space-between;align-items:center;padding:12px 18px;font-size:14px;color:var(--gray-700);}
+
+.psc-director-card{display:flex;gap:20px;align-items:flex-start;background:var(--gray-50);border:1px solid var(--gray-100);padding:22px;}
+.psc-director-avatar{flex-shrink:0;width:64px;height:64px;border-radius:50%;background:var(--navy-900);color:var(--gold-300);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:20px;font-weight:600;}
+.psc-director-info h4{font-size:15.5px;text-transform:none;letter-spacing:0;color:var(--navy-900);margin-bottom:4px;}
+.psc-director-info h4 em{color:var(--gray-500);font-size:12px;font-style:italic;font-weight:400;}
+.psc-director-role{display:block;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-500);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
+.psc-director-info p{font-size:13.5px;color:var(--gray-700);line-height:1.6;}
+
+.psc-student-carousel{position:relative;overflow:hidden;background:var(--navy-950);aspect-ratio:16/9;}
+.psc-carousel-track{display:flex;height:100%;transition:transform .5s var(--ease);}
+.psc-slide{min-width:100%;height:100%;position:relative;}
+.psc-slide img{width:100%;height:100%;object-fit:cover;}
+.psc-slide p{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(0deg,rgba(7,27,48,.9),transparent);color:var(--white);font-size:13.5px;margin:0;}
+.psc-slide p em{color:var(--gray-300);font-style:italic;font-size:11.5px;}
+.psc-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(7,27,48,.6);border:none;color:var(--white);font-size:22px;cursor:pointer;z-index:2;}
+.psc-carousel-btn.prev{left:12px;}
+.psc-carousel-btn.next{right:12px;}
+.psc-carousel-dots{position:absolute;bottom:52px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:2;}
+.psc-carousel-dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);border:none;padding:0;}
+.psc-carousel-dots button.active{background:var(--gold-500);}
+
+.psc-partners-marquee{overflow:hidden;background:var(--gray-50);border:1px solid var(--gray-100);padding:18px 0;}
+.psc-partners-track{display:flex;gap:16px;width:max-content;animation:psc-marquee 18s linear infinite;}
+@keyframes psc-marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.psc-partner-badge{flex-shrink:0;background:var(--white);border:1px solid var(--gray-300);padding:12px 24px;font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:.03em;color:var(--navy-900);white-space:nowrap;}
+.psc-partner-badge em{color:var(--gray-500);font-size:11px;font-style:italic;}
+@media (prefers-reduced-motion:reduce){.psc-partners-track{animation:none;}}
+
+@media (max-width:700px){
+  .psc-page-body{padding:26px 22px 40px;}
+  .psc-director-card{flex-direction:column;align-items:center;text-align:center;}
+}
+.btn-apply-course{background:none;border:1px solid var(--gray-300);color:var(--navy-900);font-family:'JetBrains Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;padding:8px 14px;border-radius:2px;white-space:nowrap;transition:all .2s;}
+.btn-apply-course:hover{background:var(--gold-500);border-color:var(--gold-500);color:var(--navy-950);}
+.included-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray-500);font-style:italic;}
+.level-chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:3px 10px;border-radius:12px;text-transform:uppercase;}
+.level-chip.lvl-1{background:rgba(45,111,163,.12);color:var(--blue-500);}
+.level-chip.lvl-2{background:rgba(198,161,91,.2);color:#8a6a2c;}
+.level-chip.lvl-3{background:rgba(163,32,43,.12);color:var(--red-600);}
+.level-chip.lvl-4{background:rgba(45,111,163,.22);color:#1c4d70;}
+.level-chip.lvl-5{background:var(--navy-900);color:var(--gold-300);}
+.level-chip.lvl-transv{background:rgba(107,116,128,.14);color:var(--gray-700);}
+@media (max-width:760px){
+  .courses-head-row{display:none;}
+  .courses-row{grid-template-columns:1fr;gap:6px;padding:16px 18px;}
+  .courses-row span[data-label]::before{content:attr(data-label) ": ";font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;color:var(--gray-500);letter-spacing:.04em;}
+  .btn-apply-course{width:100%;justify-content:center;margin-top:4px;}
+}

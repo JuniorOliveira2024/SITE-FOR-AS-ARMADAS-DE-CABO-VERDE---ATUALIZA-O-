@@ -1,0 +1,44 @@
+[
+  {
+    "area": "Eletricidade e Instalações Elétricas",
+    "parceiro": "IEFP — Centro de Emprego e Formação Profissional",
+    "nivel": "Nível II",
+    "duracao": "3 meses",
+    "exemplo_ilustrativo": false
+  },
+  {
+    "area": "Mecânica Auto e Manutenção de Viaturas",
+    "parceiro": "OCFA / CIMMB (formação interna)",
+    "nivel": "Nível II",
+    "duracao": "4 meses",
+    "exemplo_ilustrativo": false
+  },
+  {
+    "area": "Culinária e Hotelaria",
+    "parceiro": "IEFP — Centro de Emprego e Formação Profissional",
+    "nivel": "Nível I",
+    "duracao": "2 meses",
+    "exemplo_ilustrativo": false
+  },
+  {
+    "area": "Informática na Ótica do Utilizador",
+    "parceiro": "Labanta",
+    "nivel": "Nível I",
+    "duracao": "6 semanas",
+    "exemplo_ilustrativo": true
+  },
+  {
+    "area": "Empreendedorismo e Gestão de Pequenos Negócios",
+    "parceiro": "CERMI",
+    "nivel": "Nível I",
+    "duracao": "6 semanas",
+    "exemplo_ilustrativo": true
+  },
+  {
+    "area": "Educação Cívica e Cidadania",
+    "parceiro": "CIMMB (transversal a todo o percurso)",
+    "nivel": "Transversal",
+    "duracao": "Todo o percurso",
+    "exemplo_ilustrativo": false
+  }
+]

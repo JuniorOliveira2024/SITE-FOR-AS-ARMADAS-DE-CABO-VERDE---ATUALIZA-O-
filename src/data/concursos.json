@@ -1,0 +1,42 @@
+[
+  {
+    "id": "incorporacao-2026",
+    "title": "2ª Incorporação Militar 2026 — Centro de Instrução Militar do Morro Branco (CIMMB)",
+    "description": "Apresentação dos recrutas convocados para a 2ª Incorporação de 2026.",
+    "law_reference": null,
+    "status": "em_curso",
+    "deadline": "2026-09-08",
+    "cta_label": "Ver detalhes",
+    "cta_url": "#cimmb"
+  },
+  {
+    "id": "lei-servico-militar",
+    "title": "Lei do Serviço Militar — Decreto-Legislativo nº 6/93, de 24 de maio",
+    "description": "Diploma legal que regula o Serviço Militar Obrigatório em Cabo Verde.",
+    "law_reference": "Decreto-Legislativo nº 6/93",
+    "status": "aberto",
+    "deadline": null,
+    "cta_label": "Descarregar PDF",
+    "cta_url": "#doc-servico-militar"
+  },
+  {
+    "id": "objecao-consciencia",
+    "title": "Objeção de Consciência — Decreto-Legislativo nº 7/93",
+    "description": "Regime legal aplicável à objeção de consciência ao Serviço Militar.",
+    "law_reference": "Decreto-Legislativo nº 7/93",
+    "status": "aberto",
+    "deadline": null,
+    "cta_label": "Descarregar PDF",
+    "cta_url": "#doc-objecao"
+  },
+  {
+    "id": "programa-soldado-cidadao",
+    "title": "Programa Soldado Cidadão — Formação técnico-profissional para recrutas",
+    "description": "Programa de formação cívica e técnico-profissional integrado no percurso de incorporação.",
+    "law_reference": null,
+    "status": "aberto",
+    "deadline": null,
+    "cta_label": "Saber mais",
+    "cta_url": "#psc"
+  }
+]

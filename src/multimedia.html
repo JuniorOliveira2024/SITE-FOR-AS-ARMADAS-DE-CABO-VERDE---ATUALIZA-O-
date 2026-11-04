@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-CV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Galeria multimédia das Forças Armadas de Cabo Verde — fotografias e vídeos institucionais.">
+<meta name="theme-color" content="#0A2540">
+<title>Multimédia — Forças Armadas de Cabo Verde</title>
+<link rel="icon" type="image/png" href="assets/images/logo-fa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Cinzel:wght@600;700&family=Oswald:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base/base.css?v=202611021400">
+<link rel="stylesheet" href="css/components/header.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/multimedia.css?v=202611021400">
+<link rel="stylesheet" href="css/sections/news.css?v=202611021400">
+<link rel="stylesheet" href="css/components/footer.css?v=202611021400">
+<link rel="stylesheet" href="css/base/responsive.css?v=202611021400">
+<link rel="stylesheet" href="css/components/page-common.css?v=202611021400"><link rel="stylesheet" href="css/pages/multimedia.css?v=202611021400">
+</head>
+
+<!-- MASTER PAGE: navbar (master.html) -->
+<div id="master-navbar"></div>
+
+<a id="top"></a>
+
+
+<section class="page-hero" style="padding:150px 0 50px;">
+  <div class="container page-hero-inner">
+    <img class="page-hero-crest" src="assets/images/logo-fa.png" alt="Emblema Oficial das Forças Armadas de Cabo Verde">
+    <div class="page-hero-copy">
+    <div class="eyebrow">Registo Histórico e Operacional</div>
+    <h1>Multimédia</h1>
+    <p>Galerias fotográficas, vídeos, reportagens, eventos e registos audiovisuais das atividades militares das Forças Armadas de Cabo Verde.</p></div>
+  </div>
+</section>
+
+<section class="mm-types" id="registos" aria-label="Tipos de conteúdo multimédia">
+  <div class="container">
+    <div class="mm-types-head">
+      <div class="eyebrow">O que pode encontrar</div>
+      <h2>Registo audiovisual das atividades militares</h2>
+      <p>Galerias fotográficas, vídeos, reportagens, eventos e registos audiovisuais das atividades militares.</p>
+    </div>
+    <div class="mm-types-grid">
+      <a class="mm-type" id="galerias" href="#galeria-completa"><span class="mm-type-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><circle cx="9" cy="10.5" r="1.8"/><path d="m21 16-5-5-8 8"/></svg></span><h3>Galerias fotográficas</h3><p>Fotografias de cerimónias, formação, operações e vida institucional.</p><span class="mm-type-link">Ver galeria →</span></a>
+      <div class="mm-type" id="videos"><span class="mm-type-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></span><h3>Vídeos</h3><p>Vídeos institucionais e das atividades das Forças Armadas.</p><span class="mm-type-link soon">Em publicação</span></div>
+      <div class="mm-type" id="reportagens"><span class="mm-type-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg></span><h3>Reportagens</h3><p>Reportagens sobre missões, exercícios e o dia a dia dos militares.</p><span class="mm-type-link soon">Em publicação</span></div>
+      <a class="mm-type" id="eventos" href="#galeria-completa" data-mm-filter="Cerimónias"><span class="mm-type-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><h3>Eventos</h3><p>Cerimónias militares, comemorações e eventos institucionais.</p><span class="mm-type-link">Ver cerimónias →</span></a>
+      <div class="mm-type"><span class="mm-type-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6M8 6v12M12 3v18M16 7v10M20 10v4"/></svg></span><h3>Registos audiovisuais</h3><p>Arquivo de imagem e som das atividades militares, ao serviço da memória institucional.</p><span class="mm-type-link soon">Em publicação</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="mm-showcase" aria-label="Galeria em destaque">
+  <div class="container">
+    <div class="mm-showcase-head">
+      <div><div class="eyebrow">Em Destaque</div><h2>Galeria em Apresentação</h2></div>
+      <div class="mm-showcase-controls">
+        <span class="mm-counter" id="mm-counter" aria-live="polite">01 / 01</span>
+        <button class="mm-ctl" id="mm-prev" type="button" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="mm-ctl" id="mm-toggle" type="button" aria-label="Pausar apresentação" aria-pressed="false"><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+        <button class="mm-ctl" id="mm-next" type="button" aria-label="Imagem seguinte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="mm-stage" id="mm-stage" role="group" aria-roledescription="carrossel" aria-label="Imagens em destaque" tabindex="0"></div>
+    <div class="mm-thumbs" id="mm-thumbs" role="tablist" aria-label="Escolher imagem"></div>
+  </div>
+</section>
+
+<section class="mm-filters">
+  <div class="container">
+    <div class="filters" id="mm-page-filters" style="margin-bottom:0;">
+      <button class="filter-btn active" data-filter="Todas">Todas</button>
+      <button class="filter-btn" data-filter="Cerimónias">Cerimónias</button>
+      <button class="filter-btn" data-filter="Formação">Formação</button>
+      <button class="filter-btn" data-filter="Guarda Costeira">Guarda Costeira</button>
+      <button class="filter-btn" data-filter="Ação Cívica">Ação Cívica</button>
+    </div>
+  </div>
+</section>
+
+<section class="mm-gallery-section" id="galeria-completa">
+  <div class="container">
+    <div class="mm-full-grid" id="mm-full-grid"></div>
+  </div>
+</section>
+
+<div class="article-modal" id="mm-lightbox" role="dialog" aria-modal="true" aria-label="Ver imagem">
+  <div class="article-modal-backdrop" id="mm-lightbox-backdrop"></div>
+  <div class="article-modal-panel" style="background:transparent;box-shadow:none;">
+    <button class="article-modal-close" id="mm-lightbox-close" aria-label="Fechar">✕</button>
+    <img id="mm-lightbox-img" src="" alt="" style="width:100%;max-height:80vh;object-fit:contain;border:1px solid rgba(216,200,65,.4);background:#000;">
+    <div style="color:#fff;font-size:13px;margin-top:16px;text-align:center;" id="mm-lightbox-caption"></div>
+  </div>
+</div>
+
+
+<!-- MASTER PAGE: footer (master.html) -->
+<div id="master-footer"></div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/core/master-data.js?v=202611021400"></script>
+<script src="js/core/master.js?v=202611021400"></script>
+<script src="js/core/config.js?v=202611021400"></script>
+<script src="js/core/api.js?v=202611021400"></script><script src="js/core/live.js?v=202611021400"></script><script src="js/effects/index.js?v=202611021400"></script><script src="js/effects/fade.js?v=202611021400"></script><script src="js/effects/slide.js?v=202611021400"></script><script src="js/effects/zoom.js?v=202611021400"></script><script src="js/effects/parallax.js?v=202611021400"></script><script src="js/effects/hover.js?v=202611021400"></script><script src="js/effects/reveal.js?v=202611021400"></script><script src="js/effects/loading.js?v=202611021400"></script><script src="js/core/cms.js?v=202611021400"></script>
+<script src="js/core/toast.js?v=202611021400"></script>
+<script src="js/core/reveal.js?v=202611021400"></script>
+<script src="js/components/mobile-nav.js?v=202611021400"></script>
+<script src="js/components/header-scroll.js?v=202611021400"></script>
+<script src="js/components/search.js?v=202611021400"></script>
+<script src="js/pages/multimedia.js?v=202611021400"></script>
+</html>
