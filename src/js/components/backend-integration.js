@@ -65,12 +65,13 @@ function renderDynamicConcursos(items){
 }
 
 function mediaTileHTML(item){
+  const capText = (window.FA_RICH ? FA_RICH.text(item.caption || '') : (item.caption || ''));
   const caption = item.title + (item.category ? ' · ' + item.category : '');
   const credit = item.credit || '';
   return `
     <button class="media-tile" data-caption="${faEsc(caption)}" data-credit="${faEsc(credit)}" data-img="${faEsc(item.image_url)}"${item.type === 'video' && item.video_url ? ' data-video="' + faEsc(item.video_url) + '"' : ''}>
       <img src="${faEsc(item.image_url)}" alt="${faEsc(item.alt || item.title)}">
-      <div class="overlay"><span>${faEsc(item.caption ? item.caption : caption)}</span></div>
+      <div class="overlay"><span>${faEsc(capText ? capText : caption)}</span></div>
     </button>`;
 }
 
@@ -116,8 +117,8 @@ function formacaoPscRowHTML(f){
   const isTransversal = f.nivel === 'Transversal';
   const acao = isTransversal
     ? `<span class="included-tag">Incluído no percurso</span>`
-    : `<a class="btn-apply-course" href="contactos.html">Candidatar-se</a>`;
-  return `<div class="psc-page-course-row"><span>${faEsc(f.area)}</span><span>${faEsc(f.parceiro || '—')}</span><span class="level-chip ${nivelToChipClass(f.nivel)}">${faEsc(f.nivel)}</span><span>${faEsc(f.duracao || '—')}</span><span>${acao}</span></div>`;
+    : `<button type="button" class="btn-apply-course">Candidatar-se</button>`;
+  return `<div class="psc-page-course-row" data-curso="${faEsc(f.area)}"><span>${faEsc(f.area)}</span><span>${faEsc(f.parceiro || '')}</span><span class="level-chip ${nivelToChipClass(f.nivel)}">${faEsc(f.nivel)}</span><span>${faEsc(f.duracao || '')}</span><span>${acao}</span></div>`;
 }
 
 function renderDynamicFormacoes(items){
@@ -135,7 +136,7 @@ function renderDynamicFormacoes(items){
   }
   const pscList = document.getElementById('psc-page-courses');
   if(pscList && items.length){
-    pscList.innerHTML = items.map(formacaoPscRowHTML).join('');
+    pscList.innerHTML = '<div class="psc-page-course-row psc-page-course-head"><span>Área de Formação</span><span>Entidade Parceira</span><span>Nível</span><span>Duração</span><span></span></div>' + items.map(formacaoPscRowHTML).join('');
   }
 }
 

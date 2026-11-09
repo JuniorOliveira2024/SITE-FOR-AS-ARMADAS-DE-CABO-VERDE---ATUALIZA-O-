@@ -16,6 +16,8 @@
   let query  = '';
 
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const richHtml = (t) => (typeof FA_RICH !== 'undefined' ? FA_RICH.html(t) : esc(t));
+  const richText = (t) => (typeof FA_RICH !== 'undefined' ? FA_RICH.text(t) : String(t == null ? '' : t));
   const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 
   function actionHTML(c){
@@ -36,7 +38,7 @@
         <span class="job-ref mono">${esc(c.ref)}</span>
         <span class="status-chip ${st.chip}">${esc(st.label)}</span>
         <h3 class="job-card-title">${esc(c.title)}</h3>
-        <p>${esc(c.description)}</p>
+        <div class="job-desc">${richHtml(c.description)}</div>
         ${meta ? `<div class="job-meta">${meta}</div>` : ''}
         ${actionHTML(c)}
       </article>`;
@@ -52,7 +54,7 @@
   function render(){
     const def = CONCURSOS_FILTROS.find(f => f.key === filter) || CONCURSOS_FILTROS[0];
     const q = norm(query);
-    const list = items.filter(def.test).filter(c => !q || norm([c.title, c.description, c.ref, (c.meta||[]).join(' ')].join(' ')).includes(q));
+    const list = items.filter(def.test).filter(c => !q || norm([c.title, richText(c.description), c.ref, (c.meta||[]).join(' ')].join(' ')).includes(q));
     renderFilters();
     grid.innerHTML = list.length
       ? list.map(cardHTML).join('')

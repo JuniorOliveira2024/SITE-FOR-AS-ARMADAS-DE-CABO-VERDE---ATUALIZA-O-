@@ -17,12 +17,16 @@ function openCourseModal(cursoNome){
 }
 function closeCourseModal(){ courseModal.classList.remove('open'); }
 
-document.querySelectorAll('.btn-apply-course').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const curso = btn.closest('.courses-row').dataset.curso;
-    openCourseModal(curso);
-  });
+/* delegação: funciona também nas linhas criadas a partir do painel */
+document.addEventListener('click',(e)=>{
+  const btn = e.target.closest && e.target.closest('.btn-apply-course');
+  if(!btn) return;
+  const row = btn.closest('[data-curso]');
+  if(!row) return;
+  e.preventDefault();
+  openCourseModal(row.dataset.curso);
 });
+document.addEventListener('keydown',(e)=>{ if(e.key==='Escape' && courseModal.classList.contains('open')) closeCourseModal(); });
 document.getElementById('course-modal-close').addEventListener('click', closeCourseModal);
 document.getElementById('course-modal-backdrop').addEventListener('click', closeCourseModal);
 document.getElementById('course-close-btn').addEventListener('click', closeCourseModal);
@@ -53,7 +57,7 @@ courseForm.addEventListener('submit', async function(e){
 
   if(FA_API.enabled()){
     try{
-      await FA_API.post('/candidaturas', { tipo:'formacao', referencia:curso, nome_completo:name, contacto:contact, email:email || null });
+      await FA_API.post('/candidaturas', { tipo:'formacao', referencia:curso, nome_completo:name, contacto:contact, email:email || null, website:(document.getElementById('course-website')||{}).value || '' });
     } catch(err){
       // com o backend ligado, só confirmamos o que ficou realmente registado
       submitBtn.disabled = false;

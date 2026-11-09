@@ -140,7 +140,7 @@
   function loadRemote(){
     return FA_API.edited('multimedia').then(ed => ed ? FA_API.get('/multimedia?flat=true&limit=60') : null).then(items => {
       if(!Array.isArray(items) || !items.length) return;
-      allItems = items.map(it => ({ image: it.image_url, caption: it.caption || it.title, category: it.category, credit: it.credit, video: it.type === 'video' ? it.video_url : '' }));
+      allItems = items.map(it => ({ image: it.image_url, caption: (window.FA_RICH ? FA_RICH.text(it.caption || '') : (it.caption || '')) || it.title, category: it.category, credit: it.credit, video: it.type === 'video' ? it.video_url : '' }));
       render();
       buildCarousel();
     });

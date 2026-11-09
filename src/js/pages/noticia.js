@@ -16,7 +16,7 @@
     document.getElementById('noticia-tag').textContent = art.tag || '';
     document.getElementById('noticia-date').textContent = art.date;
     document.getElementById('noticia-title').textContent = art.title;
-    document.getElementById('noticia-paragraphs').innerHTML = art.paragraphs.map(p => '<p>' + p + '</p>').join('');
+    document.getElementById('noticia-paragraphs').innerHTML = art.bodyHtml || art.paragraphs.map(p => '<p>' + p + '</p>').join('');
     // campos opcionais vindos do painel (não existem nas notícias do frontend)
     const esc = faEscText;
     const titleEl = document.getElementById('noticia-title');

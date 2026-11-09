@@ -73,12 +73,12 @@
     </div>
     <div class="psc-page-courses" id="psc-page-courses">
       <div class="psc-page-course-row psc-page-course-head"><span>Área de Formação</span><span>Entidade Parceira</span><span>Nível</span><span>Duração</span><span></span></div>
-      <div class="psc-page-course-row"><span>Eletricidade e Instalações Elétricas</span><span>IEFP — Centro de Emprego e Formação Profissional</span><span class="level-chip lvl-2">Nível II</span><span>3 meses</span><span><a class="btn-apply-course" href="contactos.html">Candidatar-se</a></span></div>
-      <div class="psc-page-course-row"><span>Mecânica Auto e Manutenção de Viaturas</span><span>OCFA / CIMMB (formação interna)</span><span class="level-chip lvl-2">Nível II</span><span>4 meses</span><span><a class="btn-apply-course" href="contactos.html">Candidatar-se</a></span></div>
-      <div class="psc-page-course-row"><span>Culinária e Hotelaria</span><span>IEFP — Centro de Emprego e Formação Profissional</span><span class="level-chip lvl-1">Nível I</span><span>2 meses</span><span><a class="btn-apply-course" href="contactos.html">Candidatar-se</a></span></div>
-      <div class="psc-page-course-row"><span>Informática na Ótica do Utilizador</span><span>Labanta</span><span class="level-chip lvl-1">Nível I</span><span>6 semanas</span><span><a class="btn-apply-course" href="contactos.html">Candidatar-se</a></span></div>
-      <div class="psc-page-course-row"><span>Empreendedorismo e Gestão de Pequenos Negócios</span><span>CERMI</span><span class="level-chip lvl-1">Nível I</span><span>6 semanas</span><span><a class="btn-apply-course" href="contactos.html">Candidatar-se</a></span></div>
-      <div class="psc-page-course-row"><span>Educação Cívica e Cidadania</span><span>CIMMB (transversal a todo o percurso)</span><span class="level-chip lvl-transv">Transversal</span><span>Todo o percurso</span><span><span class="included-tag">Incluído no percurso</span></span></div>
+      <div class="psc-page-course-row" data-curso="Eletricidade e Instalações Elétricas"><span>Eletricidade e Instalações Elétricas</span><span>IEFP — Centro de Emprego e Formação Profissional</span><span class="level-chip lvl-2">Nível II</span><span>3 meses</span><span><button type="button" class="btn-apply-course">Candidatar-se</button></span></div>
+      <div class="psc-page-course-row" data-curso="Mecânica Auto e Manutenção de Viaturas"><span>Mecânica Auto e Manutenção de Viaturas</span><span>OCFA / CIMMB (formação interna)</span><span class="level-chip lvl-2">Nível II</span><span>4 meses</span><span><button type="button" class="btn-apply-course">Candidatar-se</button></span></div>
+      <div class="psc-page-course-row" data-curso="Culinária e Hotelaria"><span>Culinária e Hotelaria</span><span>IEFP — Centro de Emprego e Formação Profissional</span><span class="level-chip lvl-1">Nível I</span><span>2 meses</span><span><button type="button" class="btn-apply-course">Candidatar-se</button></span></div>
+      <div class="psc-page-course-row" data-curso="Informática na Ótica do Utilizador"><span>Informática na Ótica do Utilizador</span><span>Labanta</span><span class="level-chip lvl-1">Nível I</span><span>6 semanas</span><span><button type="button" class="btn-apply-course">Candidatar-se</button></span></div>
+      <div class="psc-page-course-row" data-curso="Empreendedorismo e Gestão de Pequenos Negócios"><span>Empreendedorismo e Gestão de Pequenos Negócios</span><span>CERMI</span><span class="level-chip lvl-1">Nível I</span><span>6 semanas</span><span><button type="button" class="btn-apply-course">Candidatar-se</button></span></div>
+      <div class="psc-page-course-row" data-curso="Educação Cívica e Cidadania"><span>Educação Cívica e Cidadania</span><span>CIMMB (transversal a todo o percurso)</span><span class="level-chip lvl-transv">Transversal</span><span>Todo o percurso</span><span><span class="included-tag">Incluído no percurso</span></span></div>
     </div>
 
     <div class="psc-section-head">
@@ -144,9 +144,50 @@
 <!-- MASTER PAGE: footer (master.html) -->
 <div id="master-footer"></div>
 
+
+<div class="service-modal" id="course-modal" role="dialog" aria-modal="true" aria-label="Candidatar-se a uma formação">
+  <div class="service-modal-backdrop" id="course-modal-backdrop"></div>
+  <div class="service-modal-panel">
+    <button class="service-modal-close" id="course-modal-close" type="button" aria-label="Fechar">✕</button>
+    <div id="course-step-form">
+      <div class="eyebrow">Programa Soldado Cidadão</div>
+      <h3 class="service-modal-title">Candidatura à formação</h3>
+      <p class="service-modal-lede" id="course-modal-lede">Preencha os seus dados para se candidatar a esta formação.</p>
+      <form id="course-form" novalidate>
+        <label class="service-label" for="course-name">Formação escolhida</label>
+        <input type="text" id="course-name" class="service-input" readonly>
+
+        <label for="course-full-name" class="service-label" style="margin-top:16px;">Nome completo</label>
+        <input type="text" id="course-full-name" class="service-input" placeholder="Ex: Maria Ana Fernandes Lima" autocomplete="name" required>
+        <span class="field-error" id="course-name-error" style="display:none;">Introduza o nome completo (nome e apelido), apenas letras.</span>
+
+        <label for="course-contact" class="service-label" style="margin-top:16px;">Telefone / WhatsApp</label>
+        <input type="tel" id="course-contact" class="service-input" placeholder="Ex: 991 23 45" autocomplete="tel" required>
+
+        <label for="course-email" class="service-label" style="margin-top:16px;">E-mail (opcional)</label>
+        <input type="email" id="course-email" class="service-input" placeholder="nome@exemplo.cv" autocomplete="email">
+
+        <input type="text" name="website" id="course-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0;">
+
+        <button type="submit" class="btn btn-gold" style="margin-top:24px;width:100%;justify-content:center;">Enviar Candidatura</button>
+      </form>
+    </div>
+    <div id="course-step-result" style="display:none;">
+      <div class="eyebrow">Candidatura Enviada</div>
+      <h3 class="service-modal-title">Candidatura registada com sucesso</h3>
+      <p class="service-result-note" id="course-result-note"></p>
+      <div class="service-result-actions">
+        <button class="btn btn-outline-dark" id="course-back-btn" type="button">← Nova candidatura</button>
+        <button class="btn btn-gold" id="course-close-btn" type="button">Concluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script src="js/core/master-data.js?v=202611021400"></script>
+<script src="js/core/rich.js?v=202611050100"></script>
 <script src="js/core/master.js?v=202611021400"></script>
 <script src="js/core/config.js?v=202611021400"></script>
 <script src="js/core/api.js?v=202611021400"></script><script src="js/core/live.js?v=202611021400"></script><script src="js/effects/index.js?v=202611021400"></script><script src="js/effects/fade.js?v=202611021400"></script><script src="js/effects/slide.js?v=202611021400"></script><script src="js/effects/zoom.js?v=202611021400"></script><script src="js/effects/parallax.js?v=202611021400"></script><script src="js/effects/hover.js?v=202611021400"></script><script src="js/effects/reveal.js?v=202611021400"></script><script src="js/effects/loading.js?v=202611021400"></script><script src="js/core/cms.js?v=202611021400"></script><script src="js/core/helpers.js?v=202611021400"></script>
@@ -157,6 +198,8 @@
 <script src="js/components/search.js?v=202611021400"></script>
 
 <script src="js/components/psc-carousel.js?v=202611021400"></script>
+<script src="js/components/course-application.js?v=202611050100"></script>
+<script src="js/components/psc-courses.js?v=202611050100"></script>
 <script src="js/core/i18n.js?v=202611021400"></script>
 </body>
 </html>

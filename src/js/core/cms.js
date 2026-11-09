@@ -87,9 +87,10 @@
     const sel = html ? `[data-i18n-html="${key}"]` : `[data-i18n="${key}"]`;
     const els = document.querySelectorAll(sel);
     if (!els.length) return;
-    if (typeof I18N_ORIGINAL !== 'undefined' && I18N_ORIGINAL[key]) I18N_ORIGINAL[key].value = value;   // o i18n volta a PT com o texto novo
+    if (typeof I18N_ORIGINAL !== 'undefined' && I18N_ORIGINAL[key]) I18N_ORIGINAL[key].value = (!html && w.FA_RICH.isHtml(value)) ? w.FA_RICH.text(value) : (html ? w.FA_RICH.sanitize(value) : value);   // o i18n volta a PT com o texto novo
     if (!isPt()) return;                                                                                    // noutro idioma mantém a tradução
-    els.forEach((el) => { if (html) { if (norm(el.innerHTML) !== norm(value)) el.innerHTML = value; } else if (norm(el.textContent) !== norm(value)) el.textContent = value; });
+    const rich = html || w.FA_RICH.isHtml(value);
+    els.forEach((el) => { if (rich) { const sv = w.FA_RICH.sanitize(value); if (norm(el.innerHTML) !== norm(sv)) el.innerHTML = sv; } else if (norm(el.textContent) !== norm(value)) el.textContent = value; });
   }
 
   const I18N_BINDINGS = [
@@ -103,14 +104,15 @@
   /** data-cms="chave" (texto) · data-cms-html · data-cms-multiline · data-cms-href="chave" [data-cms-prefix] · data-cms-src */
   function applyDataCms(settings) {
     const get = (k) => settings[k];
-    document.querySelectorAll('[data-cms]').forEach((el) => { const v = get(el.dataset.cms); if (v !== undefined && v !== '' && el.textContent !== v) el.textContent = v; });
-    document.querySelectorAll('[data-cms-html]').forEach((el) => { const v = get(el.dataset.cmsHtml); if (v) el.innerHTML = v; });
-    document.querySelectorAll('[data-cms-multiline]').forEach((el) => { const v = get(el.dataset.cmsMultiline); if (v) el.innerHTML = nl2br(v); });
+    document.querySelectorAll('[data-cms]').forEach((el) => { const v = get(el.dataset.cms); if (v !== undefined && v !== '') w.FA_RICH.set(el, v); });
+    document.querySelectorAll('[data-cms-html]').forEach((el) => { const v = get(el.dataset.cmsHtml); if (v) el.innerHTML = w.FA_RICH.sanitize(v); });
+    document.querySelectorAll('[data-cms-multiline]').forEach((el) => { const v = get(el.dataset.cmsMultiline); if (v) el.innerHTML = w.FA_RICH.html(v); });
     document.querySelectorAll('[data-cms-href]').forEach((el) => { const v = get(el.dataset.cmsHref); if (v) el.setAttribute('href', (el.dataset.cmsPrefix || '') + v); });
     document.querySelectorAll('[data-cms-src]').forEach((el) => { const v = get(el.dataset.cmsSrc); if (v && el.getAttribute('src') !== v) el.setAttribute('src', v); });
     // texto em parágrafos (separados por linha em branco) e em linhas (uma por linha)
     document.querySelectorAll('[data-cms-paragraphs]').forEach((el) => {
       const v = get(el.dataset.cmsParagraphs); if (!v) return;
+      if (w.FA_RICH.isHtml(v)) { const rh = w.FA_RICH.sanitize(v); if (el.dataset.cmsSig !== rh) { el.innerHTML = rh; el.dataset.cmsSig = rh; } return; }
       const html = paras(v).map((t, i) => `<p${i === 0 && el.dataset.cmsFirstClass ? ` class="${esc(el.dataset.cmsFirstClass)}"` : ''}>${esc(t)}</p>`).join('');
       if (el.dataset.cmsSig !== html) { el.innerHTML = html; el.dataset.cmsSig = html; }
     });
@@ -182,6 +184,26 @@
     applyQuickContacts(cols.quick_contacts);
   }
 
+
+  /** Página "Incorporação de Recrutas": dados alterados no painel (Serviço militar e incorporação) substituem os do ficheiro de dados. */
+  function applyIncorporacao(ov, cols) {
+    if (!document.getElementById('inc-atual') || typeof w.FA_INCORPORACAO_RENDER !== 'function') return;
+    const base = w.INCORPORACAO_ATUAL || {};
+    const faseTxt = ov['incorporacao.fase'];
+    const atual = { ...base };
+    if (ov['incorporacao.nome']) atual.nome = ov['incorporacao.nome'];
+    if (ov['incorporacao.local']) atual.local = ov['incorporacao.local'];
+    if ('incorporacao.apresentacao' in ov) atual.apresentacao = ov['incorporacao.apresentacao'] || null;
+    if ('incorporacao.juramento' in ov) atual.juramento = ov['incorporacao.juramento'] || null;
+    if (faseTxt) atual.fase = /^[1-5]/.test(faseTxt) ? Number(faseTxt[0]) : null;
+    if ('incorporacao.nota' in ov) atual.nota = ov['incorporacao.nota'];
+    w.INCORPORACAO_ATUAL = atual;
+    if (cols.incorporacao_etapas && cols.incorporacao_etapas.length) w.INCORPORACAO_ETAPAS = cols.incorporacao_etapas.map((e, i) => ({ n: i + 1, titulo: e.titulo, texto: e.texto }));
+    if (cols.incorporacao_requisitos) w.INCORPORACAO_REQUISITOS = cols.incorporacao_requisitos.map((r) => r.texto);
+    if (cols.incorporacao_documentos) w.INCORPORACAO_DOCUMENTOS = cols.incorporacao_documentos.map((r) => r.texto);
+    if (cols.incorporacao_outras) w.INCORPORACAO_OUTRAS = cols.incorporacao_outras.map((o) => ({ nome: o.nome, estado: o.estado, texto: o.texto }));
+    w.FA_INCORPORACAO_RENDER();
+  }
 
   /* ---------- História, Contactos e Estrutura ---------- */
   const UNIT_ICONS = {
@@ -366,7 +388,7 @@
     return list.map((c) => {
       const st = concStatus(c);
       const meta = (c.meta || []).map((m) => `<span>${esc(m)}</span>`).join('');
-      return `<div class="job-card" data-job="${esc(c.title)}" data-ref="${esc(c.ref || '')}"><span class="job-ref mono">${esc(c.ref || '')}</span><span class="status-chip ${st.chip}">${esc(st.label)}</span><h4>${esc(c.title)}</h4><p>${esc(c.description || '')}</p>${meta ? `<div class="job-meta">${meta}</div>` : ''}<button class="btn btn-outline-dark job-apply"${c.disabled ? ' disabled' : ''}>${esc(c.cta_label || 'Candidatar-se')}</button></div>`;
+      return `<div class="job-card" data-job="${esc(c.title)}" data-ref="${esc(c.ref || '')}"><span class="job-ref mono">${esc(c.ref || '')}</span><span class="status-chip ${st.chip}">${esc(st.label)}</span><h4>${esc(c.title)}</h4><p>${(w.FA_RICH ? w.FA_RICH.html(c.description) : esc(c.description) || '')}</p>${meta ? `<div class="job-meta">${meta}</div>` : ''}<button class="btn btn-outline-dark job-apply"${c.disabled ? ' disabled' : ''}>${esc(c.cta_label || 'Candidatar-se')}</button></div>`;
     }).join('');
   }
 
@@ -459,6 +481,7 @@
       const cols = {};
       Object.keys(site.collections || {}).forEach((k) => { if (ed['collection:' + k]) cols[k] = site.collections[k]; });
       applyCollections(cols);                                           // listas: só as alteradas no painel
+      applyIncorporacao(site.overrides || {}, cols);                    // página da incorporação de recrutas
       reapplyI18n();
       if (w.FA_EFFECTS && w.FA_EFFECTS.apply(site.effects) && w.FA_LIVE) w.FA_LIVE.reloadWhenIdle();   // efeito alterado/removido
     }

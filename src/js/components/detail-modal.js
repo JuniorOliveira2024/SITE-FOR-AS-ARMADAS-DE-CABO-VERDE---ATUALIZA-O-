@@ -41,7 +41,7 @@ function openDetail(slug){
   document.getElementById('detail-tag').textContent = d.tag;
   document.getElementById('detail-date').textContent = d.date;
   document.getElementById('detail-title').textContent = d.title;
-  document.getElementById('detail-content').innerHTML = d.paragraphs.map(p=>'<p>'+p+'</p>').join('');
+  document.getElementById('detail-content').innerHTML = d.bodyHtml || d.paragraphs.map(p=>'<p>'+p+'</p>').join('');
   detailModal.classList.add('open');
   detailModal.scrollTop = 0;
 }

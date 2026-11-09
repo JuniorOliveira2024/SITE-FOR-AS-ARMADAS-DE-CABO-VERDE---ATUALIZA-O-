@@ -20,6 +20,8 @@ function buildDynamicArticle(item){
     seoTitle: item.seo_title || '',
     seoDescription: item.seo_description || item.excerpt || '',
     // o texto vem do painel: escapado antes de entrar no HTML
-    paragraphs: (item.body || item.excerpt || '').split('\n').map(p=>p.trim()).filter(Boolean).map(faEscText)
+    // texto formatado no painel (negrito, cores…): HTML já limpo; texto simples continua escapado por parágrafos
+    bodyHtml: (window.FA_RICH && FA_RICH.isHtml(item.body)) ? FA_RICH.sanitize(item.body) : '',
+    paragraphs: (window.FA_RICH ? FA_RICH.text(item.body || item.excerpt || '') : (item.body || item.excerpt || '')).split('\n').map(p=>p.trim()).filter(Boolean).map(faEscText)
   };
 }

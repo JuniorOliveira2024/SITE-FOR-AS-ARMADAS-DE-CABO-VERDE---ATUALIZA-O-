@@ -22,4 +22,4 @@ document.addEventListener('click',(e)=>{
   openJobModal(card.dataset.job || card.querySelector('h4').textContent);
 });
 const galleryBtn = document.getElementById('btn-toast-galeria');
-if (galleryBtn) galleryBtn.addEventListener('click',()=>showToast('A abrir galeria multimédia completa…'));
+/* "Ver galeria completa" é agora uma ligação direta para multimedia.html */
